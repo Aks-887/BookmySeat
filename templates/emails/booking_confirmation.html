@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Movie Ticket Confirmation - BookMySeat</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6;}
+    .container {max-width: 600px; margin: 0 auto; background: #ffffff;}
+    .header {background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%); color: white; padding: 40px 20px; text-align: center; border-radius: 6px 6px 0 0;}
+    .header h1 {font-size: 28px; margin-bottom: 8px; font-weight: 600;}
+    .header p {font-size: 14px; opacity: 0.95;}
+    .content {padding: 30px 20px; background: #f8f9fa;}
+    .section {margin-bottom: 25px; background: white; padding: 15px; border-left: 4px solid #0d6efd; border-radius: 4px;}
+    .section-title {font-weight: 600; font-size: 14px; color: #0d6efd; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px;}
+    .section-content {font-size: 15px; color: #444;}
+    .booking-id {display: inline-block; padding: 10px 16px; background: #0d6efd; color: white; border-radius: 4px; font-weight: 600; font-size: 14px; word-break: break-all;}
+    .detail-row {display: flex; justify-content: space-between; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #e9ecef;}
+    .detail-row:last-child {border-bottom: none; margin-bottom: 0; padding-bottom: 0;}
+    .detail-label {font-weight: 500; color: #666; font-size: 14px;}
+    .detail-value {color: #333; font-size: 14px; font-weight: 500;}
+    .seats-badge {display: inline-block; background: #28a745; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; margin: 2px; font-weight: 600;}
+    .footer {background: #e9ecef; padding: 20px; border-radius: 0 0 6px 6px; font-size: 12px; color: #666; text-align: center;}
+    .footer p {margin-bottom: 8px;}
+    .footer a {color: #0d6efd; text-decoration: none;}
+    .footer-divider {height: 1px; background: #dee2e6; margin: 12px 0;}
+    .important-note {background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px; border-radius: 4px; font-size: 13px; color: #856404; margin-bottom: 15px;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>✓ Booking Confirmed</h1>
+      <p>Your movie tickets are ready</p>
+    </div>
+
+    <div class="content">
+      <div class="section">
+        <div class="section-title">Confirmation</div>
+        <div class="section-content" style="margin-bottom: 10px;">
+          Hello <strong>{{ user_full_name }}</strong>,
+        </div>
+        <div class="section-content">
+          Thank you for booking with BookMySeat. Your tickets are confirmed and ready to use.
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Booking ID</div>
+        <div class="booking-id">{{ payment_id }}</div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Movie Details</div>
+        <div class="detail-row">
+          <span class="detail-label">Movie:</span>
+          <span class="detail-value">{{ movie_name }}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Theater:</span>
+          <span class="detail-value">{{ theater_name }}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Show Time:</span>
+          <span class="detail-value">{{ show_time }}</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Selected Seats</div>
+        <div class="section-content">
+          {% for seat in seats_list %}
+            <span class="seats-badge">{{ seat }}</span>
+          {% empty %}
+            <span class="seats-badge">{{ seat_list }}</span>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="important-note">
+        <strong>Important:</strong> Please arrive 15 minutes before the show time. Bring a valid ID and your booking reference number.
+      </div>
+
+      <div class="section">
+        <div class="section-title">Need Help?</div>
+        <div class="section-content">
+          If you need to modify or cancel your booking, please visit your profile page or contact our support team.
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><strong>BookMySeat Booking Confirmation</strong></p>
+      <p>Confirmation Date: <strong>{{ booking_date }}</strong></p>
+      <div class="footer-divider"></div>
+      <p>This is an automated message. Please do not reply to this email.</p>
+      <p>For support, visit your <a href="#">profile page</a> or contact us</p>
+      <p style="margin-top: 15px; font-size: 11px; color: #999;">© 2024 BookMySeat. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>

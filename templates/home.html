@@ -1,0 +1,586 @@
+{% extends "users/basic.html" %} {% block content %}
+<style>
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: #f8f9fa;
+    }
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 30px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #007bff;
+      color: #333;
+    }
+    .card {
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    .card-img-top {
+      object-fit: cover;
+    }
+    .card-body {
+      background-color: #fff;
+      padding: 15px;
+    }
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .card-text {
+      font-size: 14px;
+      color: #666;
+    }
+    .carousel-item img {
+      object-fit: cover;
+    }
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+  </style>
+  
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li
+        data-target="#carouselExampleIndicators"
+        data-slide-to="0"
+        class="active"
+      ></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          class="d-block w-100"
+          src="https://assets-in.bmscdn.com/promotions/cms/creatives/1728390794440_bandlanddesktop.jpg"
+          alt="First slide"
+          height="300"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          class="d-block w-100"
+          src="https://assets-in.bmscdn.com/promotions/cms/creatives/1726036566435_playcardnewweb.jpg"
+          alt="Second slide"
+          height="300"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          class="d-block w-100"
+          src="https://assets-in.bmscdn.com/promotions/cms/creatives/1729172081740_sorcar1240x300.jpg"
+          alt="Third slide"
+          height="300"
+        />
+      </div>
+    </div>
+    <a
+      class="carousel-control-prev"
+      href="#carouselExampleIndicators"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#carouselExampleIndicators"
+      role="button"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  
+  <div class="container mt-4">
+    {% if not user.is_authenticated %}
+    <div class="alert alert-info" role="alert">
+      <a href="{% url 'login' %}" class="alert-link">Login</a> or
+      <a href="{% url 'register' %}" class="alert-link">Register</a> to continue.
+    </div>
+    {% endif %}
+  
+    <div class="section-title">Recommended Movies</div>
+    <div class="row">
+      {% if recommended_movies %}
+        {% for item in recommended_movies %}
+        <div class="col-md-3 col-sm-6">
+          <a href="{% url 'theater_list' item.movie.id %}" class="text-decoration-none">
+            <div class="card h-100">
+              <img
+                src="{{ item.poster }}"
+                class="card-img-top"
+                alt="{{ item.movie.name }}"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <h5 class="card-title text-center">{{ item.movie.name }}</h5>
+                <p class="card-text text-center">{{ item.movie.description }}</p>
+                <p class="card-text text-center">Showtime: 7:30 PM · Cinema Hall</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      {% else %}
+        <div class="col-md-3 col-sm-6">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1517602302552-471fe67acf66?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Moonlight Odyssey" height="300" />
+            <div class="card-body">
+              <h5 class="card-title text-center">Moonlight Odyssey</h5>
+              <p class="card-text text-center">Fri, Jun 14 · 7:00 PM · Premiere Cinema</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1542204165-73f2bd057448?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Neon Horizon" height="300" />
+            <div class="card-body">
+              <h5 class="card-title text-center">Neon Horizon</h5>
+              <p class="card-text text-center">Sat, Jun 15 · 8:15 PM · Grand Theatre</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Aurora Escape" height="300" />
+            <div class="card-body">
+              <h5 class="card-title text-center">Aurora Escape</h5>
+              <p class="card-text text-center">Sun, Jun 16 · 6:45 PM · Galaxy Screen</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1517602967131-07e25e9ec964?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Starlit Journey" height="300" />
+            <div class="card-body">
+              <h5 class="card-title text-center">Starlit Journey</h5>
+              <p class="card-text text-center">Mon, Jun 17 · 9:00 PM · City Screen</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Horizon of Dreams" height="300" />
+            <div class="card-body">
+              <h5 class="card-title text-center">Horizon of Dreams</h5>
+              <p class="card-text text-center">Tue, Jun 18 · 7:30 PM · Art House</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Midnight Reverie" height="300" />
+            <div class="card-body">
+              <h5 class="card-title text-center">Midnight Reverie</h5>
+              <p class="card-text text-center">Wed, Jun 19 · 8:00 PM · Luxe Cinema</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Crimson Voyage" height="300" />
+            <div class="card-body">
+              <h5 class="card-title text-center">Crimson Voyage</h5>
+              <p class="card-text text-center">Thu, Jun 20 · 9:15 PM · Silver Screen</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1499084732479-de2c02d45fcc?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Echoes of Tomorrow" height="300" />
+            <div class="card-body">
+              <h5 class="card-title text-center">Echoes of Tomorrow</h5>
+              <p class="card-text text-center">Fri, Jun 21 · 7:00 PM · Downtown Cinema</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Silver Skyline" height="300" />
+            <div class="card-body">
+              <h5 class="card-title text-center">Silver Skyline</h5>
+              <p class="card-text text-center">Sat, Jun 22 · 6:00 PM · Parkview Theatre</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1514516725445-e5cea0b53815?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Radiant Nights" height="300" />
+            <div class="card-body">
+              <h5 class="card-title text-center">Radiant Nights</h5>
+              <p class="card-text text-center">Sun, Jun 23 · 8:30 PM · Meridian Hall</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="City Lights Mystique" height="300" />
+            <div class="card-body">
+              <h5 class="card-title text-center">City Lights Mystique</h5>
+              <p class="card-text text-center">Mon, Jun 24 · 9:00 PM · Metro Theatre</p>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="section-title">The Best of Live Events</div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Electric Nights Festival" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Electric Nights Festival</h5>
+            <p class="card-text">Fri, Jun 14 · 8:00 PM · Grand Arena</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Rising Stars Gala" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Rising Stars Gala</h5>
+            <p class="card-text">Sat, Jun 15 · 7:30 PM · Main Stage</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1518972559570-5bdc6e44313b?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Broadway Showcase" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Broadway Showcase</h5>
+            <p class="card-text">Sun, Jun 16 · 6:00 PM · Studio Theatre</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Acoustic Evening" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Acoustic Evening</h5>
+            <p class="card-text">Mon, Jun 17 · 9:00 PM · Loft Hall</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1518085250887-9d7c6d16f3a2?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Dance Fusion Night" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Dance Fusion Night</h5>
+            <p class="card-text">Tue, Jun 18 · 8:15 PM · Studio 7</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Urban Beats Live" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Urban Beats Live</h5>
+            <p class="card-text">Wed, Jun 19 · 9:00 PM · City Club</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Cinema Under Stars" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Cinema Under Stars</h5>
+            <p class="card-text">Thu, Jun 20 · 7:00 PM · Rooftop Deck</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Sunset Jazz Session" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Sunset Jazz Session</h5>
+            <p class="card-text">Fri, Jun 21 · 6:30 PM · Jazz Lounge</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Global Dance Festival" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Global Dance Festival</h5>
+            <p class="card-text">Sat, Jun 22 · 5:00 PM · Grand Hall</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Fashion & Music Gala" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Fashion & Music Gala</h5>
+            <p class="card-text">Sun, Jun 23 · 7:45 PM · Crystal Theatre</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Open Mic Night" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Open Mic Night</h5>
+            <p class="card-text">Mon, Jun 24 · 8:00 PM · Café Stage</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title">Premiere</div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1491199629863-83c5388e8328?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Midnight Premiere" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Midnight Premiere</h5>
+            <p class="card-text">Thu, Jun 13 · 11:59 PM · Red Carpet Hall</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Spotlight Premiere" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Spotlight Premiere</h5>
+            <p class="card-text">Fri, Jun 14 · 7:15 PM · Premiere Theatre</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Cinematic Hall Premiere" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Cinematic Hall Premiere</h5>
+            <p class="card-text">Sat, Jun 15 · 8:00 PM · Cinema Central</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1496167117684-415edae47c3b?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Director's Cut Premiere" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Director's Cut Premiere</h5>
+            <p class="card-text">Sun, Jun 16 · 6:45 PM · Hall 1</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1518515097038-ca19a3777cd5?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Red Carpet Curtain" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Red Carpet Curtain</h5>
+            <p class="card-text">Mon, Jun 17 · 7:30 PM · Grand Premiere</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Sunrise Premiere" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Sunrise Premiere</h5>
+            <p class="card-text">Tue, Jun 18 · 9:00 AM · Studio 2</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Silver Screen Premiere" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Silver Screen Premiere</h5>
+            <p class="card-text">Wed, Jun 19 · 8:00 PM · Luxe Cinema</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1510706032705-a3ce0d05189f?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Spring Premiere" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Spring Premiere</h5>
+            <p class="card-text">Thu, Jun 20 · 7:00 PM · Premiere Plaza</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Golden Hour Premiere" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Golden Hour Premiere</h5>
+            <p class="card-text">Fri, Jun 21 · 6:30 PM · Premiere Hall</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Spotlight Premiere" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Spotlight Premiere</h5>
+            <p class="card-text">Sat, Jun 22 · 7:45 PM · Elite Theatre</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Night Premiere Gala" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Night Premiere Gala</h5>
+            <p class="card-text">Sun, Jun 23 · 8:00 PM · Sunset Room</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title">Your Music Studio</div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Live Recording Session" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Live Recording Session</h5>
+            <p class="card-text">Mon, Jun 17 · 3:00 PM · Studio A</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Producer Workshop" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Producer Workshop</h5>
+            <p class="card-text">Tue, Jun 18 · 10:00 AM · Studio B</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1511376777868-611b54f68947?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Vocal Training Lab" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Vocal Training Lab</h5>
+            <p class="card-text">Wed, Jun 19 · 11:00 AM · Studio C</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="DJ Beat Making" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">DJ Beat Making</h5>
+            <p class="card-text">Thu, Jun 20 · 2:30 PM · Studio D</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Mixing Masterclass" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Mixing Masterclass</h5>
+            <p class="card-text">Fri, Jun 21 · 1:00 PM · Studio E</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1502920917128-1aa500764b2f?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Instrumental Jam" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Instrumental Jam</h5>
+            <p class="card-text">Sat, Jun 22 · 4:00 PM · Studio F</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Beat Lab Session" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Beat Lab Session</h5>
+            <p class="card-text">Sun, Jun 23 · 5:00 PM · Studio G</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1497032205916-ac775f0649ae?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Songwriting Circle" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Songwriting Circle</h5>
+            <p class="card-text">Mon, Jun 24 · 3:30 PM · Studio H</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Acoustic Studio Night" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Acoustic Studio Night</h5>
+            <p class="card-text">Tue, Jun 25 · 7:00 PM · Studio I</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Producer Jam" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Producer Jam</h5>
+            <p class="card-text">Wed, Jun 26 · 6:00 PM · Studio J</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Harmony Session" height="240" />
+          <div class="card-body">
+            <h5 class="card-title">Harmony Session</h5>
+            <p class="card-text">Thu, Jun 27 · 2:00 PM · Studio K</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".card").hover(
+        function () {
+          $(this).addClass("shadow-lg").css("cursor", "pointer");
+        },
+        function () {
+          $(this).removeClass("shadow-lg");
+        }
+      );
+    });
+  </script>
+
+<!-- <h1>Movies</h1>
+<ul>
+    {% for movie in movies%}
+    <li>
+        <img src="{{movie.image.url}}" alt="image" >
+        <strong>{{movie.name}}</strong>{{movie.rating}}
+        <p>Cast:{{movie.cast}}</p>
+        <a href="{% url 'theater_list' movie.id %}">View Theaters</a>
+    </li>
+    {% endfor %}
+</ul> -->
+{% endblock %}

@@ -1,0 +1,50 @@
+================================================================================
+                    BOOKMYSEAT - BOOKING CONFIRMATION
+================================================================================
+
+Hello {{ user_full_name }},
+
+Thank you for booking your movie tickets with BookMySeat!
+
+Your booking is CONFIRMED. Please review the details below:
+
+================================================================================
+BOOKING CONFIRMATION
+================================================================================
+
+Confirmation ID: {{ payment_id }}
+
+MOVIE DETAILS:
+  Movie:       {{ movie_name }}
+  Theater:     {{ theater_name }}
+  Show Time:   {{ show_time }}
+
+SEAT INFORMATION:
+  Selected:    {{ seat_list }}
+
+IMPORTANT INFORMATION:
+  • Please arrive 15 minutes before the show time
+  • Bring a valid ID and this confirmation reference number
+  • Your booking is valid for this show only
+  • Ticket refund policy applies as per our terms
+
+BOOKING DATE: {{ booking_date }}
+
+================================================================================
+NEED HELP?
+================================================================================
+
+If you need to modify or cancel your booking:
+  1. Visit your profile page on BookMySeat
+  2. Contact our support team
+  3. Reply to this email (our team will respond within 24 hours)
+
+IMPORTANT: This is an automated confirmation message. Do not reply with
+sensitive information such as payment details or personal ID numbers.
+
+================================================================================
+
+© 2024 BookMySeat. All rights reserved.
+For more information, visit www.bookmyseat.com
+
+================================================================================

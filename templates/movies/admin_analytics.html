@@ -1,0 +1,19 @@
+{% extends "users/basic.html" %}
+{% block content %}
+<div class="container py-4">
+  <h2 class="mb-4">Admin Analytics</h2>
+  <div class="row">
+    <div class="col-md-4 mb-3"><div class="card"><div class="card-body"><h5>Daily Revenue</h5><p class="display-6">{{ daily_revenue }}</p></div></div></div>
+    <div class="col-md-4 mb-3"><div class="card"><div class="card-body"><h5>Weekly Revenue</h5><p class="display-6">{{ weekly_revenue }}</p></div></div></div>
+    <div class="col-md-4 mb-3"><div class="card"><div class="card-body"><h5>Monthly Revenue</h5><p class="display-6">{{ monthly_revenue }}</p></div></div></div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-6 mb-3"><div class="card"><div class="card-body"><h5>Popular Movies</h5><ul>{% for movie in popular_movies %}<li>{{ movie.name }} ({{ movie.booking_count }})</li>{% empty %}<li>No bookings yet.</li>{% endfor %}</ul></div></div></div>
+    <div class="col-md-6 mb-3"><div class="card"><div class="card-body"><h5>Busiest Theaters</h5><ul>{% for theater in busiest_theaters %}<li>{{ theater.name }} ({{ theater.occupancy }})</li>{% empty %}<li>No theater data yet.</li>{% endfor %}</ul></div></div></div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-6 mb-3"><div class="card"><div class="card-body"><h5>Peak Booking Hours</h5><ul>{% for hour in peak_hours %}<li>{{ hour.hour }}:00 ({{ hour.count }})</li>{% empty %}<li>No peak hours yet.</li>{% endfor %}</ul></div></div></div>
+    <div class="col-md-6 mb-3"><div class="card"><div class="card-body"><h5>Cancellation Rate</h5><p class="display-6">{{ cancellation_rate }}%</p></div></div></div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,367 @@
+{% extends "users/basic.html" %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    <!-- Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="text-center mb-3">Movies</h1>
+            <p class="text-center text-muted">Showing {{ movies.paginator.count }} total movies</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Left Sidebar: Filters -->
+        <div class="col-lg-3 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="fas fa-filter"></i> Filters</h5>
+                </div>
+                <div class="card-body">
+                    <form method="GET" action="{% url 'movie_list' %}" id="filterForm">
+                        <!-- Search -->
+                        <div class="mb-4">
+                            <label class="form-label font-weight-bold">Search</label>
+                            <input 
+                                type="text" 
+                                class="form-control" 
+                                name="search" 
+                                placeholder="Movie, cast, description..." 
+                                value="{{ search_query }}"
+                            />
+                        </div>
+
+                        <!-- Genres Filter -->
+                        <div class="mb-4">
+                            <label class="form-label font-weight-bold">Genres</label>
+                            <div class="genre-filter">
+                                {% for genre in all_genres %}
+                                <div class="form-check">
+                                    <input 
+                                        class="form-check-input filter-checkbox" 
+                                        type="checkbox" 
+                                        name="genres" 
+                                        value="{{ genre.id }}" 
+                                        id="genre_{{ genre.id }}"
+                                        {% if genre.id|stringformat:"s" in selected_genre_ids %}checked{% endif %}
+                                    />
+                                    <label class="form-check-label" for="genre_{{ genre.id }}">
+                                        {{ genre.name }}
+                                        <span class="badge badge-secondary badge-sm ml-2">{{ genre.movie_count }}</span>
+                                    </label>
+                                </div>
+                                {% empty %}
+                                <p class="text-muted small">No genres available</p>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <!-- Languages Filter -->
+                        <div class="mb-4">
+                            <label class="form-label font-weight-bold">Languages</label>
+                            <div class="language-filter">
+                                {% for language in all_languages %}
+                                <div class="form-check">
+                                    <input 
+                                        class="form-check-input filter-checkbox" 
+                                        type="checkbox" 
+                                        name="languages" 
+                                        value="{{ language.id }}" 
+                                        id="lang_{{ language.id }}"
+                                        {% if language.id|stringformat:"s" in selected_language_ids %}checked{% endif %}
+                                    />
+                                    <label class="form-check-label" for="lang_{{ language.id }}">
+                                        {{ language.name }}
+                                        <span class="badge badge-secondary badge-sm ml-2">{{ language.movie_count }}</span>
+                                    </label>
+                                </div>
+                                {% empty %}
+                                <p class="text-muted small">No languages available</p>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <!-- Active Filters Display -->
+                        {% if selected_genres or selected_languages %}
+                        <div class="alert alert-info alert-sm py-2 mb-3">
+                            <small>
+                                <strong>Active Filters:</strong><br>
+                                {% for genre_id, genre_name in selected_genres.items %}
+                                <span class="badge badge-primary">{{ genre_name }} ✕</span>
+                                {% endfor %}
+                                {% for lang_id, lang_name in selected_languages.items %}
+                                <span class="badge badge-info">{{ lang_name }} ✕</span>
+                                {% endfor %}
+                            </small>
+                        </div>
+                        <a href="{% url 'movie_list' %}" class="btn btn-sm btn-outline-danger btn-block">Clear Filters</a>
+                        {% endif %}
+
+                        <!-- Hidden input to preserve page on filter change -->
+                        <input type="hidden" name="page" value="1" />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section: Movies -->
+        <div class="col-lg-9">
+            <!-- Sorting and Results Info -->
+            <div class="row mb-3 align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">
+                        <strong>{{ movies.paginator.count }}</strong> movie{{ movies.paginator.count|pluralize }} found
+                        {% if search_query %}<span class="badge badge-pill badge-primary">Search: {{ search_query }}</span>{% endif %}
+                    </p>
+                </div>
+                <div class="col-md-6 text-right">
+                    <label for="sortSelect" class="mr-2">Sort by:</label>
+                    <form method="GET" id="sortForm" class="d-inline-block">
+                        <select name="sort" id="sortSelect" class="form-control d-inline-block" style="width:auto;" onchange="document.getElementById('sortForm').submit();">
+                            <option value="-release_date" {% if sort_by == "-release_date" %}selected{% endif %}>Newest First</option>
+                            <option value="release_date" {% if sort_by == "release_date" %}selected{% endif %}>Oldest First</option>
+                            <option value="-rating" {% if sort_by == "-rating" %}selected{% endif %}>Highest Rated</option>
+                            <option value="rating" {% if sort_by == "rating" %}selected{% endif %}>Lowest Rated</option>
+                            <option value="name" {% if sort_by == "name" %}selected{% endif %}>A-Z</option>
+                            <option value="-name" {% if sort_by == "-name" %}selected{% endif %}>Z-A</option>
+                        </select>
+                        <!-- Preserve current filters in sort form -->
+                        {% for genre_id in selected_genre_ids %}
+                            <input type="hidden" name="genres" value="{{ genre_id }}" />
+                        {% endfor %}
+                        {% for lang_id in selected_language_ids %}
+                            <input type="hidden" name="languages" value="{{ lang_id }}" />
+                        {% endfor %}
+                        {% if search_query %}<input type="hidden" name="search" value="{{ search_query }}" />{% endif %}
+                    </form>
+                </div>
+            </div>
+
+            <!-- Movies Grid -->
+            <div class="row" id="movieList">
+                {% for item in movie_items %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm movie-card">
+                        <div class="position-relative">
+                            <img src="{{ item.poster }}" class="card-img-top" alt="{{ item.movie.name }}" style="height: 300px; object-fit: cover;">
+                            <button class="btn btn-sm btn-primary position-absolute open-gallery" style="left:10px;top:10px;" type="button" data-toggle="tooltip" title="View Gallery">
+                                <i class="fas fa-images"></i> Preview
+                            </button>
+                            {% if item.movie.rating >= 8 %}
+                            <span class="badge badge-success position-absolute" style="right:10px;top:10px;">
+                                <i class="fas fa-crown"></i> Top Rated
+                            </span>
+                            {% endif %}
+                        </div>
+                        <div class="movie-images d-none">
+                            {% if item.movie.image %}
+                            <img src="{{ item.movie.image.url }}" alt="{{ item.movie.name }}">
+                            {% endif %}
+                            {% for img in item.movie.images.all %}
+                                {% if img.image %}
+                                <img src="{{ img.image.url }}" alt="{{ img.alt_text|default:item.movie.name }}">
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ item.movie.name }}</h5>
+                            <div class="mb-2">
+                                <small class="text-muted">
+                                    {% for genre in item.movie.genres.all %}
+                                    <span class="badge badge-light">{{ genre.name }}</span>
+                                    {% endfor %}
+                                </small>
+                            </div>
+                            <div class="mb-2">
+                                <small class="text-muted">
+                                    {% for lang in item.movie.languages.all %}
+                                    <span class="badge badge-light">{{ lang.code|upper }}</span>
+                                    {% endfor %}
+                                </small>
+                            </div>
+                            <p class="card-text">
+                                <i class="fas fa-star text-warning"></i> <strong>{{ item.movie.rating }}</strong> / 10
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    <i class="fas fa-users"></i> {{ item.movie.cast|truncatewords:5 }}
+                                </small>
+                            </p>
+                            {% if item.movie.release_date %}
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar"></i> {{ item.movie.release_date|date:"M d, Y" }}
+                                </small>
+                            </p>
+                            {% endif %}
+                        </div>
+                        <div class="card-footer bg-white border-top-0">
+                            <a href="{% url 'theater_list' item.movie.id %}" class="btn btn-outline-primary btn-sm btn-block">
+                                View Theaters <i class="fas fa-chevron-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="col-12 text-center py-5">
+                    <i class="fas fa-film" style="font-size: 3rem; color: #ccc;"></i>
+                    <p class="lead mt-3">No movies found matching your filters.</p>
+                    <p class="text-muted">Try adjusting your search or filters.</p>
+                    <a href="{% url 'movie_list' %}" class="btn btn-primary">Clear Filters</a>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Pagination -->
+            {% if paginator.num_pages > 1 %}
+            <nav aria-label="Page navigation" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    {% if movies.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page=1{% if search_query %}&search={{ search_query }}{% endif %}{% for g in selected_genre_ids %}&genres={{ g }}{% endfor %}{% for l in selected_language_ids %}&languages={{ l }}{% endfor %}&sort={{ sort_by }}">First</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ movies.previous_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}{% for g in selected_genre_ids %}&genres={{ g }}{% endfor %}{% for l in selected_language_ids %}&languages={{ l }}{% endfor %}&sort={{ sort_by }}">Previous</a>
+                    </li>
+                    {% endif %}
+
+                    {% for num in paginator.page_range %}
+                    {% if movies.number == num %}
+                    <li class="page-item active"><span class="page-link">{{ num }}</span></li>
+                    {% elif num > movies.number|add:'-3' and num < movies.number|add:'3' %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ num }}{% if search_query %}&search={{ search_query }}{% endif %}{% for g in selected_genre_ids %}&genres={{ g }}{% endfor %}{% for l in selected_language_ids %}&languages={{ l }}{% endfor %}&sort={{ sort_by }}">{{ num }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+
+                    {% if movies.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ movies.next_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}{% for g in selected_genre_ids %}&genres={{ g }}{% endfor %}{% for l in selected_language_ids %}&languages={{ l }}{% endfor %}&sort={{ sort_by }}">Next</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ paginator.num_pages }}{% if search_query %}&search={{ search_query }}{% endif %}{% for g in selected_genre_ids %}&genres={{ g }}{% endfor %}{% for l in selected_language_ids %}&languages={{ l }}{% endfor %}&sort={{ sort_by }}">Last</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Gallery Modal -->
+<div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Gallery</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="galleryCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Items injected dynamically -->
+          </div>
+          <a class="carousel-control-prev" href="#galleryCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#galleryCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+        <div class="mt-3 d-flex justify-content-center" id="galleryThumbs">
+          <!-- Thumbnails injected dynamically -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<style>
+    .movie-card {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    
+    .movie-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important;
+    }
+
+    .badge-sm {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .filter-checkbox {
+        cursor: pointer;
+    }
+
+    .form-check-label {
+        cursor: pointer;
+        margin-bottom: 0;
+    }
+
+    .genre-filter, .language-filter {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+
+    @media (max-width: 768px) {
+        .col-lg-3, .col-lg-9 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+</style>
+
+<script>
+  $(function() {
+    // Auto-submit filter form on checkbox change
+    $('.filter-checkbox').on('change', function() {
+      $('#filterForm').submit();
+    });
+
+    // Gallery modal functionality
+    function buildGallery(images) {
+      var inner = $('#galleryCarousel .carousel-inner').empty();
+      var thumbs = $('#galleryThumbs').empty();
+      images.forEach(function(src, idx) {
+        var item = $('<div class="carousel-item">').toggleClass('active', idx===0);
+        var img = $('<img>').attr('src', src).addClass('d-block w-100').css({'max-height':'60vh','object-fit':'contain'});
+        item.append(img);
+        inner.append(item);
+
+        var thumb = $('<img>').attr('src', src).addClass('img-thumbnail mx-1').css({'height':'60px','cursor':'pointer'});
+        thumb.on('click', function() { $('#galleryCarousel').carousel(idx); });
+        thumbs.append(thumb);
+      });
+    }
+
+    $('.open-gallery').on('click', function(e) {
+      e.preventDefault();
+      var images = [];
+      var container = $(this).closest('.movie-card').find('.movie-images');
+      container.find('img').each(function() { images.push($(this).attr('src')); });
+      buildGallery(images);
+      $('#galleryModal').modal('show');
+    });
+
+    // Tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+{% endblock %}

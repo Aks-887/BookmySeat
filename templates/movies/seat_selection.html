@@ -1,0 +1,416 @@
+{% extends "users/basic.html" %} {% block content %}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <!-- Movie and Theater Info -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center flex-wrap">
+            <div>
+              <h4 class="card-title">{{ theaters.movie.name }}</h4>
+              <p class="card-text text-muted">
+                {{ theaters.name }} | {{ theaters.time|date:"M d, Y - H:i" }}
+              </p>
+            </div>
+            <div class="mt-2 mt-sm-0">
+              <div class="badge bg-primary ms-2" id="selected-count" style="font-size: 14px;">
+                <i class="fas fa-ticket-alt"></i> 0 Selected
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Error Message -->
+      {% if error %}
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <i class="fas fa-exclamation-triangle"></i> <strong>Error:</strong> {{ error }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endif %}
+
+      <!-- Seat Selection -->
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center mb-4">
+            <i class="fas fa-chair"></i> Select Your Seats
+          </h5>
+          
+          <!-- Screen Indicator -->
+          <div class="screen text-center mb-4">
+            <span style="font-size: 14px;">🎬 SCREEN 🎬</span>
+          </div>
+
+          <form method="POST" id="booking-form">
+            {% csrf_token %}
+            
+            <!-- Seats Grid -->
+            <div class="seats-grid mb-4">
+              {% for seat in seats %}
+              <div class="seat-wrapper">
+                {% if not seat.is_booked %}
+                <input
+                  type="checkbox"
+                  name="seats"
+                  value="{{ seat.id }}"
+                  class="seat-checkbox d-none"
+                  id="seat-{{ seat.id }}"
+                  data-seat-number="{{ seat.seat_number }}"
+                />
+                <label
+                  for="seat-{{ seat.id }}"
+                  class="seat available"
+                  title="Click to select seat {{ seat.seat_number }}"
+                  data-seat-id="{{ seat.id }}"
+                  data-seat-number="{{ seat.seat_number }}"
+                >
+                  <span class="seat-text">{{ seat.seat_number }}</span>
+                </label>
+                {% else %}
+                <div class="seat sold" title="Seat {{ seat.seat_number }} is already booked">
+                  <span class="seat-text">{{ seat.seat_number }}</span>
+                </div>
+                {% endif %}
+              </div>
+              {% endfor %}
+            </div>
+
+            <!-- Seat Legend -->
+            <div class="seat-legend mb-4">
+              <div class="legend-item">
+                <div class="seat available"></div>
+                <span>Available</span>
+              </div>
+              <div class="legend-item">
+                <div class="seat selected"></div>
+                <span>Selected</span>
+              </div>
+              <div class="legend-item">
+                <div class="seat sold"></div>
+                <span>Sold</span>
+              </div>
+            </div>
+
+            <!-- Selected Seats Summary -->
+            <div id="selected-seats-summary" class="alert alert-info d-none" role="alert">
+              <strong>Selected Seats:</strong>
+              <span id="selected-seats-list" class="ms-2"></span>
+            </div>
+
+            <!-- Book Button -->
+            <div class="text-center">
+              <button type="submit" class="btn btn-success btn-lg" id="book-button">
+                <i class="fas fa-credit-card"></i> Book Selected Seats
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Seat Styling */
+  .seats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+
+  .seat-wrapper {
+    position: relative;
+  }
+
+  .seat {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #28a745;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    font-weight: 600;
+    font-size: 12px;
+    user-select: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .seat-text {
+    pointer-events: none;
+  }
+
+  .seat.available {
+    color: #28a745;
+  }
+
+  .seat.available:hover {
+    background-color: #e8f5e9;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+  }
+
+  .seat.available:active {
+    transform: scale(0.95);
+  }
+
+  .seat.selected {
+    background-color: #28a745;
+    color: white;
+    border-color: #1e7e34;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+    animation: pulse-selected 0.3s ease;
+  }
+
+  .seat.sold {
+    background-color: #e9ecef;
+    color: #6c757d;
+    border-color: #dee2e6;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  /* Animation for selected seats */
+  @keyframes pulse-selected {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.15);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Screen styling */
+  .screen {
+    margin: 20px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+    height: 60px;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Legend styling */
+  .seat-legend {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .legend-item .seat {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    cursor: default;
+  }
+
+  .legend-item .seat:hover {
+    transform: none;
+    background-color: inherit;
+  }
+
+  .legend-item span {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+  }
+
+  /* Selected seats summary */
+  #selected-seats-summary {
+    background-color: #cfe2ff;
+    border-color: #b6d4fe;
+    color: #084298;
+    border-radius: 6px;
+    animation: slideIn 0.3s ease;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Selected count badge */
+  #selected-count {
+    padding: 8px 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  /* Book button styling */
+  #book-button {
+    padding: 12px 30px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+  }
+
+  #book-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(40, 167, 69, 0.3);
+  }
+
+  #book-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  /* Alert styling */
+  .alert-danger {
+    border-radius: 6px;
+    animation: slideIn 0.3s ease;
+  }
+
+  /* Responsive design */
+  @media (max-width: 576px) {
+    .seats-grid {
+      gap: 6px;
+      padding: 15px;
+    }
+
+    .seat {
+      width: 35px;
+      height: 35px;
+      font-size: 11px;
+    }
+
+    .seat-legend {
+      gap: 15px;
+    }
+
+    #book-button {
+      width: 100%;
+    }
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const seatCheckboxes = document.querySelectorAll('.seat-checkbox');
+  const seatLabels = document.querySelectorAll('label.seat');
+  const selectedCountBadge = document.getElementById('selected-count');
+  const selectedSeatsSummary = document.getElementById('selected-seats-summary');
+  const selectedSeatsList = document.getElementById('selected-seats-list');
+  const bookButton = document.getElementById('book-button');
+  const bookingForm = document.getElementById('booking-form');
+
+  /**
+   * Update selected seats count and display
+   */
+  function updateSelectedSeats() {
+    const selectedSeats = Array.from(seatCheckboxes)
+      .filter(cb => cb.checked)
+      .map(cb => cb.dataset.seatNumber)
+      .sort();
+
+    // Update count badge
+    selectedCountBadge.innerHTML = `<i class="fas fa-ticket-alt"></i> ${selectedSeats.length} Selected`;
+
+    // Update summary and button state
+    if (selectedSeats.length > 0) {
+      selectedSeatsList.textContent = selectedSeats.join(', ');
+      selectedSeatsSummary.classList.remove('d-none');
+      bookButton.disabled = false;
+    } else {
+      selectedSeatsSummary.classList.add('d-none');
+      bookButton.disabled = true;
+    }
+  }
+
+  /**
+   * Handle seat label click - toggle selection and highlight
+   */
+  seatLabels.forEach(label => {
+    label.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const seatId = this.getAttribute('for');
+      const checkbox = document.getElementById(seatId);
+      
+      // Toggle checkbox
+      checkbox.checked = !checkbox.checked;
+      
+      // Update visual state
+      if (checkbox.checked) {
+        this.classList.add('selected');
+        this.classList.remove('available');
+      } else {
+        this.classList.remove('selected');
+        this.classList.add('available');
+      }
+      
+      // Update UI
+      updateSelectedSeats();
+    });
+  });
+
+  /**
+   * Handle checkbox change (programmatic updates)
+   */
+  seatCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+      const label = document.querySelector(`label[for="${this.id}"]`);
+      
+      if (this.checked) {
+        label.classList.add('selected');
+        label.classList.remove('available');
+      } else {
+        label.classList.remove('selected');
+        label.classList.add('available');
+      }
+      
+      updateSelectedSeats();
+    });
+  });
+
+  /**
+   * Handle form submission
+   */
+  bookingForm.addEventListener('submit', function(e) {
+    const selectedSeats = Array.from(seatCheckboxes).filter(cb => cb.checked);
+    
+    if (selectedSeats.length === 0) {
+      e.preventDefault();
+      alert('Please select at least one seat');
+      return;
+    }
+  });
+
+  // Initial state
+  updateSelectedSeats();
+});
+</script>
+
+{% endblock %}

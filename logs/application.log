@@ -1,0 +1,121 @@
+INFO 2026-06-11 10:11:31 autoreload 9652 15872 Watching for file changes with StatReloader
+INFO 2026-06-11 10:11:31 autoreload 7048 7268 Watching for file changes with StatReloader
+INFO 2026-06-11 10:11:44 basehttp 9652 15276 "GET /movies/ HTTP/1.1" 200 143466
+INFO 2026-06-11 10:11:47 basehttp 9652 15276 "GET /movies/147/theaters HTTP/1.1" 200 16165
+INFO 2026-06-11 10:11:52 basehttp 9652 15276 "GET /movies/theater/35/seats/book/ HTTP/1.1" 200 33449
+INFO 2026-06-11 10:12:21 autoreload 7048 7268 D:\code\Intership\movies\admin.py changed, reloading.
+INFO 2026-06-11 10:12:21 autoreload 9652 15872 D:\code\Intership\movies\admin.py changed, reloading.
+INFO 2026-06-11 10:12:22 autoreload 2064 15584 Watching for file changes with StatReloader
+INFO 2026-06-11 10:12:22 autoreload 5788 5484 Watching for file changes with StatReloader
+INFO 2026-06-11 10:12:25 basehttp 2064 3368 "GET /profile/ HTTP/1.1" 200 20316
+INFO 2026-06-11 10:14:36 autoreload 2064 15584 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-06-11 10:14:36 autoreload 5788 5484 D:\code\Intership\movies\admin.py changed, reloading.
+INFO 2026-06-11 10:14:36 autoreload 6032 7724 Watching for file changes with StatReloader
+INFO 2026-06-11 10:14:37 autoreload 6036 356 Watching for file changes with StatReloader
+INFO 2026-06-11 10:17:57 basehttp 6032 15992 "GET /profile/ HTTP/1.1" 200 20316
+INFO 2026-06-11 10:18:00 basehttp 6032 15992 "GET / HTTP/1.1" 200 44344
+INFO 2026-06-11 10:43:49 autoreload 6032 7724 D:\code\Intership\users\views.py changed, reloading.
+INFO 2026-06-11 10:43:49 autoreload 6036 356 D:\code\Intership\users\views.py changed, reloading.
+INFO 2026-06-11 10:43:50 autoreload 8576 18304 Watching for file changes with StatReloader
+INFO 2026-06-11 10:43:50 autoreload 1364 19036 Watching for file changes with StatReloader
+INFO 2026-06-11 10:44:41 basehttp 8576 15612 "GET / HTTP/1.1" 200 42523
+INFO 2026-06-11 10:44:50 basehttp 8576 15612 "GET /movies/ HTTP/1.1" 200 143466
+INFO 2026-06-11 10:45:11 basehttp 8576 15612 "GET /movies/ HTTP/1.1" 200 143466
+INFO 2026-06-11 10:45:12 basehttp 8576 15612 "GET / HTTP/1.1" 200 42523
+INFO 2026-06-11 10:48:08 basehttp 8576 15612 "GET / HTTP/1.1" 200 42523
+INFO 2026-06-11 10:57:47 basehttp 8576 1652 "GET / HTTP/1.1" 200 42523
+INFO 2026-06-11 10:57:50 basehttp 8576 1652 "GET /movies/ HTTP/1.1" 200 143466
+INFO 2026-06-11 11:00:47 basehttp 8576 1652 "GET /movies/ HTTP/1.1" 200 148263
+INFO 2026-06-11 11:00:47 basehttp 8576 1652 "GET /media/movies/feUv2SYumXlT8E2RhzlYbZxfEGLG5AVrCPxP1gmAaCusxyPnA1.jpg HTTP/1.1" 200 42378
+INFO 2026-06-11 11:00:47 basehttp 8576 9224 "GET /media/movies/IQsBhg9t747dLhjXfsChIGZy4XfugER8BF0Gw5MDhIcnY5nTA1.jpg HTTP/1.1" 200 61134
+INFO 2026-06-11 11:00:47 basehttp 8576 16108 "GET /media/movies/f5VK0h2bprRhR6iRrixcuEfRxSUF4l14F66vQYrsJGmKZ5nTA1.jpg HTTP/1.1" 200 27304
+INFO 2026-06-11 11:00:49 basehttp 8576 16108 "GET / HTTP/1.1" 200 42074
+INFO 2026-06-11 11:01:39 basehttp 8576 16108 "GET / HTTP/1.1" 200 42074
+INFO 2026-06-11 11:01:41 basehttp 8576 16108 "GET / HTTP/1.1" 200 42074
+INFO 2026-06-11 11:10:17 basehttp 8576 11836 "GET / HTTP/1.1" 200 42028
+INFO 2026-06-11 11:10:25 basehttp 8576 11836 "GET /movies/ HTTP/1.1" 200 149439
+INFO 2026-06-11 11:10:30 basehttp 8576 11836 "GET /movies/ HTTP/1.1" 200 149439
+INFO 2026-06-11 11:10:35 basehttp 8576 11836 "GET /movies/?sort=release_date HTTP/1.1" 200 149439
+INFO 2026-06-11 11:10:37 basehttp 8576 11836 "GET /movies/?sort=name HTTP/1.1" 200 149418
+INFO 2026-06-11 11:11:05 basehttp 8576 11836 "GET / HTTP/1.1" 200 42028
+INFO 2026-06-11 12:23:10 basehttp 8576 23960 "GET / HTTP/1.1" 200 42028
+INFO 2026-06-11 12:23:14 basehttp 8576 23960 "GET /movies/186/theaters HTTP/1.1" 200 16161
+INFO 2026-06-11 12:23:18 basehttp 8576 23960 "GET /movies/theater/108/seats/book/ HTTP/1.1" 200 34569
+INFO 2026-06-11 12:23:28 basehttp 8576 23960 "POST /movies/theater/108/seats/book/ HTTP/1.1" 302 0
+INFO 2026-06-11 12:23:28 basehttp 8576 23960 "GET /profile/ HTTP/1.1" 200 17154
+INFO 2026-06-11 12:26:06 basehttp 8576 23960 "GET /movies/ HTTP/1.1" 200 149439
+INFO 2026-06-11 12:46:56 basehttp 8576 25380 "GET /movies/ HTTP/1.1" 200 149439
+INFO 2026-06-11 12:46:59 basehttp 8576 25380 "GET /profile/ HTTP/1.1" 200 17154
+INFO 2026-06-11 12:47:02 basehttp 8576 25380 "GET / HTTP/1.1" 200 42028
+INFO 2026-06-11 12:47:04 basehttp 8576 25380 "GET /movies/191/theaters HTTP/1.1" 200 16171
+INFO 2026-06-11 12:47:10 basehttp 8576 25380 "GET /movies/theater/118/seats/book/ HTTP/1.1" 200 34572
+INFO 2026-06-11 12:47:17 basehttp 8576 25380 "POST /movies/theater/118/seats/book/ HTTP/1.1" 302 0
+INFO 2026-06-11 12:47:17 basehttp 8576 25380 "GET /profile/ HTTP/1.1" 200 17943
+INFO 2026-06-11 12:51:35 autoreload 1364 19036 D:\code\Intership\movies\email_tasks.py changed, reloading.
+INFO 2026-06-11 12:51:36 autoreload 8576 18304 D:\code\Intership\movies\email_tasks.py changed, reloading.
+INFO 2026-06-11 12:51:36 autoreload 21688 23768 Watching for file changes with StatReloader
+INFO 2026-06-11 12:51:37 autoreload 18072 25184 Watching for file changes with StatReloader
+INFO 2026-06-11 12:52:04 autoreload 21688 23768 D:\code\Intership\movies\email_tasks.py changed, reloading.
+INFO 2026-06-11 12:52:04 autoreload 18072 25184 D:\code\Intership\movies\email_tasks.py changed, reloading.
+INFO 2026-06-11 12:52:05 autoreload 7612 21440 Watching for file changes with StatReloader
+INFO 2026-06-11 12:52:05 autoreload 17212 23104 Watching for file changes with StatReloader
+INFO 2026-06-11 13:29:00 basehttp 7612 21532 "GET /profile/ HTTP/1.1" 200 17943
+INFO 2026-06-11 13:29:02 basehttp 7612 21532 "GET / HTTP/1.1" 200 42028
+INFO 2026-06-11 13:29:05 basehttp 7612 21532 "GET /movies/193/theaters HTTP/1.1" 200 16185
+INFO 2026-06-11 13:29:06 basehttp 7612 21532 "GET /movies/theater/122/seats/book/ HTTP/1.1" 200 34576
+INFO 2026-06-11 13:29:12 basehttp 7612 21532 "POST /movies/theater/122/seats/book/ HTTP/1.1" 302 0
+INFO 2026-06-11 13:29:12 basehttp 7612 21532 "GET /profile/ HTTP/1.1" 200 19537
+INFO 2026-06-11 13:34:29 autoreload 7612 21440 D:\code\Intership\bookmyseat\settings.py changed, reloading.
+INFO 2026-06-11 13:34:29 autoreload 17212 23104 D:\code\Intership\bookmyseat\settings.py changed, reloading.
+INFO 2026-06-11 13:34:30 autoreload 20124 18880 Watching for file changes with StatReloader
+INFO 2026-06-11 13:34:30 autoreload 13544 12480 Watching for file changes with StatReloader
+INFO 2026-07-01 15:10:39 autoreload 13660 14092 Watching for file changes with StatReloader
+INFO 2026-07-01 15:11:06 basehttp 13660 4668 "GET / HTTP/1.1" 200 41635
+INFO 2026-07-01 15:11:06 basehttp 13660 4668 "GET /media/movies/download.jpeg HTTP/1.1" 304 0
+INFO 2026-07-01 15:11:06 basehttp 13660 4668 "GET /media/movies/feUv2SYumXlT8E2RhzlYbZxfEGLG5AVrCPxP1gmAaCusxyPnA1.jpg HTTP/1.1" 304 0
+INFO 2026-07-01 15:11:06 basehttp 13660 3360 "GET /media/movies/f5VK0h2bprRhR6iRrixcuEfRxSUF4l14F66vQYrsJGmKZ5nTA1.jpg HTTP/1.1" 304 0
+INFO 2026-07-01 15:11:06 basehttp 13660 4668 "GET /media/movies/IQsBhg9t747dLhjXfsChIGZy4XfugER8BF0Gw5MDhIcnY5nTA1.jpg HTTP/1.1" 200 61134
+INFO 2026-07-01 15:11:54 basehttp 13660 13084 "GET / HTTP/1.1" 200 41635
+INFO 2026-07-01 15:11:55 basehttp 13660 13084 "GET /media/movies/download.jpeg HTTP/1.1" 200 12036
+INFO 2026-07-01 15:11:55 basehttp 13660 7980 "GET /media/movies/feUv2SYumXlT8E2RhzlYbZxfEGLG5AVrCPxP1gmAaCusxyPnA1.jpg HTTP/1.1" 200 42378
+INFO 2026-07-01 15:11:55 basehttp 13660 13084 "GET /media/movies/f5VK0h2bprRhR6iRrixcuEfRxSUF4l14F66vQYrsJGmKZ5nTA1.jpg HTTP/1.1" 200 27304
+INFO 2026-07-01 15:11:55 basehttp 13660 12520 "GET / HTTP/1.1" 200 41635
+INFO 2026-07-01 15:11:55 basehttp 13660 7980 "GET /media/movies/IQsBhg9t747dLhjXfsChIGZy4XfugER8BF0Gw5MDhIcnY5nTA1.jpg HTTP/1.1" 200 61134
+WARNING 2026-07-01 15:11:55 log 13660 12520 Not Found: /favicon.ico
+WARNING 2026-07-01 15:11:55 basehttp 13660 12520 "GET /favicon.ico HTTP/1.1" 404 4291
+INFO 2026-07-01 15:12:04 basehttp 13660 12520 "GET /movies/194/theaters HTTP/1.1" 200 15821
+INFO 2026-07-01 15:12:08 basehttp 13660 12520 "GET /movies/theater/124/seats/book/ HTTP/1.1" 302 0
+INFO 2026-07-01 15:12:08 basehttp 13660 12520 "GET /login/?next=/movies/theater/124/seats/book/ HTTP/1.1" 200 14857
+INFO 2026-07-01 15:12:25 basehttp 13660 12520 "POST /login/ HTTP/1.1" 200 14894
+INFO 2026-07-01 15:12:27 basehttp 13660 12520 "GET /register/ HTTP/1.1" 200 19272
+INFO 2026-07-01 15:12:30 basehttp 13660 12520 "GET /login/ HTTP/1.1" 200 14857
+INFO 2026-07-01 15:12:40 basehttp 13660 12520 "POST /login/ HTTP/1.1" 200 14872
+INFO 2026-07-01 15:12:47 basehttp 13660 12520 "POST /login/ HTTP/1.1" 200 14872
+INFO 2026-07-01 15:12:53 basehttp 13660 12520 "POST /login/ HTTP/1.1" 200 14872
+INFO 2026-07-01 18:48:08 basehttp 13660 16280 "GET /register/ HTTP/1.1" 200 19272
+INFO 2026-07-01 18:48:33 basehttp 13660 16280 "POST /register/ HTTP/1.1" 200 19862
+INFO 2026-07-01 18:49:03 basehttp 13660 16280 "POST /register/ HTTP/1.1" 302 0
+INFO 2026-07-01 18:49:03 basehttp 13660 16280 "GET /profile/ HTTP/1.1" 200 16537
+INFO 2026-07-01 18:49:10 basehttp 13660 16280 "GET / HTTP/1.1" 200 42028
+INFO 2026-07-01 18:49:11 basehttp 13660 16280 "GET /movies HTTP/1.1" 301 0
+INFO 2026-07-01 18:49:11 basehttp 13660 16280 "GET /movies/ HTTP/1.1" 200 149439
+INFO 2026-07-01 18:49:12 basehttp 13660 16280 "GET /media/movies/635217f73e372771013edb4c-the-avengers-poster-marvel-movie-canvas1.jpg HTTP/1.1" 200 308649
+INFO 2026-07-01 18:49:13 basehttp 13660 16280 "GET / HTTP/1.1" 200 42028
+INFO 2026-07-01 18:49:17 basehttp 13660 16280 "GET /movies/186/theaters HTTP/1.1" 200 16404
+INFO 2026-07-01 18:49:25 basehttp 13660 16280 "GET /movies/theater/108/seats/book/ HTTP/1.1" 200 34139
+INFO 2026-07-01 18:49:30 basehttp 13660 16280 "POST /movies/theater/108/seats/book/ HTTP/1.1" 302 0
+INFO 2026-07-01 18:49:30 basehttp 13660 16280 "GET /profile/ HTTP/1.1" 200 16537
+INFO 2026-07-01 18:49:34 basehttp 13660 16280 "GET / HTTP/1.1" 200 42028
+INFO 2026-07-01 18:49:36 basehttp 13660 16280 "GET /movies/194/theaters HTTP/1.1" 200 16406
+INFO 2026-07-01 18:49:38 basehttp 13660 16280 "GET /movies/theater/124/seats/book/ HTTP/1.1" 200 34568
+INFO 2026-07-01 18:49:42 basehttp 13660 16280 "POST /movies/theater/124/seats/book/ HTTP/1.1" 302 0
+INFO 2026-07-01 18:49:43 basehttp 13660 16280 "GET /profile/ HTTP/1.1" 200 16537
+INFO 2026-07-01 18:56:29 basehttp 13660 5028 "GET /movies/ HTTP/1.1" 200 148112
+INFO 2026-07-01 18:56:33 basehttp 13660 5028 "GET /movies/ HTTP/1.1" 200 148112
+INFO 2026-07-01 18:56:41 basehttp 13660 5028 "GET / HTTP/1.1" 200 42289
+INFO 2026-07-01 18:56:44 basehttp 13660 5028 "GET /movies/219/theaters HTTP/1.1" 200 16426
+INFO 2026-07-01 18:56:48 basehttp 13660 5028 "GET /movies/theater/174/seats/book/ HTTP/1.1" 200 31126
+INFO 2026-07-01 18:56:52 basehttp 13660 5028 "POST /movies/theater/174/seats/book/ HTTP/1.1" 302 0
+INFO 2026-07-01 18:56:52 basehttp 13660 5028 "GET /profile/ HTTP/1.1" 200 16537
+INFO 2026-07-01 19:06:31 autoreload 13660 14092 D:\code\Intership\movies\models.py changed, reloading.
+INFO 2026-07-01 19:06:32 autoreload 10976 3908 Watching for file changes with StatReloader
