@@ -1,6 +1,6 @@
 dj-database-url
 Django>=5.1
-gunicorn==20.1.0
+gunicorn>=21.0
 psycopg2-binary
 python-dotenv==1.2.2
 sqlparse==0.4.4
