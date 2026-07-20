@@ -188,14 +188,34 @@ def theater_list(request, movie_id):
 @login_required(login_url='/login/')
 def book_seats(request, theater_id):
     theaters = get_object_or_404(Theater, id=theater_id)
-    seats = Seat.objects.filter(theater=theaters)
+    seats = list(Seat.objects.filter(theater=theaters))
+    
+    # Sort seats properly: A1, A2, ..., A10 instead of A1, A10, A2
+    def seat_sort_key(s):
+        row = s.seat_number[0]
+        try:
+            num = int(s.seat_number[1:])
+        except ValueError:
+            num = 0
+        return (row, num)
+        
+    seats.sort(key=seat_sort_key)
+    
+    # Group by row
+    seat_rows = {}
+    for seat in seats:
+        row = seat.seat_number[0]
+        if row not in seat_rows:
+            seat_rows[row] = []
+        seat_rows[row].append(seat)
+
     SeatReservation.release_expired_reservations()
     if request.method == 'POST':
         selected_Seats = request.POST.getlist('seats')
         error_seats = []
         successful_bookings = []
         if not selected_Seats:
-            return render(request, "movies/seat_selection.html", {'theater': theaters, "seats": seats, 'error': "No seat selected"})
+            return render(request, "movies/seat_selection.html", {'theater': theaters, "seat_rows": seat_rows, "seats": seats, 'error': "No seat selected"})
 
         transaction_id = str(uuid.uuid4())
         reservation_window = timezone.now() + timezone.timedelta(minutes=2)
@@ -241,12 +261,12 @@ def book_seats(request, theater_id):
 
         if error_seats:
             error_message = f"The following seats are already reserved or booked: {', '.join(error_seats)}"
-            return render(request, 'movies/seat_selection.html', {'theater': theaters, "seats": seats, 'error': error_message})
+            return render(request, 'movies/seat_selection.html', {'theater': theaters, "seat_rows": seat_rows, "seats": seats, 'error': error_message})
 
         messages.success(request, 'Seats reserved successfully. Please complete payment to confirm your booking.')
         return redirect('payment_checkout', payment_id=transaction_id)
 
-    return render(request, 'movies/seat_selection.html', {'theaters': theaters, "seats": seats})
+    return render(request, 'movies/seat_selection.html', {'theaters': theaters, "seat_rows": seat_rows, "seats": seats})
 
 
 def _apply_payment_status(payment_id, idempotency_key, status, gateway_payment_id='', verified_amount=None, amount=None):

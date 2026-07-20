@@ -45,32 +45,38 @@
             {% csrf_token %}
             
             <!-- Seats Grid -->
-            <div class="seats-grid mb-4">
-              {% for seat in seats %}
-              <div class="seat-wrapper">
-                {% if not seat.is_booked %}
-                <input
-                  type="checkbox"
-                  name="seats"
-                  value="{{ seat.id }}"
-                  class="seat-checkbox d-none"
-                  id="seat-{{ seat.id }}"
-                  data-seat-number="{{ seat.seat_number }}"
-                />
-                <label
-                  for="seat-{{ seat.id }}"
-                  class="seat available"
-                  title="Click to select seat {{ seat.seat_number }}"
-                  data-seat-id="{{ seat.id }}"
-                  data-seat-number="{{ seat.seat_number }}"
-                >
-                  <span class="seat-text">{{ seat.seat_number }}</span>
-                </label>
-                {% else %}
-                <div class="seat sold" title="Seat {{ seat.seat_number }} is already booked">
-                  <span class="seat-text">{{ seat.seat_number }}</span>
+            <div class="seats-grid mb-4 d-flex flex-column align-items-center">
+              {% for row, row_seats in seat_rows.items %}
+              <div class="d-flex justify-content-center mb-2 w-100">
+                <div class="row-label d-flex align-items-center me-3" style="width: 20px; font-weight: bold; color: var(--text-secondary);">{{ row }}</div>
+                {% for seat in row_seats %}
+                <div class="seat-wrapper mx-1">
+                  {% if not seat.is_booked %}
+                  <input
+                    type="checkbox"
+                    name="seats"
+                    value="{{ seat.id }}"
+                    class="seat-checkbox d-none"
+                    id="seat-{{ seat.id }}"
+                    data-seat-number="{{ seat.seat_number }}"
+                  />
+                  <label
+                    for="seat-{{ seat.id }}"
+                    class="seat available"
+                    title="Click to select seat {{ seat.seat_number }}"
+                    data-seat-id="{{ seat.id }}"
+                    data-seat-number="{{ seat.seat_number }}"
+                  >
+                    <span class="seat-text">{{ seat.seat_number }}</span>
+                  </label>
+                  {% else %}
+                  <div class="seat sold" title="Seat {{ seat.seat_number }} is already booked">
+                    <span class="seat-text">{{ seat.seat_number }}</span>
+                  </div>
+                  {% endif %}
                 </div>
-                {% endif %}
+                {% endfor %}
+                <div class="row-label d-flex align-items-center ms-3" style="width: 20px; font-weight: bold; color: var(--text-secondary);">{{ row }}</div>
               </div>
               {% endfor %}
             </div>

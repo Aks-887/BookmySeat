@@ -137,10 +137,15 @@
               src="{{ movie.safe_trailer_embed_url }}"
               title="Trailer for {{ movie.name }}"
               loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
+              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
+          </div>
+          <div class="text-center mt-2">
+            <small class="text-muted">
+              <i class="fas fa-info-circle"></i> If the video is unavailable, <a href="{{ movie.trailer_url }}" target="_blank" class="text-primary text-decoration-none">watch it directly on YouTube</a>.
+            </small>
           </div>
         </div>
       </div>
