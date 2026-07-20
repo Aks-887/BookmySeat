@@ -1,0 +1,110 @@
+---
+- name: Provision and deploy BookMySeat
+  hosts: bookmyseat
+  become: true
+  vars:
+    project_path: "{{ deploy_path | default('/opt/bookmyseat') }}"
+    env_file: "{{ project_path }}/deploy/process_email_queue.env"
+  tasks:
+    - name: Ensure apt cache updated
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+    - name: Install required packages
+      apt:
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - gnupg
+          - lsb-release
+        state: present
+
+    - name: Install Docker GPG key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Add Docker repository
+      apt_repository:
+        repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_lsb.codename }} stable
+        state: present
+
+    - name: Install docker and compose plugin
+      apt:
+        name:
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+          - docker-compose-plugin
+        state: present
+        update_cache: yes
+
+    - name: Ensure docker service is running
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Create project directory
+      file:
+        path: "{{ project_path }}"
+        state: directory
+        owner: root
+        group: root
+        mode: '0755'
+
+    - name: Copy docker-compose.prod.yml
+      copy:
+        src: ../../docker-compose.prod.yml
+        dest: "{{ project_path }}/docker-compose.yml"
+        mode: '0644'
+
+    - name: Copy nginx config
+      copy:
+        src: ../../deploy/nginx/bookmyseat.conf
+        dest: "{{ project_path }}/deploy/nginx/bookmyseat.conf"
+        mode: '0644'
+
+    - name: Copy env file (you should encrypt this in real deployments)
+      copy:
+        src: ../../deploy/process_email_queue.env.example
+        dest: "{{ env_file }}"
+        mode: '0600'
+
+    - name: Pull and start containers
+      shell: |
+        set -e
+        cd {{ project_path }}
+        docker compose pull || true
+        docker compose up -d --remove-orphans
+      args:
+        executable: /bin/bash
+
+    - name: Run migrations inside web container
+      shell: |
+        docker compose exec -T web python manage.py migrate --noinput
+      args:
+        chdir: "{{ project_path }}"
+
+    - name: Collect static files
+      shell: |
+        docker compose exec -T web python manage.py collectstatic --noinput
+      args:
+        chdir: "{{ project_path }}"
+
+    - name: Ensure UFW allows HTTP and HTTPS
+      ufw:
+        rule: allow
+        port: '{{ item }}'
+      loop:
+        - '80'
+        - '443'
+
+    - name: Restart docker-compose services
+      shell: |
+        cd {{ project_path }}
+        docker compose up -d
+      args:
+        executable: /bin/bash

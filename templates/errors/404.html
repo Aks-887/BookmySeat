@@ -1,0 +1,14 @@
+{% extends "users/basic.html" %}
+{% block content %}
+<div class="container py-5 text-center animate-fade-in" style="min-height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+  <div class="mb-4">
+    <i class="fas fa-video-slash fa-6x text-primary" style="background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 15px rgba(255,0,85,0.25));"></i>
+  </div>
+  <h1 class="display-3 font-weight-bold text-primary mb-2">404</h1>
+  <h3 class="font-weight-bold text-primary mb-3">Scene Not Found</h3>
+  <p class="text-secondary mb-5" style="max-width: 480px;">The script has changed or the scene you're looking for was cut from the final release. Let's redirect you back to the main stage.</p>
+  <div>
+    <a href="/" class="btn btn-primary btn-lg"><i class="fas fa-home mr-2"></i>Back to Home</a>
+  </div>
+</div>
+{% endblock %}

@@ -116,10 +116,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 8px;
+    gap: 10px;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid var(--card-border) !important;
+    border-radius: 16px;
   }
 
   .seat-wrapper {
@@ -127,34 +128,31 @@
   }
 
   .seat {
-    width: 40px;
-    height: 40px;
-    border: 2px solid #28a745;
-    border-radius: 6px;
+    width: 42px;
+    height: 42px;
+    border: 2px solid var(--accent-blue) !important;
+    background: rgba(0, 176, 255, 0.05) !important;
+    color: var(--accent-blue) !important;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.3s ease;
-    background-color: #ffffff;
-    font-weight: 600;
-    font-size: 12px;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    font-weight: 700;
+    font-size: 13px;
     user-select: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .seat-text {
     pointer-events: none;
   }
 
-  .seat.available {
-    color: #28a745;
-  }
-
   .seat.available:hover {
-    background-color: #e8f5e9;
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+    background-color: var(--accent-blue) !important;
+    color: #fff !important;
+    transform: scale(1.12);
+    box-shadow: 0 0 15px rgba(0, 176, 255, 0.5) !important;
   }
 
   .seat.available:active {
@@ -162,19 +160,19 @@
   }
 
   .seat.selected {
-    background-color: #28a745;
-    color: white;
-    border-color: #1e7e34;
-    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+    background: var(--primary-gradient) !important;
+    color: white !important;
+    border-color: transparent !important;
+    box-shadow: 0 0 15px rgba(255, 0, 85, 0.5) !important;
     animation: pulse-selected 0.3s ease;
   }
 
   .seat.sold {
-    background-color: #e9ecef;
-    color: #6c757d;
-    border-color: #dee2e6;
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    color: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
     cursor: not-allowed;
-    opacity: 0.6;
+    opacity: 0.4;
   }
 
   /* Animation for selected seats */
@@ -192,50 +190,54 @@
 
   /* Screen styling */
   .screen {
-    margin: 20px 0;
-    padding: 20px;
-    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
-    height: 60px;
-    border-radius: 8px;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 16px;
-    letter-spacing: 2px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 30px auto;
+    width: 80%;
+    height: 12px;
+    background: linear-gradient(to bottom, rgba(0, 176, 255, 0.4), rgba(0, 176, 255, 0));
+    border-radius: 50%;
+    box-shadow: 0 -6px 20px rgba(0, 176, 255, 0.6);
+    color: var(--accent-blue);
+    text-shadow: 0 0 10px rgba(0, 176, 255, 0.5);
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-align: center;
   }
 
   /* Legend styling */
   .seat-legend {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 24px;
     flex-wrap: wrap;
-    padding: 15px;
-    background: #f8f9fa;
-    border-radius: 8px;
+    padding: 20px;
+    background: transparent !important;
+    border: none !important;
   }
 
   .legend-item {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
   }
 
   .legend-item .seat {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     margin: 0;
     cursor: default;
+    font-size: 10px;
   }
 
   .legend-item .seat:hover {
     transform: none;
     background-color: inherit;
+    box-shadow: none !important;
   }
 
   .legend-item span {
     font-size: 14px;
-    color: #333;
+    color: var(--text-secondary);
     font-weight: 500;
   }
 

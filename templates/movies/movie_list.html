@@ -1,6 +1,51 @@
 {% extends "users/basic.html" %}
 
 {% block content %}
+<style>
+  .autocomplete-dropdown {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    right: 0;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+  
+  .autocomplete-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: var(--text-primary) !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid var(--card-border);
+  }
+  
+  .autocomplete-item:last-child {
+    border-bottom: none;
+  }
+  
+  .autocomplete-item:hover {
+    background: rgba(255, 0, 85, 0.05);
+    color: var(--primary-color) !important;
+  }
+  
+  .autocomplete-item img {
+    width: 32px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 12px;
+    border: 1px solid var(--card-border);
+  }
+</style>
 <div class="container-fluid py-4">
     <!-- Header -->
     <div class="row mb-4">
@@ -12,7 +57,7 @@
 
     <div class="row">
         <!-- Left Sidebar: Filters -->
-        <div class="col-lg-3 mb-4">
+        <div class="col-lg-3 mb-4 animate-fade-in">
             <div class="card shadow-sm">
                 <div class="card-header bg-primary text-white">
                     <h5 class="mb-0"><i class="fas fa-filter"></i> Filters</h5>
@@ -22,13 +67,18 @@
                         <!-- Search -->
                         <div class="mb-4">
                             <label class="form-label font-weight-bold">Search</label>
-                            <input 
-                                type="text" 
-                                class="form-control" 
-                                name="search" 
-                                placeholder="Movie, cast, description..." 
-                                value="{{ search_query }}"
-                            />
+                            <div class="position-relative" id="autocomplete-wrapper">
+                                <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    name="search" 
+                                    id="searchInput"
+                                    placeholder="Movie, cast, description..." 
+                                    value="{{ search_query }}"
+                                    autocomplete="off"
+                                />
+                                <div class="autocomplete-dropdown d-none" id="autocompleteDropdown"></div>
+                            </div>
                         </div>
 
                         <!-- Genres Filter -->
@@ -140,7 +190,7 @@
             <!-- Movies Grid -->
             <div class="row" id="movieList">
                 {% for item in movie_items %}
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 animate-fade-in" style="animation-delay: {% widthratio forloop.counter0 1 40 %}ms;">
                     <div class="card h-100 shadow-sm movie-card">
                         <div class="position-relative">
                             <img src="{{ item.poster }}" class="card-img-top" alt="{{ item.movie.name }}" style="height: 300px; object-fit: cover;">
@@ -359,6 +409,61 @@
       buildGallery(images);
       $('#galleryModal').modal('show');
     });
+
+    // Autocomplete Search Feature
+    const searchInput = document.getElementById('searchInput');
+    const dropdown = document.getElementById('autocompleteDropdown');
+    const wrapper = document.getElementById('autocomplete-wrapper');
+    
+    let debounceTimeout;
+    if (searchInput && dropdown) {
+      searchInput.addEventListener('input', function() {
+        clearTimeout(debounceTimeout);
+        const val = searchInput.value.trim();
+        if (val.length < 2) {
+          dropdown.classList.add('d-none');
+          dropdown.innerHTML = '';
+          return;
+        }
+        
+        debounceTimeout = setTimeout(async () => {
+          try {
+            const res = await fetch(`/movies/autocomplete/?q=${encodeURIComponent(val)}`);
+            const data = await res.json();
+            if (data.movies && data.movies.length > 0) {
+              dropdown.innerHTML = '';
+              data.movies.forEach(movie => {
+                const item = document.createElement('a');
+                item.href = `/movies/${movie.id}/theaters`;
+                item.className = 'autocomplete-item';
+                
+                const img = document.createElement('img');
+                img.src = movie.image || '/static/images/default_poster.jpg';
+                
+                const text = document.createElement('span');
+                text.className = 'font-weight-bold';
+                text.textContent = movie.name;
+                
+                item.appendChild(img);
+                item.appendChild(text);
+                dropdown.appendChild(item);
+              });
+              dropdown.classList.remove('d-none');
+            } else {
+              dropdown.classList.add('d-none');
+            }
+          } catch(e) {
+             console.error("Autocomplete failed", e);
+          }
+        }, 150);
+      });
+      
+      document.addEventListener('click', function(e) {
+        if (wrapper && !wrapper.contains(e.target)) {
+          dropdown.classList.add('d-none');
+        }
+      });
+    }
 
     // Tooltips
     $('[data-toggle="tooltip"]').tooltip();

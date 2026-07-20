@@ -1,5 +1,4 @@
 import logging
-import threading
 from datetime import timedelta
 
 from django.conf import settings
@@ -17,15 +16,19 @@ EMAIL_MAX_ATTEMPTS = 5
 
 
 def _sanitize_context(context: dict) -> dict:
-    """Remove sensitive data from context before logging/storing"""
-    sensitive_keys = ['password', 'token', 'secret', 'key', 'credential']
-    sanitized = context.copy()
-    
-    for key in sensitive_keys:
-        if key in sanitized:
-            sanitized[key] = '***REDACTED***'
-    
-    return sanitized
+    """Remove sensitive values recursively before queue persistence."""
+    sensitive_parts = ('password', 'token', 'secret', 'credential', 'card', 'cvv')
+
+    def clean(value, key=''):
+        if any(part in key.lower() for part in sensitive_parts):
+            return '***REDACTED***'
+        if isinstance(value, dict):
+            return {str(k): clean(v, str(k)) for k, v in value.items()}
+        if isinstance(value, list):
+            return [clean(item) for item in value]
+        return value
+
+    return clean(context)
 
 
 def _send_email_task(task: EmailTask) -> None:
@@ -80,22 +83,26 @@ def _send_email_task(task: EmailTask) -> None:
         message.attach_alternative(html_body, "text/html")
 
         try:
-            message.send(fail_silently=False)
+            sent_count = message.send(fail_silently=False)
             task.status = EmailTask.STATUS_SENT
             task.last_error = ''
             task.next_attempt_at = timezone.now()
             task.save(update_fields=['status', 'last_error', 'next_attempt_at'])
             
             logger.info(
-                'Booking confirmation email sent successfully (EmailTask: %s, Recipient: %s, Attempts: %d)',
+                'Booking confirmation email sent successfully (EmailTask: %s, Recipient: %s, Attempts: %d, SentCount: %d)',
                 task.id,
                 recipient,
                 task.attempts,
+                sent_count,
                 extra={
                     'task_id': task.id,
                     'recipient': recipient,
                     'status': 'sent',
-                    'attempts': task.attempts
+                    'attempts': task.attempts,
+                    'sent_count': sent_count,
+                    'payment_id': context.get('payment_id'),
+                    'booking_id': context.get('booking_id')
                 }
             )
         except Exception as send_exc:
@@ -191,13 +198,25 @@ def queue_booking_confirmation_email(recipient_email: str, booking_context: dict
     # Sanitize context before storage (remove sensitive data)
     sanitized_context = _sanitize_context(booking_context)
 
-    task = EmailTask.objects.create(
-        recipient=recipient_email,
-        subject='Your Movie Ticket Confirmation - BookMySeat',
-        template_name='emails/booking_confirmation.html',
-        context=sanitized_context,  # store sanitized context
-        max_attempts=EMAIL_MAX_ATTEMPTS,
-    )
+    sanitized_context.setdefault('support_contact', getattr(settings, 'DEFAULT_FROM_EMAIL', 'support@bookmyseat.local'))
+    booking_reference = sanitized_context.get('booking_reference') or sanitized_context.get('booking_id')
+    deduplication_key = f'booking-confirmation:{booking_reference}' if booking_reference else None
+    defaults = {
+        'recipient': recipient_email,
+        'subject': 'Your Movie Ticket Confirmation - BookMySeat',
+        'template_name': 'emails/booking_confirmation.html',
+        'context': sanitized_context,
+        'max_attempts': EMAIL_MAX_ATTEMPTS,
+    }
+    if deduplication_key:
+        task, created = EmailTask.objects.get_or_create(deduplication_key=deduplication_key, defaults=defaults)
+    else:
+        task = EmailTask.objects.create(**defaults)
+        created = True
+
+    if not created:
+        logger.info('Booking confirmation already queued', extra={'task_id': task.id, 'booking_reference': booking_reference})
+        return task
     
     logger.info(
         'Booking confirmation email queued (EmailTask: %s, Recipient: %s)',
@@ -210,15 +229,12 @@ def queue_booking_confirmation_email(recipient_email: str, booking_context: dict
             'queued_at': timezone.now().isoformat()
         }
     )
+    # Do not dispatch immediately in-request. Processing should be done
+    # by the background queue worker `process_email_queue` to ensure
+    # email sending does not block or depend on request-process lifecycle.
+    # A separate worker (cron, supervisor, or container) should run:
+    #   python manage.py process_email_queue --limit 50
 
-    # Dispatch in background thread (non-blocking)
-    thread = threading.Thread(
-        target=_dispatch_email_task_async,
-        args=(task.id,),
-        daemon=True
-    )
-    thread.start()
-    
     return task
 
 

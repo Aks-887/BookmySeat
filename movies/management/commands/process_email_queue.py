@@ -45,7 +45,7 @@ class Command(BaseCommand):
             processed = process_pending_email_tasks(limit=limit)
             self.stdout.write(
                 self.style.SUCCESS(
-                    f'✓ Successfully processed {processed} email task(s)'
+                    f'[OK] Successfully processed {processed} email task(s)'
                 )
             )
 
@@ -96,6 +96,6 @@ class Command(BaseCommand):
 
         self.stdout.write(
             self.style.SUCCESS(
-                f'✓ Cleaned up {deleted_count} old email task(s) (older than {days} days)'
+                f'[OK] Cleaned up {deleted_count} old email task(s) (older than {days} days)'
             )
         )

@@ -84,6 +84,76 @@ DESCRIPTIONS = [
     'A thought-provoking documentary about society.',
 ]
 
+TRAILER_MAP = {
+    '3 idiots': 'https://www.youtube.com/watch?v=K0eDlFX9GMc',
+    '1917': 'https://www.youtube.com/watch?v=YqNYrYcyAqY',
+    'baahubali': 'https://www.youtube.com/watch?v=sOEg_YZQsTI',
+    'bajrangi bhaijaan': 'https://www.youtube.com/watch?v=vyX4ToS3444',
+    'barbie': 'https://www.youtube.com/watch?v=pBk4NYhWNMM',
+    'batman begins': 'https://www.youtube.com/watch?v=neY2xVmOfUM',
+    'beast': 'https://www.youtube.com/watch?v=0Gsc589G9yM',
+    'beauty and the beast': 'https://www.youtube.com/watch?v=e3Nl_Tfi8Hg',
+    'bhool bhulaiyaa': 'https://www.youtube.com/watch?v=JupDghO2kHQ',
+    'brahmastra': 'https://www.youtube.com/watch?v=BUjXzrgLDcY',
+    'dangal': 'https://www.youtube.com/watch?v=x_7YlGv9u1g',
+    'deadpool': 'https://www.youtube.com/watch?v=ONHBaC-pfsk',
+    'doctor strange': 'https://www.youtube.com/watch?v=HSzx-zryEgM',
+    'don': 'https://www.youtube.com/watch?v=gM7i8pXU4bE',
+    'drishyam': 'https://www.youtube.com/watch?v=AuuX2j14Uu4',
+    'dune': 'https://www.youtube.com/watch?v=g8z-q-827Cg',
+    'dunkirk': 'https://www.youtube.com/watch?v=F-eMt3SrfFU',
+    'encanto': 'https://www.youtube.com/watch?v=CaimKeNpLi0',
+    'fight club': 'https://www.youtube.com/watch?v=qtRKdVHc-cE',
+    'forrest gump': 'https://www.youtube.com/watch?v=bLvqoHBptjg',
+    'frozen': 'https://www.youtube.com/watch?v=TbQm5AMF_A0',
+    'gladiator': 'https://www.youtube.com/watch?v=P5ieIbInFpg',
+    'goodfellas': 'https://www.youtube.com/watch?v=2ilzidi_J8Q',
+    'inception': 'https://www.youtube.com/watch?v=8hP9D6kZseM',
+    'interstellar': 'https://www.youtube.com/watch?v=zSWdZAto3Qc',
+    'iron man': 'https://www.youtube.com/watch?v=8hYlB38asDY',
+    'jailer': 'https://www.youtube.com/watch?v=xenOE1T_OT8',
+    'jawan': 'https://www.youtube.com/watch?v=COv527yI28s',
+    'john wick': 'https://www.youtube.com/watch?v=C0BMx-qxsP4',
+    'joker': 'https://www.youtube.com/watch?v=t433PEQGE1c',
+    'justice league': 'https://www.youtube.com/watch?v=3cxixDgHUsk',
+    'kalki': 'https://www.youtube.com/watch?v=kQDd1AhGI90',
+    'kantara': 'https://www.youtube.com/watch?v=8pM5jT6Mcrw',
+    'leo': 'https://www.youtube.com/watch?v=Po3jjhYnOy4',
+    'logan': 'https://www.youtube.com/watch?v=Div0iP65aZo',
+    'luca': 'https://www.youtube.com/watch?v=mYfJxlgR2jw',
+    'mad max': 'https://www.youtube.com/watch?v=hEJnMQG9ld8',
+    'man of steel': 'https://www.youtube.com/watch?v=T6DJcgm3wNY',
+    'memento': 'https://www.youtube.com/watch?v=4CV41hoyS8A',
+    'minions': 'https://www.youtube.com/watch?v=WdKPH-EUtj4',
+    'mission impossible': 'https://www.youtube.com/watch?v=2m1drlzHC8U',
+    'moana': 'https://www.youtube.com/watch?v=LKFuXETZUsI',
+    'mulan': 'https://www.youtube.com/watch?v=KK8FHdFluOQ',
+    'oppenheimer': 'https://www.youtube.com/watch?v=uYPbbksJxIg',
+    'parasite': 'https://www.youtube.com/watch?v=5xH0HfJHsaY',
+    'pathaan': 'https://www.youtube.com/watch?v=vqu4z34wENw',
+    'pulp fiction': 'https://www.youtube.com/watch?v=s7EdQ4FqbhY',
+    'pushpa': 'https://www.youtube.com/watch?v=Q1gYzR9PtkY',
+    'rrr': 'https://www.youtube.com/watch?v=f_vdG5j4XFc',
+    'rockstar': 'https://www.youtube.com/watch?v=T08k-Xsh_p4',
+    'salaar': 'https://www.youtube.com/watch?v=4GPvY9U4eLM',
+    'shutter island': 'https://www.youtube.com/watch?v=5iaYLCip5vg',
+    'skyfall': 'https://www.youtube.com/watch?v=6kw1UVovByw',
+    'spider-man': 'https://www.youtube.com/watch?v=JfVOs4VSpmA',
+    'stree': 'https://www.youtube.com/watch?v=gXZG80jT_1Y',
+    'tenet': 'https://www.youtube.com/watch?v=LdOM0x0XD2U',
+    'the dark knight': 'https://www.youtube.com/watch?v=EXeTwQWrcwY',
+    'the godfather': 'https://www.youtube.com/watch?v=UaVTIH8mujA',
+    'the matrix': 'https://www.youtube.com/watch?v=vKQi3bgb1Co',
+    'the shawshank redemption': 'https://www.youtube.com/watch?v=PLl99DlL6b4',
+    'thor': 'https://www.youtube.com/watch?v=JOddp-QLgPg',
+    'titanic': 'https://www.youtube.com/watch?v=CHekzSiZcBY',
+    'top gun': 'https://www.youtube.com/watch?v=giXcoYmT0_4',
+    'uri': 'https://www.youtube.com/watch?v=vvPrV4-HlyI',
+    'venom': 'https://www.youtube.com/watch?v=u9Mv98Gr5pY',
+    'wonder woman': 'https://www.youtube.com/watch?v=1Q8fG0TtVAY',
+    'zootopia': 'https://www.youtube.com/watch?v=jWM0ct-OLsM',
+}
+
 MOVIE_IMAGE_FILES = [
     'movies/635217f73e372771013edb4c-the-avengers-poster-marvel-movie-canvas1.jpg',
     'movies/download.jpeg',
@@ -91,6 +161,25 @@ MOVIE_IMAGE_FILES = [
     'movies/feUv2SYumXlT8E2RhzlYbZxfEGLG5AVrCPxP1gmAaCusxyPnA1.jpg',
     'movies/IQsBhg9t747dLhjXfsChIGZy4XfugER8BF0Gw5MDhIcnY5nTA1.jpg',
 ]
+
+def clean_title_from_filename(filename):
+    # Get base name without directory and extension
+    base = os.path.splitext(os.path.basename(filename))[0]
+    # Replace underscores/hyphens with spaces
+    title = base.replace('_', ' ').replace('-', ' ')
+    # Strip any leading numbers (like "125814193-") or special characters
+    title = re.sub(r'^\d+[\s_-]*', '', title)
+    # Title-case and strip extra spaces
+    title = title.title().strip()
+    # Remove standard image suffixes if any
+    title = re.sub(r'\s+Covers?$', '', title, flags=re.IGNORECASE)
+    title = re.sub(r'\s+Wallpaper$', '', title, flags=re.IGNORECASE)
+    title = re.sub(r'\s+Movie\s+Poster$', '', title, flags=re.IGNORECASE)
+    title = re.sub(r'\s+Film\s+Poster\s+Art$', '', title, flags=re.IGNORECASE)
+    return title
+
+import os
+import re
 
 class Command(BaseCommand):
     help = 'Generate test data with 100+ movies, genres, languages, theaters, and seats'
@@ -134,7 +223,7 @@ class Command(BaseCommand):
                 defaults={'description': f'{genre_name} movies and shows'}
             )
             genres.append(genre)
-        self.stdout.write(self.style.SUCCESS(f'✓ Created {len(genres)} genres'))
+        self.stdout.write(self.style.SUCCESS(f'[OK] Created {len(genres)} genres'))
 
         # Create Languages
         self.stdout.write('Creating languages...')
@@ -145,15 +234,53 @@ class Command(BaseCommand):
                 code=lang_code,
             )
             languages.append(lang)
-        self.stdout.write(self.style.SUCCESS(f'✓ Created {len(languages)} languages'))
+        self.stdout.write(self.style.SUCCESS(f'[OK] Created {len(languages)} languages'))
+
+        # Scan media/movies for poster images
+        from django.conf import settings
+        movies_dir = os.path.join(settings.MEDIA_ROOT, 'movies')
+        image_extensions = ('.jpg', '.jpeg', '.png', '.webp')
+        
+        dynamic_images = []
+        if os.path.exists(movies_dir):
+            for f in os.listdir(movies_dir):
+                if f.lower().endswith(image_extensions):
+                    dynamic_images.append(f'movies/{f}')
+                    
+        if not dynamic_images:
+            dynamic_images = MOVIE_IMAGE_FILES
+            
+        movies_to_create = []
+        for img in dynamic_images:
+            title = clean_title_from_filename(img)
+            if not title or title.lower() in ('poster', 'seed best data', 'seedmovie'):
+                continue
+            movies_to_create.append((title, img))
+            
+        # Shuffle to randomize
+        random.shuffle(movies_to_create)
+        
+        # If we need more movies than posters available, cycle them
+        if len(movies_to_create) < num_movies:
+            original_count = len(movies_to_create)
+            if original_count == 0:
+                for j in range(num_movies):
+                    extra_img = random.choice(dynamic_images)
+                    extra_title = f"{random.choice(MOVIE_NAMES)} {j+1}"
+                    movies_to_create.append((extra_title, extra_img))
+            else:
+                for j in range(num_movies - original_count):
+                    base_title, base_img = movies_to_create[j % original_count]
+                    extra_title = f"{base_title} (Show {(j // original_count) + 2})"
+                    movies_to_create.append((extra_title, base_img))
+        else:
+            movies_to_create = movies_to_create[:num_movies]
 
         # Create Movies
-        self.stdout.write(f'Creating {num_movies} movies...')
+        self.stdout.write(f'Creating {num_movies} movies from dynamic posters...')
         movies_created = 0
         
-        for i in range(num_movies):
-            movie_name = f"{random.choice(MOVIE_NAMES)} {i+1}"
-            
+        for i, (movie_name, movie_image) in enumerate(movies_to_create):
             # Random release date (within last 5 years)
             days_back = random.randint(0, 365 * 5)
             release_date = timezone.now().date() - timedelta(days=days_back)
@@ -168,6 +295,13 @@ class Command(BaseCommand):
             # Random description
             description = random.choice(DESCRIPTIONS)
             
+            # Match trailer by title keywords
+            matched_trailer = ''
+            for key, val in TRAILER_MAP.items():
+                if key in movie_name.lower():
+                    matched_trailer = val
+                    break
+            
             # Create movie
             movie = Movie.objects.create(
                 name=movie_name,
@@ -175,7 +309,8 @@ class Command(BaseCommand):
                 cast=cast,
                 description=description,
                 release_date=release_date,
-                image=random.choice(MOVIE_IMAGE_FILES),
+                image=movie_image,
+                trailer_url=matched_trailer,
             )
             
             # Assign 2-4 random genres
@@ -192,7 +327,7 @@ class Command(BaseCommand):
             for j in range(images_per_movie):
                 MovieImage.objects.create(
                     movie=movie,
-                    image=random.choice(MOVIE_IMAGE_FILES),
+                    image=movie_image,
                     alt_text=f'{movie.name} - Gallery Image {j+1}'
                 )
 
@@ -221,7 +356,7 @@ class Command(BaseCommand):
             if (i + 1) % 20 == 0:
                 self.stdout.write(f'  {i+1}/{num_movies} movies created...')
         
-        self.stdout.write(self.style.SUCCESS(f'✓ Created {movies_created} movies'))
+        self.stdout.write(self.style.SUCCESS(f'[OK] Created {movies_created} movies'))
         
         # Summary statistics
         total_genres = Genre.objects.count()

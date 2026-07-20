@@ -119,3 +119,1953 @@ INFO 2026-07-01 18:56:52 basehttp 13660 5028 "POST /movies/theater/174/seats/boo
 INFO 2026-07-01 18:56:52 basehttp 13660 5028 "GET /profile/ HTTP/1.1" 200 16537
 INFO 2026-07-01 19:06:31 autoreload 13660 14092 D:\code\Intership\movies\models.py changed, reloading.
 INFO 2026-07-01 19:06:32 autoreload 10976 3908 Watching for file changes with StatReloader
+INFO 2026-07-12 18:42:06 autoreload 16288 4052 Watching for file changes with StatReloader
+INFO 2026-07-12 18:42:11 basehttp 16288 8232 "GET / HTTP/1.1" 200 42173
+INFO 2026-07-12 18:42:12 basehttp 16288 5012 "GET /media/movies/download.jpeg HTTP/1.1" 200 12036
+INFO 2026-07-12 18:42:12 basehttp 16288 7868 "GET /media/movies/IQsBhg9t747dLhjXfsChIGZy4XfugER8BF0Gw5MDhIcnY5nTA1.jpg HTTP/1.1" 200 61134
+INFO 2026-07-12 18:42:12 basehttp 16288 8232 "GET /media/movies/f5VK0h2bprRhR6iRrixcuEfRxSUF4l14F66vQYrsJGmKZ5nTA1.jpg HTTP/1.1" 200 27304
+INFO 2026-07-12 18:42:12 basehttp 16288 5012 "GET /media/movies/635217f73e372771013edb4c-the-avengers-poster-marvel-movie-canvas1.jpg HTTP/1.1" 200 308649
+WARNING 2026-07-12 18:42:16 log 16288 5012 Not Found: /favicon.ico
+WARNING 2026-07-12 18:42:16 basehttp 16288 5012 "GET /favicon.ico HTTP/1.1" 404 4291
+INFO 2026-07-12 18:42:19 basehttp 16288 5012 "POST /logout/ HTTP/1.1" 200 11192
+INFO 2026-07-12 18:42:20 basehttp 16288 5012 "GET /login/ HTTP/1.1" 200 14857
+INFO 2026-07-12 18:42:27 basehttp 16288 5012 "GET /register/ HTTP/1.1" 200 19272
+INFO 2026-07-12 18:44:36 basehttp 16288 5012 "POST /register/ HTTP/1.1" 302 0
+INFO 2026-07-12 18:44:36 basehttp 16288 5012 "GET /profile/ HTTP/1.1" 200 16534
+INFO 2026-07-12 18:44:41 basehttp 16288 5012 "GET / HTTP/1.1" 200 42173
+INFO 2026-07-12 18:44:42 basehttp 16288 5012 "GET /movies HTTP/1.1" 301 0
+INFO 2026-07-12 18:44:42 basehttp 16288 5012 "GET /movies/ HTTP/1.1" 200 153603
+INFO 2026-07-12 18:44:42 basehttp 16288 5012 "GET /media/movies/feUv2SYumXlT8E2RhzlYbZxfEGLG5AVrCPxP1gmAaCusxyPnA1.jpg HTTP/1.1" 200 42378
+INFO 2026-07-12 18:44:46 basehttp 16288 5012 "GET / HTTP/1.1" 200 42173
+INFO 2026-07-12 18:44:47 basehttp 16288 5012 "GET /movies/477/theaters HTTP/1.1" 200 15448
+INFO 2026-07-12 18:44:50 basehttp 16288 5012 "GET /movies/theater/580/seats/book/ HTTP/1.1" 200 41590
+INFO 2026-07-12 18:44:54 basehttp 16288 5012 "POST /movies/theater/580/seats/book/ HTTP/1.1" 302 0
+INFO 2026-07-12 18:44:54 basehttp 16288 5012 "GET /profile/ HTTP/1.1" 200 17967
+INFO 2026-07-12 18:45:18 basehttp 16288 5012 "GET /movies/ HTTP/1.1" 200 153603
+INFO 2026-07-12 18:45:22 basehttp 16288 5012 "GET /movies/?sort=rating HTTP/1.1" 200 157192
+INFO 2026-07-12 18:45:26 basehttp 16288 5012 "GET /movies/?sort=rating HTTP/1.1" 200 157192
+INFO 2026-07-12 18:45:30 basehttp 16288 5012 "GET /movies/?sort=release_date HTTP/1.1" 200 153603
+INFO 2026-07-12 18:45:38 basehttp 16288 5012 "GET /movies/?sort=release_date HTTP/1.1" 200 153603
+INFO 2026-07-12 18:45:42 basehttp 16288 5012 "GET /movies/?sort=name HTTP/1.1" 200 151770
+INFO 2026-07-12 18:45:46 basehttp 16288 5012 "GET /movies/?sort=-name HTTP/1.1" 200 151728
+INFO 2026-07-12 18:45:50 basehttp 16288 5012 "GET /movies/?sort=name HTTP/1.1" 200 151770
+INFO 2026-07-12 18:45:55 basehttp 16288 5012 "GET /movies/?search=&genres=161&page=1 HTTP/1.1" 200 91577
+INFO 2026-07-12 18:45:58 basehttp 16288 5012 "GET /movies/?search=&genres=157&genres=161&page=1 HTTP/1.1" 200 133382
+INFO 2026-07-12 18:45:59 basehttp 16288 5012 "GET /movies/?search=&genres=161&page=1 HTTP/1.1" 200 91577
+INFO 2026-07-12 18:46:01 basehttp 16288 5012 "GET /movies/?search=&genres=161&genres=163&page=1 HTTP/1.1" 200 139170
+INFO 2026-07-12 18:46:05 basehttp 16288 5012 "GET /movies/?search=&genres=163&page=1 HTTP/1.1" 200 93118
+INFO 2026-07-12 18:46:08 basehttp 16288 5012 "GET /movies/?search=&genres=161&genres=163&page=1 HTTP/1.1" 200 139170
+INFO 2026-07-12 18:46:10 basehttp 16288 5012 "GET /movies/?search=&genres=161&page=1 HTTP/1.1" 200 91577
+INFO 2026-07-12 18:46:14 basehttp 16288 5012 "GET /movies/?search=&page=1 HTTP/1.1" 200 153603
+INFO 2026-07-12 18:46:18 basehttp 16288 5012 "GET /movies/?search=&genres=177&page=1 HTTP/1.1" 200 91871
+INFO 2026-07-12 18:46:22 basehttp 16288 5012 "GET /movies/?search=&page=1 HTTP/1.1" 200 153603
+INFO 2026-07-12 18:46:31 basehttp 16288 5012 "GET /movies/?search=&languages=63&page=1 HTTP/1.1" 200 153653
+INFO 2026-07-12 18:46:36 basehttp 16288 5012 "GET /movies/406/theaters HTTP/1.1" 200 16420
+INFO 2026-07-12 18:46:39 basehttp 16288 5012 "GET / HTTP/1.1" 200 42173
+ERROR 2026-07-12 19:02:48 exception 6860 14792 Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+WARNING 2026-07-12 19:02:48 log 6860 14792 Bad Request: /movies/theater/606/seats/book/
+INFO 2026-07-12 19:03:18 basehttp 16288 15908 "GET /movies/477/theaters HTTP/1.1" 200 15448
+INFO 2026-07-12 19:03:21 basehttp 16288 15908 "GET /movies/theater/580/seats/book/ HTTP/1.1" 200 41590
+INFO 2026-07-12 19:03:24 basehttp 16288 15908 "GET /movies/ HTTP/1.1" 200 153603
+INFO 2026-07-12 19:03:25 basehttp 16288 15908 "GET /profile/ HTTP/1.1" 200 17967
+INFO 2026-07-12 19:03:29 basehttp 16288 15908 "GET / HTTP/1.1" 200 42173
+INFO 2026-07-12 19:03:31 basehttp 16288 15908 "GET /movies/477/theaters HTTP/1.1" 200 15448
+INFO 2026-07-12 19:03:33 basehttp 16288 15908 "GET /movies/theater/580/seats/book/ HTTP/1.1" 200 41590
+INFO 2026-07-12 19:03:40 basehttp 16288 15908 "GET /profile/ HTTP/1.1" 200 17967
+INFO 2026-07-12 19:03:57 autoreload 16288 4052 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-12 19:03:58 autoreload 9764 14296 Watching for file changes with StatReloader
+INFO 2026-07-12 19:06:46 autoreload 2252 10868 Watching for file changes with StatReloader
+INFO 2026-07-12 19:11:19 autoreload 9764 14296 D:\code\Intership\users\views.py changed, reloading.
+INFO 2026-07-12 19:11:20 autoreload 2252 10868 D:\code\Intership\movies\urls.py changed, reloading.
+INFO 2026-07-12 19:11:20 autoreload 15612 7556 Watching for file changes with StatReloader
+INFO 2026-07-12 19:11:20 autoreload 100 12472 Watching for file changes with StatReloader
+INFO 2026-07-12 19:12:43 autoreload 15612 7556 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-12 19:12:43 autoreload 100 12472 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-12 19:12:44 autoreload 15724 8840 Watching for file changes with StatReloader
+INFO 2026-07-12 19:12:44 autoreload 16484 16744 Watching for file changes with StatReloader
+INFO 2026-07-12 19:18:40 autoreload 16484 16744 D:\code\Intership\movies\urls.py changed, reloading.
+INFO 2026-07-12 19:18:40 autoreload 15724 8840 D:\code\Intership\movies\urls.py changed, reloading.
+INFO 2026-07-12 19:18:41 autoreload 7308 16720 Watching for file changes with StatReloader
+INFO 2026-07-12 19:18:41 autoreload 7248 12928 Watching for file changes with StatReloader
+INFO 2026-07-12 19:18:50 views 9084 13852 Webhook processed successfully: payment_id=pay-123, status=pending->completed, booking_id=1
+INFO 2026-07-12 22:09:21 autoreload 7248 12928 D:\code\Intership\bookmyseat\settings.py changed, reloading.
+INFO 2026-07-12 22:09:21 autoreload 7308 16720 D:\code\Intership\bookmyseat\settings.py changed, reloading.
+INFO 2026-07-12 22:09:22 autoreload 20528 20908 Watching for file changes with StatReloader
+INFO 2026-07-12 22:09:22 autoreload 20384 21792 Watching for file changes with StatReloader
+INFO 2026-07-12 22:10:09 autoreload 21852 21724 Watching for file changes with StatReloader
+INFO 2026-07-12 22:10:41 basehttp 20384 14936 "GET / HTTP/1.1" 200 41780
+INFO 2026-07-12 22:10:41 basehttp 20384 14936 "GET /media/movies/f5VK0h2bprRhR6iRrixcuEfRxSUF4l14F66vQYrsJGmKZ5nTA1.jpg HTTP/1.1" 304 0
+INFO 2026-07-12 22:10:41 basehttp 20384 14936 "GET /media/movies/IQsBhg9t747dLhjXfsChIGZy4XfugER8BF0Gw5MDhIcnY5nTA1.jpg HTTP/1.1" 200 61134
+INFO 2026-07-12 22:10:41 basehttp 20384 21540 "GET /media/movies/download.jpeg HTTP/1.1" 200 12036
+INFO 2026-07-12 22:10:41 basehttp 20384 21172 "GET /media/movies/635217f73e372771013edb4c-the-avengers-poster-marvel-movie-canvas1.jpg HTTP/1.1" 200 308649
+INFO 2026-07-12 22:10:44 basehttp 20384 21172 "GET / HTTP/1.1" 200 41780
+WARNING 2026-07-12 22:10:45 log 20384 21172 Not Found: /favicon.ico
+WARNING 2026-07-12 22:10:45 basehttp 20384 21172 "GET /favicon.ico HTTP/1.1" 404 4291
+INFO 2026-07-12 22:10:45 basehttp 20384 21172 "GET /media/movies/f5VK0h2bprRhR6iRrixcuEfRxSUF4l14F66vQYrsJGmKZ5nTA1.jpg HTTP/1.1" 200 27304
+INFO 2026-07-12 22:10:45 basehttp 20384 21540 "GET /media/movies/IQsBhg9t747dLhjXfsChIGZy4XfugER8BF0Gw5MDhIcnY5nTA1.jpg HTTP/1.1" 200 61134
+INFO 2026-07-12 22:10:45 basehttp 20384 21540 "GET /media/movies/download.jpeg HTTP/1.1" 200 12036
+INFO 2026-07-12 22:10:45 basehttp 20384 21172 "GET /media/movies/635217f73e372771013edb4c-the-avengers-poster-marvel-movie-canvas1.jpg HTTP/1.1" 200 308649
+INFO 2026-07-12 22:10:52 basehttp 20384 19344 "GET / HTTP/1.1" 200 42186
+INFO 2026-07-12 22:10:55 basehttp 20384 19344 "GET /movies/379/theaters HTTP/1.1" 200 16437
+INFO 2026-07-12 22:10:58 basehttp 20384 19344 "GET /movies/theater/433/seats/book/ HTTP/1.1" 200 41600
+INFO 2026-07-12 22:11:03 basehttp 20384 19344 "POST /movies/theater/433/seats/book/ HTTP/1.1" 302 0
+ERROR 2026-07-12 22:11:03 log 20384 19344 Internal Server Error: /movies/payments/checkout/d9fdb472-25a8-4c1e-984f-4f2836488493/
+Traceback (most recent call last):
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\movies\views.py", line 253, in payment_checkout
+    booking = get_object_or_404(Booking, payment_id=payment_id, user=request.user)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\query.py", line 439, in get
+    raise self.model.MultipleObjectsReturned(
+movies.models.Booking.MultipleObjectsReturned: get() returned more than one Booking -- it returned 2!
+ERROR 2026-07-12 22:11:03 basehttp 20384 19344 "GET /movies/payments/checkout/d9fdb472-25a8-4c1e-984f-4f2836488493/ HTTP/1.1" 500 86009
+INFO 2026-07-12 22:45:42 basehttp 20384 20080 "GET /movies/theater/433/seats/book/ HTTP/1.1" 200 41600
+ERROR 2026-07-12 22:45:45 log 20384 20080 Internal Server Error: /movies/theater/433/seats/book/
+Traceback (most recent call last):
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: movies_seatreservation.seat_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\movies\views.py", line 191, in book_seats
+    reservation = SeatReservation.objects.create(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 776, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 919, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: movies_seatreservation.seat_id
+ERROR 2026-07-12 22:45:45 basehttp 20384 20080 "POST /movies/theater/433/seats/book/ HTTP/1.1" 500 171745
+ERROR 2026-07-12 22:45:49 log 20384 20080 Internal Server Error: /movies/theater/433/seats/book/
+Traceback (most recent call last):
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: movies_seatreservation.seat_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\movies\views.py", line 191, in book_seats
+    reservation = SeatReservation.objects.create(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 776, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 919, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: movies_seatreservation.seat_id
+ERROR 2026-07-12 22:45:49 basehttp 20384 20080 "POST /movies/theater/433/seats/book/ HTTP/1.1" 500 171745
+ERROR 2026-07-13 09:25:48 log 20384 11968 Internal Server Error: /movies/theater/433/seats/book/
+Traceback (most recent call last):
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: movies_seatreservation.seat_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\movies\views.py", line 191, in book_seats
+    reservation = SeatReservation.objects.create(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 776, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 919, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: movies_seatreservation.seat_id
+ERROR 2026-07-13 09:25:48 basehttp 20384 11968 "POST /movies/theater/433/seats/book/ HTTP/1.1" 500 171742
+INFO 2026-07-13 09:25:52 basehttp 20384 11968 "GET /movies/379/theaters HTTP/1.1" 200 16437
+INFO 2026-07-13 09:25:55 basehttp 20384 11968 "GET / HTTP/1.1" 200 42186
+INFO 2026-07-13 09:25:57 basehttp 20384 11968 "GET / HTTP/1.1" 200 42186
+INFO 2026-07-13 09:25:58 basehttp 20384 11968 "GET / HTTP/1.1" 200 42186
+INFO 2026-07-13 09:26:00 basehttp 20384 11968 "GET /movies/439/theaters HTTP/1.1" 200 16421
+INFO 2026-07-13 09:26:03 basehttp 20384 11968 "GET /movies/theater/523/seats/book/ HTTP/1.1" 200 41595
+INFO 2026-07-13 09:26:37 basehttp 20384 11968 "POST /movies/theater/523/seats/book/ HTTP/1.1" 302 0
+ERROR 2026-07-13 09:26:38 log 20384 11968 Internal Server Error: /movies/payments/checkout/90ddecba-e785-4299-aa19-b6e691489ea5/
+Traceback (most recent call last):
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\movies\views.py", line 253, in payment_checkout
+    booking = get_object_or_404(Booking, payment_id=payment_id, user=request.user)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\query.py", line 439, in get
+    raise self.model.MultipleObjectsReturned(
+movies.models.Booking.MultipleObjectsReturned: get() returned more than one Booking -- it returned 2!
+ERROR 2026-07-13 09:26:38 basehttp 20384 11968 "GET /movies/payments/checkout/90ddecba-e785-4299-aa19-b6e691489ea5/ HTTP/1.1" 500 86257
+ERROR 2026-07-13 09:29:22 log 18688 15344 Internal Server Error: /movies/payments/checkout/shared-payment-123/
+Traceback (most recent call last):
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\movies\views.py", line 253, in payment_checkout
+    booking = get_object_or_404(Booking, payment_id=payment_id, user=request.user)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\query.py", line 439, in get
+    raise self.model.MultipleObjectsReturned(
+movies.models.Booking.MultipleObjectsReturned: get() returned more than one Booking -- it returned 2!
+INFO 2026-07-13 09:29:50 autoreload 21852 21724 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-13 09:29:50 autoreload 20528 20908 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-13 09:29:50 autoreload 20384 21792 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-13 09:29:51 autoreload 19836 18340 Watching for file changes with StatReloader
+INFO 2026-07-13 09:29:51 autoreload 17988 1420 Watching for file changes with StatReloader
+INFO 2026-07-13 09:29:51 autoreload 20804 3708 Watching for file changes with StatReloader
+INFO 2026-07-13 09:30:10 autoreload 19836 18340 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-13 09:30:10 autoreload 17988 1420 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-13 09:30:10 autoreload 20804 3708 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-13 09:30:11 autoreload 22348 4776 Watching for file changes with StatReloader
+INFO 2026-07-13 09:30:11 autoreload 20600 19500 Watching for file changes with StatReloader
+INFO 2026-07-13 09:30:11 autoreload 6584 5576 Watching for file changes with StatReloader
+INFO 2026-07-13 09:34:42 views 820 14380 Webhook processed successfully: payment_id=pay-123, status=pending->completed, booking_id=1
+INFO 2026-07-13 09:35:44 basehttp 6584 10436 "GET /movies/payments/checkout/90ddecba-e785-4299-aa19-b6e691489ea5/ HTTP/1.1" 200 13738
+INFO 2026-07-13 09:36:00 basehttp 6584 10436 "POST /movies/payments/checkout/90ddecba-e785-4299-aa19-b6e691489ea5/ HTTP/1.1" 302 0
+INFO 2026-07-13 09:36:00 basehttp 6584 10436 "GET /profile/ HTTP/1.1" 200 21140
+INFO 2026-07-16 23:24:14 autoreload 5188 6608 Watching for file changes with StatReloader
+INFO 2026-07-16 23:24:29 basehttp 5188 17272 "GET / HTTP/1.1" 200 41914
+INFO 2026-07-16 23:24:29 basehttp 5188 17272 "GET /media/movies/f5VK0h2bprRhR6iRrixcuEfRxSUF4l14F66vQYrsJGmKZ5nTA1.jpg HTTP/1.1" 200 27304
+INFO 2026-07-16 23:24:29 basehttp 5188 17268 "GET /media/movies/download.jpeg HTTP/1.1" 200 12036
+INFO 2026-07-16 23:24:29 basehttp 5188 12412 "GET /media/movies/IQsBhg9t747dLhjXfsChIGZy4XfugER8BF0Gw5MDhIcnY5nTA1.jpg HTTP/1.1" 200 61134
+INFO 2026-07-16 23:24:29 basehttp 5188 2268 "GET /media/movies/635217f73e372771013edb4c-the-avengers-poster-marvel-movie-canvas1.jpg HTTP/1.1" 200 308649
+WARNING 2026-07-16 23:24:30 log 5188 12412 Not Found: /favicon.ico
+WARNING 2026-07-16 23:24:30 basehttp 5188 12412 "GET /favicon.ico HTTP/1.1" 404 4291
+INFO 2026-07-16 23:24:32 basehttp 5188 12412 "GET /movies/558/theaters HTTP/1.1" 200 16431
+INFO 2026-07-16 23:24:34 basehttp 5188 12412 "GET /movies/theater/696/seats/book/ HTTP/1.1" 200 41597
+INFO 2026-07-16 23:24:39 basehttp 5188 12412 "POST /movies/theater/696/seats/book/ HTTP/1.1" 302 0
+INFO 2026-07-16 23:24:39 basehttp 5188 12412 "GET /movies/payments/checkout/859a1af4-c13e-49eb-8247-3fa78b92e4d6/ HTTP/1.1" 200 13742
+INFO 2026-07-16 23:24:46 basehttp 5188 12412 "POST /movies/payments/checkout/859a1af4-c13e-49eb-8247-3fa78b92e4d6/ HTTP/1.1" 302 0
+INFO 2026-07-16 23:24:46 basehttp 5188 12412 "GET /profile/ HTTP/1.1" 200 17956
+WARNING 2026-07-16 23:26:57 log 5188 12412 Not Found: /profile/admin
+WARNING 2026-07-16 23:26:57 basehttp 5188 12412 "GET /profile/admin HTTP/1.1" 404 4297
+WARNING 2026-07-16 23:27:07 log 5188 12412 Not Found: /profile/admin/
+WARNING 2026-07-16 23:27:07 basehttp 5188 12412 "GET /profile/admin/ HTTP/1.1" 404 4300
+INFO 2026-07-16 23:27:19 basehttp 5188 12412 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-07-16 23:27:19 basehttp 5188 12412 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2658
+INFO 2026-07-16 23:27:19 basehttp 5188 12412 "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+INFO 2026-07-16 23:27:19 basehttp 5188 17268 "GET /static/admin/css/login.css HTTP/1.1" 200 939
+INFO 2026-07-16 23:27:19 basehttp 5188 2268 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2271
+INFO 2026-07-16 23:27:19 basehttp 5188 12080 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 1360
+INFO 2026-07-16 23:27:19 basehttp 5188 17272 "GET /static/admin/css/responsive.css HTTP/1.1" 200 18545
+INFO 2026-07-16 23:27:19 basehttp 5188 12080 "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+INFO 2026-07-16 23:27:19 basehttp 5188 12080 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2026-07-16 23:27:19 basehttp 5188 17272 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+INFO 2026-07-16 23:27:19 basehttp 5188 12080 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+INFO 2026-07-16 23:27:19 basehttp 5188 2268 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+INFO 2026-07-16 23:27:30 basehttp 5188 2268 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2532
+INFO 2026-07-16 23:27:51 basehttp 5188 2268 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2530
+INFO 2026-07-16 23:28:14 basehttp 5188 2268 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2533
+INFO 2026-07-16 23:28:31 basehttp 5188 2268 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2530
+INFO 2026-07-16 23:28:48 basehttp 5188 2268 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2533
+INFO 2026-07-16 23:33:51 autoreload 5372 5164 Watching for file changes with StatReloader
+INFO 2026-07-16 23:34:01 basehttp 5372 16804 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2530
+INFO 2026-07-16 23:34:19 basehttp 5372 16804 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-07-16 23:34:19 basehttp 5372 16804 "GET /admin/ HTTP/1.1" 200 6511
+INFO 2026-07-16 23:34:19 basehttp 5372 16804 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 380
+INFO 2026-07-16 23:34:19 basehttp 5372 16804 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2026-07-16 23:34:19 basehttp 5372 12432 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2026-07-16 23:34:28 basehttp 5372 12432 "GET /admin/movies/booking/ HTTP/1.1" 200 9858
+INFO 2026-07-16 23:34:28 basehttp 5372 12432 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6874
+INFO 2026-07-16 23:34:28 basehttp 5372 14084 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2026-07-16 23:34:28 basehttp 5372 12432 "GET /static/admin/js/actions.js HTTP/1.1" 200 7867
+INFO 2026-07-16 23:34:28 basehttp 5372 14984 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 5984
+INFO 2026-07-16 23:34:28 basehttp 5372 16804 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-16 23:34:28 basehttp 5372 7824 "GET /static/admin/js/core.js HTTP/1.1" 200 5698
+INFO 2026-07-16 23:34:28 basehttp 5372 14084 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7902
+INFO 2026-07-16 23:34:28 basehttp 5372 12432 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2026-07-16 23:34:28 basehttp 5372 7824 "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2026-07-16 23:34:28 basehttp 5372 6424 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 287630
+INFO 2026-07-16 23:34:28 basehttp 5372 14984 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+INFO 2026-07-16 23:34:28 basehttp 5372 14984 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2026-07-16 23:34:33 basehttp 5372 14984 "GET /admin/movies/emailtask/ HTTP/1.1" 200 18557
+INFO 2026-07-16 23:34:33 basehttp 5372 14984 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-16 23:34:34 basehttp 5372 14984 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2026-07-16 23:34:59 basehttp 5372 14984 "GET /admin/movies/genre/ HTTP/1.1" 200 14020
+INFO 2026-07-16 23:34:59 basehttp 5372 14984 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-16 23:35:01 basehttp 5372 14984 "GET /admin/movies/language/ HTTP/1.1" 200 10748
+INFO 2026-07-16 23:35:01 basehttp 5372 14984 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-16 23:35:04 basehttp 5372 14984 "GET /admin/movies/movie/ HTTP/1.1" 200 53002
+INFO 2026-07-16 23:35:04 basehttp 5372 14984 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-16 23:35:08 basehttp 5372 14984 "GET /admin/movies/movie/527/change/ HTTP/1.1" 200 21020
+INFO 2026-07-16 23:35:08 basehttp 5372 14984 "GET /static/admin/css/forms.css HTTP/1.1" 200 8804
+INFO 2026-07-16 23:35:08 basehttp 5372 12432 "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4360
+INFO 2026-07-16 23:35:08 basehttp 5372 14084 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 12350
+INFO 2026-07-16 23:35:08 basehttp 5372 16804 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 492
+INFO 2026-07-16 23:35:08 basehttp 5372 6424 "GET /static/admin/js/inlines.js HTTP/1.1" 200 15225
+INFO 2026-07-16 23:35:08 basehttp 5372 7824 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-16 23:35:08 basehttp 5372 6424 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2026-07-16 23:35:08 basehttp 5372 7824 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11097
+INFO 2026-07-16 23:35:08 basehttp 5372 7824 "GET /static/admin/img/inline-delete.svg HTTP/1.1" 200 560
+INFO 2026-07-16 23:35:08 basehttp 5372 7824 "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+INFO 2026-07-16 23:35:08 basehttp 5372 14084 "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+INFO 2026-07-16 23:35:08 basehttp 5372 6424 "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+INFO 2026-07-16 23:35:20 basehttp 5372 6424 "GET /admin/movies/emailtask/ HTTP/1.1" 200 18557
+INFO 2026-07-16 23:35:20 basehttp 5372 6424 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-16 23:35:31 basehttp 5372 6424 "GET /admin/movies/seat/ HTTP/1.1" 200 48991
+INFO 2026-07-16 23:35:31 basehttp 5372 14084 "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2026-07-16 23:35:31 basehttp 5372 6424 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-16 23:35:52 basehttp 5372 6424 "GET / HTTP/1.1" 200 42065
+INFO 2026-07-16 23:35:56 basehttp 5372 6424 "GET /movies/558/theaters HTTP/1.1" 200 16582
+INFO 2026-07-16 23:35:57 basehttp 5372 6424 "GET /movies/theater/696/seats/book/ HTTP/1.1" 200 40880
+INFO 2026-07-16 23:37:01 basehttp 5372 6424 "GET /profile/ HTTP/1.1" 200 16671
+INFO 2026-07-16 23:37:12 basehttp 5372 6424 "POST /profile/ HTTP/1.1" 302 0
+INFO 2026-07-16 23:37:12 basehttp 5372 6424 "GET /profile/ HTTP/1.1" 200 16695
+ERROR 2026-07-16 23:37:22 log 5372 6424 Internal Server Error: /movies/admin-analytics/
+Traceback (most recent call last):
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\movies\views.py", line 541, in admin_analytics
+    cache.set(cache_key, context, 60)
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\cache\backends\locmem.py", line 56, in set
+    pickled = pickle.dumps(value, self.pickle_protocol)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\query.py", line 233, in __getstate__
+    self._fetch_all()
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\query.py", line 109, in __iter__
+    for row in compiler.results_iter(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1130, in results_iter
+    results = self.execute_sql(MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 97, in execute
+    with self.debug_sql(sql, params, use_last_executed_query=True):
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 144, in __exit__
+    next(self.gen)
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 113, in debug_sql
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 164, in last_executed_query
+    return sql % params
+           ~~~~^~~~~~~~
+ValueError: unsupported format character 'H' (0x48) at index 19
+ERROR 2026-07-16 23:37:22 basehttp 5372 6424 "GET /movies/admin-analytics/ HTTP/1.1" 500 126593
+INFO 2026-07-16 23:37:31 basehttp 5372 6424 "GET / HTTP/1.1" 200 42065
+INFO 2026-07-16 23:37:34 basehttp 5372 6424 "GET /movies/617/theaters HTTP/1.1" 200 16566
+INFO 2026-07-16 23:37:36 basehttp 5372 6424 "GET /movies/theater/781/seats/book/ HTTP/1.1" 200 41742
+INFO 2026-07-16 23:37:41 basehttp 5372 6424 "GET / HTTP/1.1" 200 42065
+INFO 2026-07-16 23:37:44 basehttp 5372 6424 "GET /movies/558/theaters HTTP/1.1" 200 16582
+INFO 2026-07-16 23:37:46 basehttp 5372 6424 "GET /movies/theater/696/seats/book/ HTTP/1.1" 200 40880
+INFO 2026-07-16 23:37:51 basehttp 5372 6424 "POST /movies/theater/696/seats/book/ HTTP/1.1" 302 0
+INFO 2026-07-16 23:37:51 basehttp 5372 6424 "GET /movies/payments/checkout/d64ed03b-c86a-4714-8de2-2f4870492a4a/ HTTP/1.1" 200 13893
+INFO 2026-07-16 23:37:54 basehttp 5372 6424 "POST /movies/payments/checkout/d64ed03b-c86a-4714-8de2-2f4870492a4a/ HTTP/1.1" 302 0
+INFO 2026-07-16 23:37:54 basehttp 5372 6424 "GET /profile/ HTTP/1.1" 200 18104
+INFO 2026-07-16 23:39:06 autoreload 5372 5164 D:\code\Intership\movies\email_tasks.py changed, reloading.
+INFO 2026-07-16 23:39:06 autoreload 6024 16412 Watching for file changes with StatReloader
+INFO 2026-07-16 23:39:14 autoreload 6024 16412 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-16 23:39:15 autoreload 3060 9484 Watching for file changes with StatReloader
+INFO 2026-07-16 23:39:39 autoreload 3060 9484 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-16 23:39:40 autoreload 15996 14648 Watching for file changes with StatReloader
+INFO 2026-07-16 23:45:43 autoreload 15996 14648 D:\code\Intership\movies\email_tasks.py changed, reloading.
+INFO 2026-07-16 23:45:44 autoreload 11500 1372 Watching for file changes with StatReloader
+INFO 2026-07-16 23:45:52 autoreload 11500 1372 D:\code\Intership\bookmyseat\settings.py changed, reloading.
+INFO 2026-07-16 23:45:54 autoreload 13184 9264 Watching for file changes with StatReloader
+INFO 2026-07-16 23:49:25 basehttp 13184 10420 "GET / HTTP/1.1" 200 42065
+INFO 2026-07-16 23:52:35 basehttp 13184 10420 "GET / HTTP/1.1" 200 42065
+INFO 2026-07-16 23:52:39 basehttp 13184 10420 "GET /movies/617/theaters HTTP/1.1" 200 16566
+INFO 2026-07-16 23:52:41 basehttp 13184 10420 "GET /movies/theater/781/seats/book/ HTTP/1.1" 200 41742
+INFO 2026-07-16 23:52:48 basehttp 13184 10420 "POST /movies/theater/781/seats/book/ HTTP/1.1" 302 0
+INFO 2026-07-16 23:52:48 basehttp 13184 10420 "GET /movies/payments/checkout/22ab83ac-57db-4771-b839-452910cb91a0/ HTTP/1.1" 200 14513
+INFO 2026-07-16 23:52:51 basehttp 13184 10420 "POST /movies/payments/checkout/22ab83ac-57db-4771-b839-452910cb91a0/ HTTP/1.1" 302 0
+INFO 2026-07-16 23:52:51 basehttp 13184 10420 "GET /profile/ HTTP/1.1" 200 21212
+INFO 2026-07-16 23:56:15 autoreload 13184 9264 D:\code\Intership\bookmyseat\settings.py changed, reloading.
+INFO 2026-07-16 23:56:16 autoreload 6032 4832 Watching for file changes with StatReloader
+INFO 2026-07-17 13:29:12 autoreload 17772 1836 Watching for file changes with StatReloader
+INFO 2026-07-17 13:40:59 autoreload 19708 18652 Watching for file changes with StatReloader
+INFO 2026-07-17 13:41:01 basehttp 19708 3392 "GET / HTTP/1.1" 200 42065
+INFO 2026-07-17 13:41:03 basehttp 19708 3392 "GET /movies/558/theaters HTTP/1.1" 200 16582
+INFO 2026-07-17 13:41:06 basehttp 19708 3392 "GET /movies/theater/696/seats/book/ HTTP/1.1" 200 40012
+ERROR 2026-07-17 13:41:11 log 19708 3392 Internal Server Error: /movies/theater/696/seats/book/
+Traceback (most recent call last):
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: movies_booking.amount
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\movies\views.py", line 197, in book_seats
+    booking = Booking.objects.create(
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 776, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 919, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: movies_booking.amount
+ERROR 2026-07-17 13:41:11 basehttp 19708 3392 "POST /movies/theater/696/seats/book/ HTTP/1.1" 500 171634
+INFO 2026-07-17 13:41:37 basehttp 19708 3392 "GET /admin/auth/user/ HTTP/1.1" 200 17041
+INFO 2026-07-17 13:41:37 basehttp 19708 3392 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 2956 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 16440 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 3392 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 20052 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 2956 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 19748 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 16440 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 3392 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 18812 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-17 13:41:37 basehttp 19708 20052 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 2956 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 19748 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 19748 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 18812 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 19748 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 18812 "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 18812 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 18812 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 19748 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 19748 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 19748 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 18812 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2026-07-17 13:41:37 basehttp 19708 19748 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2026-07-17 13:42:39 basehttp 19708 19748 "POST /admin/auth/user/ HTTP/1.1" 200 9291
+INFO 2026-07-17 13:42:39 basehttp 19708 19748 "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2026-07-17 13:42:43 basehttp 19708 19748 "POST /admin/auth/user/ HTTP/1.1" 302 0
+INFO 2026-07-17 13:42:44 basehttp 19708 19748 "GET /admin/auth/user/ HTTP/1.1" 200 11069
+INFO 2026-07-17 13:42:44 basehttp 19708 19748 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-17 13:42:48 basehttp 19708 19748 "GET /admin/auth/user/?o= HTTP/1.1" 200 10884
+INFO 2026-07-17 13:42:48 basehttp 19708 19748 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-17 13:42:50 basehttp 19708 19748 "GET /admin/auth/user/?o=1 HTTP/1.1" 200 11140
+INFO 2026-07-17 13:42:50 basehttp 19708 19748 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-17 13:42:53 basehttp 19708 19748 "GET /admin/auth/user/9/change/?_changelist_filters=o%3D1 HTTP/1.1" 200 19961
+INFO 2026-07-17 13:42:53 basehttp 19708 19748 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2026-07-17 13:42:53 basehttp 19708 3392 "GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+INFO 2026-07-17 13:42:53 basehttp 19708 16440 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+INFO 2026-07-17 13:42:53 basehttp 19708 2956 "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+INFO 2026-07-17 13:42:53 basehttp 19708 20052 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19634
+INFO 2026-07-17 13:42:53 basehttp 19708 18812 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-17 13:42:53 basehttp 19708 20052 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2026-07-17 13:42:53 basehttp 19708 18812 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2026-07-17 13:42:53 basehttp 19708 18812 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2026-07-17 13:42:53 basehttp 19708 18812 "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 304 0
+INFO 2026-07-17 13:42:53 basehttp 19708 2956 "GET /static/admin/img/selector-icons.svg HTTP/1.1" 304 0
+INFO 2026-07-17 13:42:53 basehttp 19708 16440 "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 304 0
+INFO 2026-07-17 13:42:53 basehttp 19708 3392 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO 2026-07-17 13:42:53 basehttp 19708 20052 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2026-07-17 13:43:08 basehttp 19708 20052 "GET /admin/auth/group/add/ HTTP/1.1" 200 12409
+INFO 2026-07-17 13:43:08 basehttp 19708 20052 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-17 13:43:10 basehttp 19708 20052 "GET /admin/auth/user/add/ HTTP/1.1" 200 9147
+INFO 2026-07-17 13:43:11 basehttp 19708 20052 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-17 13:43:14 basehttp 19708 20052 "GET /admin/auth/user/ HTTP/1.1" 200 10933
+INFO 2026-07-17 13:43:14 basehttp 19708 20052 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-17 13:43:29 basehttp 19708 20052 "POST /admin/auth/user/ HTTP/1.1" 200 8973
+INFO 2026-07-17 13:43:32 basehttp 19708 20052 "POST /admin/auth/user/ HTTP/1.1" 302 0
+INFO 2026-07-17 13:43:32 basehttp 19708 20052 "GET /admin/auth/user/ HTTP/1.1" 302 0
+INFO 2026-07-17 13:43:32 basehttp 19708 20052 "GET /admin/login/?next=/admin/auth/user/ HTTP/1.1" 200 2369
+INFO 2026-07-17 13:43:32 basehttp 19708 20052 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2026-07-17 13:44:54 basehttp 19708 20052 "POST /admin/login/?next=/admin/auth/user/ HTTP/1.1" 200 2396
+INFO 2026-07-17 13:45:17 basehttp 19708 20052 "POST /admin/login/?next=/admin/auth/user/ HTTP/1.1" 302 0
+INFO 2026-07-17 13:45:17 basehttp 19708 20052 "GET /admin/auth/user/ HTTP/1.1" 200 10512
+INFO 2026-07-17 13:45:17 basehttp 19708 20052 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-17 13:45:26 basehttp 19708 20052 "POST /admin/auth/user/ HTTP/1.1" 200 6791
+INFO 2026-07-17 13:45:27 basehttp 19708 20052 "POST /admin/auth/user/ HTTP/1.1" 302 0
+INFO 2026-07-17 13:45:27 basehttp 19708 20052 "GET /admin/auth/user/ HTTP/1.1" 200 10251
+INFO 2026-07-17 13:45:27 basehttp 19708 20052 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-17 13:45:31 basehttp 19708 20052 "GET / HTTP/1.1" 200 42065
+INFO 2026-07-17 13:45:32 basehttp 19708 20052 "POST /logout/ HTTP/1.1" 200 11192
+INFO 2026-07-17 13:45:34 basehttp 19708 20052 "GET /register/ HTTP/1.1" 200 19272
+INFO 2026-07-17 13:45:58 basehttp 19708 20052 "POST /register/ HTTP/1.1" 302 0
+INFO 2026-07-17 13:45:58 basehttp 19708 20052 "GET /profile/ HTTP/1.1" 200 16541
+INFO 2026-07-17 13:46:02 basehttp 19708 20052 "GET / HTTP/1.1" 200 41914
+INFO 2026-07-17 13:46:03 basehttp 19708 20052 "GET /movies/535/theaters HTTP/1.1" 200 16425
+INFO 2026-07-17 13:46:08 basehttp 19708 20052 "GET / HTTP/1.1" 200 41914
+INFO 2026-07-17 13:46:09 basehttp 19708 20052 "GET /movies/558/theaters HTTP/1.1" 200 16431
+INFO 2026-07-17 13:46:11 basehttp 19708 20052 "GET /movies/theater/696/seats/book/ HTTP/1.1" 200 39861
+INFO 2026-07-17 13:46:17 basehttp 19708 20052 "GET /admin/movies/booking/ HTTP/1.1" 302 0
+INFO 2026-07-17 13:46:18 basehttp 19708 20052 "GET /admin/login/?next=/admin/movies/booking/ HTTP/1.1" 200 2396
+ERROR 2026-07-17 13:46:29 log 19708 20052 Internal Server Error: /movies/theater/696/seats/book/
+Traceback (most recent call last):
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: movies_booking.amount
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\movies\views.py", line 197, in book_seats
+    booking = Booking.objects.create(
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 776, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 919, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: movies_booking.amount
+ERROR 2026-07-17 13:46:29 basehttp 19708 20052 "POST /movies/theater/696/seats/book/ HTTP/1.1" 500 170054
+INFO 2026-07-17 13:52:03 autoreload 19708 18652 D:\code\Intership\movies\models.py changed, reloading.
+INFO 2026-07-17 13:52:04 autoreload 17664 13932 Watching for file changes with StatReloader
+INFO 2026-07-17 13:52:33 autoreload 17664 13932 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-17 13:52:33 autoreload 18320 16888 Watching for file changes with StatReloader
+INFO 2026-07-17 14:16:09 autoreload 11884 9564 Watching for file changes with StatReloader
+INFO 2026-07-17 14:16:42 basehttp 11884 6208 "GET / HTTP/1.1" 200 41914
+WARNING 2026-07-17 14:16:43 log 11884 6208 Not Found: /favicon.ico
+WARNING 2026-07-17 14:16:43 basehttp 11884 6208 "GET /favicon.ico HTTP/1.1" 404 4291
+INFO 2026-07-17 14:16:44 basehttp 11884 6208 "GET /movies/558/theaters HTTP/1.1" 200 16431
+INFO 2026-07-17 14:16:45 basehttp 11884 6208 "GET /movies/theater/696/seats/book/ HTTP/1.1" 200 39861
+INFO 2026-07-17 14:16:49 basehttp 11884 6208 "POST /movies/theater/696/seats/book/ HTTP/1.1" 302 0
+INFO 2026-07-17 14:16:49 basehttp 11884 6208 "GET /profile/ HTTP/1.1" 200 17950
+INFO 2026-07-17 14:27:17 autoreload 11884 9564 D:\code\Intership\movies\email_tasks.py changed, reloading.
+INFO 2026-07-17 14:27:18 autoreload 12528 18012 Watching for file changes with StatReloader
+INFO 2026-07-17 14:28:53 autoreload 12528 18012 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-17 14:28:56 autoreload 15604 16908 Watching for file changes with StatReloader
+INFO 2026-07-17 14:29:11 autoreload 15604 16908 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-17 14:29:13 autoreload 2712 17560 Watching for file changes with StatReloader
+INFO 2026-07-17 14:30:02 autoreload 2712 17560 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-17 14:30:04 autoreload 15576 3268 Watching for file changes with StatReloader
+INFO 2026-07-17 14:30:39 autoreload 15576 3268 D:\code\Intership\movies\email_tasks.py changed, reloading.
+INFO 2026-07-17 14:30:40 autoreload 18128 1980 Watching for file changes with StatReloader
+INFO 2026-07-17 14:31:59 autoreload 18128 1980 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-17 14:32:00 autoreload 8080 7680 Watching for file changes with StatReloader
+INFO 2026-07-17 14:32:30 views 3716 17276 Payment status completed for booking
+INFO 2026-07-17 14:35:11 autoreload 2528 5760 Watching for file changes with StatReloader
+INFO 2026-07-17 14:35:13 basehttp 2528 7248 "GET / HTTP/1.1" 200 41914
+INFO 2026-07-17 14:35:15 basehttp 2528 7248 "GET /movies/558/theaters HTTP/1.1" 200 16431
+INFO 2026-07-17 14:35:17 basehttp 2528 7248 "GET /movies/theater/696/seats/book/ HTTP/1.1" 200 39861
+ERROR 2026-07-17 14:35:22 log 2528 7248 Internal Server Error: /movies/theater/696/seats/book/
+Traceback (most recent call last):
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: movies_seatreservation.seat_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\movies\views.py", line 191, in book_seats
+    reservation = SeatReservation.objects.create(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 776, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 919, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: movies_seatreservation.seat_id
+ERROR 2026-07-17 14:35:22 basehttp 2528 7248 "POST /movies/theater/696/seats/book/ HTTP/1.1" 500 171539
+INFO 2026-07-17 14:39:26 autoreload 2528 5760 D:\code\Intership\movies\models.py changed, reloading.
+INFO 2026-07-17 14:39:28 autoreload 16176 6616 Watching for file changes with StatReloader
+INFO 2026-07-17 14:40:17 autoreload 16176 6616 D:\code\Intership\movies\email_tasks.py changed, reloading.
+INFO 2026-07-17 14:40:19 autoreload 8872 15196 Watching for file changes with StatReloader
+INFO 2026-07-17 14:40:29 autoreload 8872 15196 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-17 14:40:31 autoreload 13236 7140 Watching for file changes with StatReloader
+INFO 2026-07-17 14:41:07 autoreload 13236 7140 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-17 14:41:09 autoreload 19328 18864 Watching for file changes with StatReloader
+INFO 2026-07-17 14:41:58 autoreload 19328 18864 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-17 14:42:00 autoreload 19376 18460 Watching for file changes with StatReloader
+INFO 2026-07-17 14:42:23 autoreload 19376 18460 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-17 14:42:24 autoreload 18888 10224 Watching for file changes with StatReloader
+INFO 2026-07-17 14:42:38 autoreload 18888 10224 D:\code\Intership\movies\urls.py changed, reloading.
+INFO 2026-07-17 14:42:40 autoreload 9528 14732 Watching for file changes with StatReloader
+INFO 2026-07-17 14:42:52 autoreload 9528 14732 D:\code\Intership\movies\urls.py changed, reloading.
+INFO 2026-07-17 14:42:54 autoreload 19248 3204 Watching for file changes with StatReloader
+INFO 2026-07-17 14:43:57 autoreload 19248 3204 D:\code\Intership\bookmyseat\settings.py changed, reloading.
+INFO 2026-07-17 14:43:59 autoreload 12680 18668 Watching for file changes with StatReloader
+INFO 2026-07-17 14:44:35 autoreload 12680 18668 D:\code\Intership\movies\models.py changed, reloading.
+INFO 2026-07-17 14:44:36 autoreload 7112 14464 Watching for file changes with StatReloader
+INFO 2026-07-17 14:44:53 autoreload 7112 14464 D:\code\Intership\movies\email_tasks.py changed, reloading.
+INFO 2026-07-17 14:44:56 autoreload 16044 4552 Watching for file changes with StatReloader
+INFO 2026-07-17 15:08:33 views 11176 12692 Payment confirmed
+INFO 2026-07-17 15:11:01 autoreload 12896 6348 Watching for file changes with StatReloader
+INFO 2026-07-17 15:14:22 autoreload 14840 2572 Watching for file changes with StatReloader
+WARNING 2026-07-17 15:14:26 base 14840 9976 Session data corrupted
+INFO 2026-07-17 15:14:26 basehttp 14840 9976 "GET / HTTP/1.1" 200 41508
+WARNING 2026-07-17 15:14:28 log 14840 9976 Not Found: /favicon.ico
+WARNING 2026-07-17 15:14:28 basehttp 14840 9976 "GET /favicon.ico HTTP/1.1" 404 4291
+WARNING 2026-07-17 15:14:31 base 14840 9976 Session data corrupted
+INFO 2026-07-17 15:14:31 basehttp 14840 9976 "GET /movies/617/theaters HTTP/1.1" 200 15817
+WARNING 2026-07-17 15:14:33 base 14840 9976 Session data corrupted
+INFO 2026-07-17 15:14:33 basehttp 14840 9976 "GET /login/ HTTP/1.1" 200 14857
+WARNING 2026-07-17 15:14:45 base 14840 9976 Session data corrupted
+INFO 2026-07-17 15:14:45 basehttp 14840 9976 "GET /admin/ HTTP/1.1" 302 0
+WARNING 2026-07-17 15:14:45 base 14840 9976 Session data corrupted
+INFO 2026-07-17 15:14:45 basehttp 14840 9976 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2214
+WARNING 2026-07-17 15:15:02 base 14840 9976 Session data corrupted
+INFO 2026-07-17 15:15:03 basehttp 14840 9976 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-07-17 15:15:03 basehttp 14840 9976 "GET /admin/ HTTP/1.1" 200 7268
+INFO 2026-07-17 15:15:04 basehttp 14840 9976 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 380
+INFO 2026-07-17 15:15:04 basehttp 14840 7152 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO 2026-07-17 15:15:04 basehttp 14840 9976 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2026-07-17 15:15:13 basehttp 14840 7152 "GET /login/ HTTP/1.1" 200 15606
+INFO 2026-07-17 15:15:16 basehttp 14840 7152 "GET / HTTP/1.1" 200 42065
+INFO 2026-07-17 15:15:20 basehttp 14840 7152 "POST /logout/ HTTP/1.1" 200 11192
+INFO 2026-07-17 15:15:21 basehttp 14840 7152 "GET /login/ HTTP/1.1" 200 14857
+INFO 2026-07-17 15:15:43 basehttp 14840 7152 "POST /login/ HTTP/1.1" 200 14869
+INFO 2026-07-17 15:15:57 basehttp 14840 7152 "POST /login/ HTTP/1.1" 200 14872
+INFO 2026-07-17 15:16:00 basehttp 14840 7152 "GET /password-reset/ HTTP/1.1" 200 14241
+INFO 2026-07-17 15:16:03 basehttp 14840 7152 "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2026-07-17 15:16:04 basehttp 14840 7152 "GET /password-reset/done/ HTTP/1.1" 200 11193
+INFO 2026-07-17 15:16:19 basehttp 14840 7152 "GET /register/ HTTP/1.1" 200 19272
+INFO 2026-07-17 15:16:29 basehttp 14840 7152 "GET /admin/auth/user/ HTTP/1.1" 302 0
+INFO 2026-07-17 15:16:29 basehttp 14840 7152 "GET /admin/login/?next=/admin/auth/user/ HTTP/1.1" 200 2234
+INFO 2026-07-17 15:16:38 basehttp 14840 7152 "POST /admin/login/?next=/admin/auth/user/ HTTP/1.1" 302 0
+INFO 2026-07-17 15:16:38 basehttp 14840 7152 "GET /admin/auth/user/ HTTP/1.1" 200 10873
+INFO 2026-07-17 15:16:38 basehttp 14840 7152 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-17 15:16:42 basehttp 14840 7152 "GET /login/ HTTP/1.1" 200 15606
+INFO 2026-07-17 15:16:50 basehttp 14840 7152 "POST /login/ HTTP/1.1" 200 15620
+INFO 2026-07-17 15:17:02 basehttp 14840 7152 "POST /login/ HTTP/1.1" 200 15620
+INFO 2026-07-17 15:17:11 basehttp 14840 7152 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-07-17 15:17:11 basehttp 14840 7152 "GET / HTTP/1.1" 200 41914
+INFO 2026-07-17 15:17:17 basehttp 14840 7152 "GET /movies/558/theaters HTTP/1.1" 200 16431
+INFO 2026-07-17 15:17:19 basehttp 14840 7152 "GET /movies/theater/696/seats/book/ HTTP/1.1" 200 39861
+INFO 2026-07-17 15:17:23 basehttp 14840 7152 "POST /movies/theater/696/seats/book/ HTTP/1.1" 302 0
+WARNING 2026-07-17 15:17:23 views 14840 7152 Unable to create payment order
+INFO 2026-07-17 15:17:23 basehttp 14840 7152 "GET /movies/payments/checkout/ea58c4c0-6595-4257-91ce-105e8bf46a6a/ HTTP/1.1" 200 13060
+INFO 2026-07-17 15:17:52 basehttp 14840 7152 "GET /movies HTTP/1.1" 301 0
+INFO 2026-07-17 15:17:53 basehttp 14840 7152 "GET /movies/ HTTP/1.1" 200 152390
+INFO 2026-07-17 15:17:53 basehttp 14840 7152 "GET /media/movies/feUv2SYumXlT8E2RhzlYbZxfEGLG5AVrCPxP1gmAaCusxyPnA1.jpg HTTP/1.1" 200 42378
+INFO 2026-07-17 15:17:55 basehttp 14840 7152 "GET / HTTP/1.1" 200 41914
+INFO 2026-07-17 15:17:59 basehttp 14840 7152 "GET /movies/558/theaters HTTP/1.1" 200 16431
+INFO 2026-07-17 15:18:01 basehttp 14840 7152 "GET /movies/theater/696/seats/book/ HTTP/1.1" 200 38993
+INFO 2026-07-17 15:23:54 basehttp 14840 16844 "GET /movies/theater/696/seats/book/ HTTP/1.1" 200 39861
+ERROR 2026-07-17 15:23:57 log 14840 16844 Internal Server Error: /movies/theater/696/seats/book/
+Traceback (most recent call last):
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: movies_seatreservation.seat_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\movies\views.py", line 207, in book_seats
+    reservation = SeatReservation.objects.create(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 776, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 919, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: movies_seatreservation.seat_id
+ERROR 2026-07-17 15:23:57 basehttp 14840 16844 "POST /movies/theater/696/seats/book/ HTTP/1.1" 500 172435
+INFO 2026-07-17 15:24:10 basehttp 14840 16844 "GET / HTTP/1.1" 200 41914
+INFO 2026-07-17 15:24:11 basehttp 14840 16844 "GET / HTTP/1.1" 200 41914
+INFO 2026-07-17 15:24:13 basehttp 14840 16844 "GET /movies/558/theaters HTTP/1.1" 200 16431
+INFO 2026-07-17 15:24:14 basehttp 14840 16844 "GET /movies/theater/696/seats/book/ HTTP/1.1" 200 39861
+ERROR 2026-07-17 15:24:17 log 14840 16844 Internal Server Error: /movies/theater/696/seats/book/
+Traceback (most recent call last):
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: movies_seatreservation.seat_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\movies\views.py", line 207, in book_seats
+    reservation = SeatReservation.objects.create(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 776, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 919, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: movies_seatreservation.seat_id
+ERROR 2026-07-17 15:24:17 basehttp 14840 16844 "POST /movies/theater/696/seats/book/ HTTP/1.1" 500 172435
+INFO 2026-07-17 15:24:29 basehttp 14840 16844 "POST /movies/theater/696/seats/book/ HTTP/1.1" 302 0
+WARNING 2026-07-17 15:24:29 views 14840 16844 Unable to create payment order
+INFO 2026-07-17 15:24:29 basehttp 14840 16844 "GET /movies/payments/checkout/9c233bbe-13ab-4ce4-9a94-7a2e238eaaaa/ HTTP/1.1" 200 13060
+WARNING 2026-07-17 15:30:30 log 14840 19364 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-07-17 15:30:30 basehttp 14840 19364 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4402
+WARNING 2026-07-17 15:31:30 views 14840 17708 Unable to create payment order
+INFO 2026-07-17 15:31:30 basehttp 14840 17708 "GET /movies/payments/checkout/9c233bbe-13ab-4ce4-9a94-7a2e238eaaaa/ HTTP/1.1" 200 13060
+WARNING 2026-07-17 15:31:30 log 14840 17708 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-07-17 15:31:30 basehttp 14840 17708 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4402
+WARNING 2026-07-17 15:32:23 log 14840 17708 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-07-17 15:32:23 basehttp 14840 17708 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4402
+INFO 2026-07-17 15:32:28 basehttp 14840 17708 "GET / HTTP/1.1" 200 41914
+WARNING 2026-07-17 15:32:28 log 14840 17708 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-07-17 15:32:28 basehttp 14840 17708 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4402
+INFO 2026-07-17 15:32:31 basehttp 14840 17708 "GET /movies/558/theaters HTTP/1.1" 200 16431
+WARNING 2026-07-17 15:32:31 log 14840 17708 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-07-17 15:32:31 basehttp 14840 17708 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4402
+INFO 2026-07-17 15:32:34 basehttp 14840 17708 "GET /movies/theater/696/seats/book/ HTTP/1.1" 200 39861
+WARNING 2026-07-17 15:32:34 log 14840 17708 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-07-17 15:32:34 basehttp 14840 17708 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4402
+ERROR 2026-07-17 15:32:39 log 14840 17708 Internal Server Error: /movies/theater/696/seats/book/
+Traceback (most recent call last):
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: movies_seatreservation.seat_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\movies\views.py", line 207, in book_seats
+    reservation = SeatReservation.objects.create(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 776, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\base.py", line 919, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: movies_seatreservation.seat_id
+ERROR 2026-07-17 15:32:39 basehttp 14840 17708 "POST /movies/theater/696/seats/book/ HTTP/1.1" 500 172627
+WARNING 2026-07-17 15:32:39 log 14840 17708 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-07-17 15:32:39 basehttp 14840 17708 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4402
+INFO 2026-07-17 15:38:18 autoreload 14840 2572 D:\code\Intership\bookmyseat\settings.py changed, reloading.
+INFO 2026-07-17 15:38:30 autoreload 21184 17240 Watching for file changes with StatReloader
+INFO 2026-07-17 15:39:42 autoreload 21184 17240 D:\code\Intership\bookmyseat\settings.py changed, reloading.
+INFO 2026-07-17 15:39:44 autoreload 15884 18112 Watching for file changes with StatReloader
+INFO 2026-07-17 15:41:27 autoreload 20348 21424 Watching for file changes with StatReloader
+INFO 2026-07-17 15:42:08 autoreload 21360 18044 Watching for file changes with StatReloader
+INFO 2026-07-17 15:42:12 basehttp 21360 17020 "GET / HTTP/1.1" 200 41914
+INFO 2026-07-17 15:42:14 basehttp 21360 17020 "GET /movies/558/theaters HTTP/1.1" 200 16431
+INFO 2026-07-17 15:42:16 basehttp 21360 17020 "GET /movies/theater/696/seats/book/ HTTP/1.1" 200 39861
+INFO 2026-07-17 15:42:19 basehttp 21360 17020 "POST /movies/theater/696/seats/book/ HTTP/1.1" 302 0
+WARNING 2026-07-17 15:42:19 views 21360 17020 Unable to create payment order
+INFO 2026-07-17 15:42:19 basehttp 21360 17020 "GET /movies/payments/checkout/70811264-09d5-4452-b650-f5da2c035444/ HTTP/1.1" 200 13060
+INFO 2026-07-17 15:49:39 basehttp 21360 9084 "GET / HTTP/1.1" 200 41914
+WARNING 2026-07-17 15:49:40 log 21360 9084 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-07-17 15:49:40 basehttp 21360 9084 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4402
+INFO 2026-07-17 15:49:45 basehttp 21360 9084 "GET /movies/558/theaters HTTP/1.1" 200 16431
+WARNING 2026-07-17 15:49:45 log 21360 9084 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-07-17 15:49:45 basehttp 21360 9084 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4402
+INFO 2026-07-17 15:49:47 basehttp 21360 9084 "GET /movies/theater/696/seats/book/ HTTP/1.1" 200 39861
+WARNING 2026-07-17 15:49:47 log 21360 9084 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-07-17 15:49:47 basehttp 21360 9084 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4402
+INFO 2026-07-17 15:49:51 basehttp 21360 9084 "POST /movies/theater/696/seats/book/ HTTP/1.1" 302 0
+WARNING 2026-07-17 15:49:51 views 21360 9084 Unable to create payment order
+INFO 2026-07-17 15:49:51 basehttp 21360 9084 "GET /movies/payments/checkout/fe882fcc-59ca-4e63-b0cf-ac3edc2c32e0/ HTTP/1.1" 200 13060
+WARNING 2026-07-17 15:49:52 log 21360 9084 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-07-17 15:49:52 basehttp 21360 9084 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4402
+INFO 2026-07-17 15:50:14 autoreload 17096 17840 Watching for file changes with StatReloader
+INFO 2026-07-17 15:50:17 basehttp 17096 1084 "GET / HTTP/1.1" 200 41914
+INFO 2026-07-17 15:50:20 basehttp 17096 1084 "GET /movies/558/theaters HTTP/1.1" 200 16431
+INFO 2026-07-17 15:50:21 basehttp 17096 1084 "GET /movies/theater/696/seats/book/ HTTP/1.1" 200 38993
+INFO 2026-07-17 15:50:25 basehttp 17096 1084 "POST /movies/theater/696/seats/book/ HTTP/1.1" 302 0
+WARNING 2026-07-17 15:50:25 views 17096 1084 Unable to create payment order
+INFO 2026-07-17 15:50:25 basehttp 17096 1084 "GET /movies/payments/checkout/5b968e7c-518f-4db8-953e-5c65399cc134/ HTTP/1.1" 200 13060
+WARNING 2026-07-17 15:50:42 log 17096 1084 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-07-17 15:50:42 basehttp 17096 1084 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4402
+WARNING 2026-07-17 15:50:54 log 17096 1084 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-07-17 15:50:54 basehttp 17096 1084 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4402
+INFO 2026-07-17 15:51:01 basehttp 17096 1084 "GET / HTTP/1.1" 200 41914
+WARNING 2026-07-17 15:51:01 log 17096 1084 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-07-17 15:51:01 basehttp 17096 1084 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4402
+INFO 2026-07-17 15:51:03 basehttp 17096 1084 "GET /movies/558/theaters HTTP/1.1" 200 16431
+WARNING 2026-07-17 15:51:03 log 17096 1084 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-07-17 15:51:03 basehttp 17096 1084 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4402
+INFO 2026-07-17 15:51:05 basehttp 17096 1084 "GET /movies/theater/696/seats/book/ HTTP/1.1" 200 38125
+WARNING 2026-07-17 15:51:05 log 17096 1084 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-07-17 15:51:05 basehttp 17096 1084 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4402
+ERROR 2026-07-17 15:51:11 log 17096 1084 Internal Server Error: /movies/theater/696/seats/book/
+Traceback (most recent call last):
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: movies_seatreservation.seat_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\code\Intership\movies\views.py", line 207, in book_seats
+    reservation = SeatReservation.objects.create(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 776, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 919, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: movies_seatreservation.seat_id
+ERROR 2026-07-17 15:51:11 basehttp 17096 1084 "POST /movies/theater/696/seats/book/ HTTP/1.1" 500 173500
+WARNING 2026-07-17 15:51:11 log 17096 1084 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-07-17 15:51:11 basehttp 17096 1084 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4402
+INFO 2026-07-17 15:56:45 autoreload 17096 17840 D:\code\Intership\movies\models.py changed, reloading.
+INFO 2026-07-17 15:56:48 autoreload 13644 8644 Watching for file changes with StatReloader
+INFO 2026-07-17 16:02:26 autoreload 20536 18696 Watching for file changes with StatReloader
+INFO 2026-07-17 16:02:42 autoreload 18696 5384 Watching for file changes with StatReloader
+INFO 2026-07-17 16:02:54 basehttp 18696 18196 "GET / HTTP/1.1" 200 41914
+INFO 2026-07-17 16:02:57 basehttp 18696 18196 "GET /movies/558/theaters HTTP/1.1" 200 16431
+INFO 2026-07-17 16:02:59 basehttp 18696 18196 "GET /movies/theater/696/seats/book/ HTTP/1.1" 200 38125
+INFO 2026-07-17 16:03:04 basehttp 18696 18196 "POST /movies/theater/696/seats/book/ HTTP/1.1" 302 0
+WARNING 2026-07-17 16:03:04 views 18696 18196 Unable to create payment order
+INFO 2026-07-17 16:03:04 basehttp 18696 18196 "GET /movies/payments/checkout/cea0b722-2b8d-4db3-b983-40e4c91d2e98/ HTTP/1.1" 200 13060
+INFO 2026-07-17 16:33:58 views 11676 16648 Payment confirmed
+INFO 2026-07-17 16:35:09 views 15928 21448 Payment confirmed
+INFO 2026-07-17 16:40:45 views 10188 18856 Payment confirmed
+INFO 2026-07-17 16:46:31 autoreload 10704 17224 Watching for file changes with StatReloader
+INFO 2026-07-17 16:46:34 basehttp 10704 18472 "GET / HTTP/1.1" 200 41390
+INFO 2026-07-17 16:46:39 basehttp 10704 18472 "GET /movies/622/theaters HTTP/1.1" 200 15435
+INFO 2026-07-17 16:46:42 basehttp 10704 18472 "GET /movies/ HTTP/1.1" 200 82680
+INFO 2026-07-17 16:46:44 basehttp 10704 18472 "GET / HTTP/1.1" 200 41390
+INFO 2026-07-17 16:46:45 basehttp 10704 18472 "GET /profile/ HTTP/1.1" 200 16541
+INFO 2026-07-17 16:46:47 basehttp 10704 18472 "GET / HTTP/1.1" 200 41390
+INFO 2026-07-17 16:46:49 basehttp 10704 18472 "GET /movies/622/theaters HTTP/1.1" 200 15435
+INFO 2026-07-17 16:46:50 basehttp 10704 18472 "GET /movies/theater/789/seats/book/ HTTP/1.1" 200 41590
+INFO 2026-07-17 16:46:54 basehttp 10704 18472 "POST /movies/theater/789/seats/book/ HTTP/1.1" 302 0
+WARNING 2026-07-17 16:46:54 views 10704 18472 Unable to create payment order
+INFO 2026-07-17 16:46:54 basehttp 10704 18472 "GET /movies/payments/checkout/0d160a66-9dcb-4c26-b03a-4c60a4f86079/ HTTP/1.1" 200 13046
+INFO 2026-07-17 16:51:14 autoreload 10704 17224 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-17 16:51:16 autoreload 20568 19276 Watching for file changes with StatReloader
+INFO 2026-07-17 16:52:19 autoreload 20568 19276 D:\code\Intership\bookmyseat\settings.py changed, reloading.
+INFO 2026-07-17 16:52:21 autoreload 17048 3392 Watching for file changes with StatReloader
+INFO 2026-07-17 16:55:28 views 11200 14116 Payment confirmed
+INFO 2026-07-17 16:58:11 autoreload 19804 6500 Watching for file changes with StatReloader
+WARNING 2026-07-17 16:58:18 base 19804 14300 Session data corrupted
+INFO 2026-07-17 16:58:19 basehttp 19804 14300 "GET / HTTP/1.1" 200 40984
+WARNING 2026-07-17 16:58:22 base 19804 14300 Session data corrupted
+INFO 2026-07-17 16:58:22 basehttp 19804 14300 "GET /login/ HTTP/1.1" 200 14857
+WARNING 2026-07-17 16:58:31 base 19804 14300 Session data corrupted
+INFO 2026-07-17 16:58:31 basehttp 19804 14300 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-07-17 16:58:31 basehttp 19804 14300 "GET / HTTP/1.1" 200 41390
+INFO 2026-07-17 16:58:35 basehttp 19804 14300 "GET /movies/622/theaters HTTP/1.1" 200 15435
+INFO 2026-07-17 16:58:41 basehttp 19804 14300 "GET /movies/theater/789/seats/book/ HTTP/1.1" 200 41590
+INFO 2026-07-17 16:58:43 basehttp 19804 14300 "POST /movies/theater/789/seats/book/ HTTP/1.1" 302 0
+INFO 2026-07-17 16:58:47 basehttp 19804 14300 "GET /movies/payments/checkout/41750695-43c6-48ea-8533-5087d6b991d0/ HTTP/1.1" 200 14133
+INFO 2026-07-17 16:59:45 views 19804 14300 Payment confirmed
+INFO 2026-07-17 16:59:46 basehttp 19804 14300 "POST /movies/payments/confirm/ HTTP/1.1" 200 23
+INFO 2026-07-17 16:59:46 basehttp 19804 14300 "GET /movies/payments/checkout/41750695-43c6-48ea-8533-5087d6b991d0/ HTTP/1.1" 200 13013
+INFO 2026-07-17 17:00:16 basehttp 19804 14300 "GET /profile/ HTTP/1.1" 200 19476
+INFO 2026-07-17 18:06:25 autoreload 18928 16880 Watching for file changes with StatReloader
+INFO 2026-07-17 18:06:27 basehttp 18928 6804 "GET / HTTP/1.1" 200 42600
+INFO 2026-07-17 18:06:28 basehttp 18928 1964 "GET /media/movies/The_Godfather.jpg HTTP/1.1" 200 24970
+INFO 2026-07-17 18:06:28 basehttp 18928 6804 "GET /media/movies/The_Shawshank_Redemption.jpg HTTP/1.1" 200 45916
+INFO 2026-07-17 18:06:28 basehttp 18928 6804 "GET /media/movies/Inception.jpg HTTP/1.1" 200 44728
+INFO 2026-07-17 18:06:28 basehttp 18928 5672 "GET /media/movies/Fight_Club.jpg HTTP/1.1" 200 38374
+INFO 2026-07-17 18:06:28 basehttp 18928 13304 "GET /media/movies/Forrest_Gump.jpg HTTP/1.1" 200 18824
+INFO 2026-07-17 18:06:28 basehttp 18928 17088 "GET /media/movies/The_Dark_Knight.jpg HTTP/1.1" 200 40337
+INFO 2026-07-17 18:06:28 basehttp 18928 12908 "GET /media/movies/The_Lord_of_the_Rings_The_Fellowship_of_the_Ring.jpg HTTP/1.1" 200 58527
+INFO 2026-07-17 18:06:36 basehttp 18928 12908 "GET /movies/734/theaters HTTP/1.1" 200 14624
+INFO 2026-07-17 18:06:42 basehttp 18928 12908 "GET / HTTP/1.1" 200 42600
+INFO 2026-07-17 18:06:42 basehttp 18928 12908 "GET /media/movies/The_Shawshank_Redemption.jpg HTTP/1.1" 304 0
+INFO 2026-07-17 18:09:27 basehttp 18928 12908 "GET / HTTP/1.1" 200 41989
+INFO 2026-07-17 18:09:33 basehttp 18928 12908 "GET /movies/ HTTP/1.1" 200 153460
+INFO 2026-07-17 18:09:39 basehttp 18928 12908 "GET / HTTP/1.1" 200 41989
+INFO 2026-07-17 18:09:41 basehttp 18928 12908 "GET /movies/798/theaters HTTP/1.1" 200 15461
+INFO 2026-07-17 18:09:43 basehttp 18928 12908 "GET /movies/theater/872/seats/book/ HTTP/1.1" 200 41603
+INFO 2026-07-17 18:09:46 basehttp 18928 12908 "POST /movies/theater/872/seats/book/ HTTP/1.1" 302 0
+INFO 2026-07-17 18:09:47 basehttp 18928 12908 "GET /movies/payments/checkout/b55f4d72-2212-4554-9302-b15a66301476/ HTTP/1.1" 200 14159
+INFO 2026-07-17 18:10:25 views 18928 12908 Payment confirmed
+INFO 2026-07-17 18:10:25 basehttp 18928 12908 "POST /movies/payments/confirm/ HTTP/1.1" 200 23
+INFO 2026-07-17 18:10:25 basehttp 18928 12908 "GET /movies/payments/checkout/b55f4d72-2212-4554-9302-b15a66301476/ HTTP/1.1" 200 13039
+INFO 2026-07-17 18:11:02 basehttp 18928 12908 "GET /movies/ HTTP/1.1" 200 153460
+INFO 2026-07-17 18:11:02 basehttp 18928 12908 "GET /profile/ HTTP/1.1" 200 17976
+INFO 2026-07-20 02:23:15 basehttp 18928 5764 "GET / HTTP/1.1" 200 41989
+INFO 2026-07-20 02:47:54 autoreload 16928 25936 Watching for file changes with StatReloader
+INFO 2026-07-20 02:47:56 basehttp 16928 23852 "GET / HTTP/1.1" 200 41989
+INFO 2026-07-20 02:48:01 basehttp 16928 23852 "GET / HTTP/1.1" 200 41989
+INFO 2026-07-20 02:48:07 basehttp 16928 23852 "GET /movies/798/theaters HTTP/1.1" 200 15461
+INFO 2026-07-20 02:48:17 basehttp 16928 23852 "GET /profile/ HTTP/1.1" 200 17976
+INFO 2026-07-20 02:48:31 basehttp 16928 23852 "GET / HTTP/1.1" 200 41989
+INFO 2026-07-20 02:48:39 basehttp 16928 23852 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-07-20 02:48:39 basehttp 16928 23852 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2679
+INFO 2026-07-20 02:48:39 basehttp 16928 23852 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-07-20 02:48:39 basehttp 16928 22180 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-07-20 02:48:39 basehttp 16928 12940 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2026-07-20 02:48:39 basehttp 16928 21872 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-07-20 02:48:39 basehttp 16928 19576 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-07-20 02:48:39 basehttp 16928 19576 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2026-07-20 02:48:39 basehttp 16928 19576 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2026-07-20 02:48:39 basehttp 16928 12940 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2026-07-20 02:48:39 basehttp 16928 21872 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2026-07-20 02:48:39 basehttp 16928 19576 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2026-07-20 02:49:06 basehttp 16928 19576 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2528
+INFO 2026-07-20 02:49:13 basehttp 16928 19576 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-07-20 02:49:13 basehttp 16928 19576 "GET /admin/ HTTP/1.1" 200 7268
+INFO 2026-07-20 02:49:13 basehttp 16928 19576 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-07-20 02:49:13 basehttp 16928 19576 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-07-20 02:49:13 basehttp 16928 21872 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-07-20 02:49:13 basehttp 16928 12940 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+INFO 2026-07-20 02:49:17 basehttp 16928 12940 "GET /admin/movies/movie/ HTTP/1.1" 200 53501
+INFO 2026-07-20 02:49:17 basehttp 16928 12940 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2026-07-20 02:49:17 basehttp 16928 23852 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-07-20 02:49:17 basehttp 16928 12940 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2026-07-20 02:49:17 basehttp 16928 19576 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-07-20 02:49:17 basehttp 16928 22180 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-07-20 02:49:17 basehttp 16928 24704 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-07-20 02:49:17 basehttp 16928 23852 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-07-20 02:49:17 basehttp 16928 12940 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-07-20 02:49:17 basehttp 16928 19576 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2026-07-20 02:49:17 basehttp 16928 21872 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 02:49:17 basehttp 16928 19576 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2026-07-20 02:49:17 basehttp 16928 19576 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2026-07-20 02:49:17 basehttp 16928 21872 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2026-07-20 02:49:24 basehttp 16928 21872 "GET /admin/movies/ HTTP/1.1" 200 5771
+INFO 2026-07-20 02:49:27 basehttp 16928 21872 "GET /admin/movies/ HTTP/1.1" 200 5771
+INFO 2026-07-20 02:49:29 basehttp 16928 21872 "GET /admin/ HTTP/1.1" 200 7268
+INFO 2026-07-20 02:49:30 basehttp 16928 21872 "GET /admin/movies/booking/ HTTP/1.1" 200 10768
+INFO 2026-07-20 02:49:30 basehttp 16928 21872 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 02:49:38 basehttp 16928 21872 "GET /admin/movies/emailtask/ HTTP/1.1" 200 22971
+INFO 2026-07-20 02:49:38 basehttp 16928 21872 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 02:49:49 basehttp 16928 21872 "GET /admin/movies/genre/ HTTP/1.1" 200 14364
+INFO 2026-07-20 02:49:50 basehttp 16928 21872 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 02:49:57 basehttp 16928 21872 "POST /admin/movies/genre/ HTTP/1.1" 200 34264
+INFO 2026-07-20 02:50:04 basehttp 16928 21872 "POST /admin/movies/genre/ HTTP/1.1" 302 0
+INFO 2026-07-20 02:50:04 basehttp 16928 21872 "GET /admin/movies/genre/ HTTP/1.1" 200 7485
+INFO 2026-07-20 02:50:04 basehttp 16928 21872 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 02:50:06 basehttp 16928 21872 "GET /admin/movies/language/ HTTP/1.1" 200 11094
+INFO 2026-07-20 02:50:06 basehttp 16928 21872 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 02:50:13 basehttp 16928 21872 "POST /admin/movies/language/ HTTP/1.1" 200 25430
+INFO 2026-07-20 02:50:17 basehttp 16928 21872 "POST /admin/movies/language/ HTTP/1.1" 302 0
+INFO 2026-07-20 02:50:17 basehttp 16928 21872 "GET /admin/movies/language/ HTTP/1.1" 200 7509
+INFO 2026-07-20 02:50:17 basehttp 16928 21872 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 02:50:20 basehttp 16928 21872 "GET /admin/movies/movie/ HTTP/1.1" 200 50062
+INFO 2026-07-20 02:50:20 basehttp 16928 21872 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 02:50:28 basehttp 16928 21872 "POST /admin/movies/movie/ HTTP/1.1" 200 440011
+INFO 2026-07-20 02:50:42 basehttp 16928 21872 "POST /admin/movies/movie/ HTTP/1.1" 302 0
+INFO 2026-07-20 02:50:42 basehttp 16928 21872 "GET /admin/movies/movie/ HTTP/1.1" 200 18917
+INFO 2026-07-20 02:50:42 basehttp 16928 21872 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 02:50:44 basehttp 16928 21872 "GET /admin/movies/paymentwebhookevent/ HTTP/1.1" 200 7896
+INFO 2026-07-20 02:50:44 basehttp 16928 21872 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 02:50:47 basehttp 16928 21872 "GET /admin/movies/movie/ HTTP/1.1" 200 18779
+INFO 2026-07-20 02:50:47 basehttp 16928 21872 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 02:50:55 basehttp 16928 21872 "POST /admin/movies/movie/ HTTP/1.1" 200 96083
+INFO 2026-07-20 02:50:59 basehttp 16928 21872 "POST /admin/movies/movie/ HTTP/1.1" 302 0
+INFO 2026-07-20 02:50:59 basehttp 16928 21872 "GET /admin/movies/movie/ HTTP/1.1" 200 8494
+INFO 2026-07-20 02:50:59 basehttp 16928 21872 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 02:51:00 basehttp 16928 21872 "GET /admin/movies/seat/ HTTP/1.1" 200 7021
+INFO 2026-07-20 02:51:00 basehttp 16928 21872 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 02:51:01 basehttp 16928 21872 "GET /admin/movies/theater/ HTTP/1.1" 200 7042
+INFO 2026-07-20 02:51:02 basehttp 16928 21872 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 02:51:04 basehttp 16928 21872 "GET / HTTP/1.1" 200 36418
+INFO 2026-07-20 03:14:11 views 22156 27256 Payment confirmed
+INFO 2026-07-20 03:20:33 autoreload 26176 16056 Watching for file changes with StatReloader
+INFO 2026-07-20 03:20:35 basehttp 26176 23120 "GET / HTTP/1.1" 200 41417
+INFO 2026-07-20 03:20:36 basehttp 26176 23120 "GET /media/movies/Parasite.jpg HTTP/1.1" 200 36857
+INFO 2026-07-20 03:20:36 basehttp 26176 7588 "GET /media/movies/125814139-suicide-squad-film-poster-art.jpg HTTP/1.1" 200 882341
+INFO 2026-07-20 03:20:36 basehttp 26176 15988 "GET /media/movies/Dilwale.jpg HTTP/1.1" 200 43124
+INFO 2026-07-20 03:20:36 basehttp 26176 27164 "GET /media/movies/Bajrangi%20Bhaijaan.jpg HTTP/1.1" 200 43292
+INFO 2026-07-20 03:20:36 basehttp 26176 18448 "GET /media/movies/The%20Shawshank%20Redemption.jpg HTTP/1.1" 200 45916
+INFO 2026-07-20 03:20:36 basehttp 26176 27164 "GET /media/movies/Thor.jpg HTTP/1.1" 200 34090
+INFO 2026-07-20 03:20:36 basehttp 26176 15988 "GET /media/movies/Up.jpg HTTP/1.1" 200 22182
+INFO 2026-07-20 03:20:36 basehttp 26176 7588 "GET /media/movies/Black_Adam.jpg HTTP/1.1" 200 50771
+INFO 2026-07-20 03:20:36 basehttp 26176 23200 "GET /media/movies/Coco.jpg HTTP/1.1" 200 71998
+INFO 2026-07-20 03:20:36 basehttp 26176 18448 "GET /media/movies/Doctor%20Strange.jpg HTTP/1.1" 200 62832
+INFO 2026-07-20 03:20:43 basehttp 26176 18448 "GET /movies/979/theaters HTTP/1.1" 200 15620
+INFO 2026-07-20 03:20:45 basehttp 26176 18448 "GET /movies/theater/1143/seats/book/ HTTP/1.1" 200 41758
+INFO 2026-07-20 03:20:51 basehttp 26176 18448 "POST /movies/theater/1143/seats/book/ HTTP/1.1" 302 0
+INFO 2026-07-20 03:20:51 basehttp 26176 18448 "GET /movies/payments/checkout/fc4d2e83-8ab0-4bf0-a026-eb1218a70d0c/ HTTP/1.1" 200 14980
+INFO 2026-07-20 03:21:38 views 26176 18448 Payment confirmed
+INFO 2026-07-20 03:21:38 basehttp 26176 18448 "POST /movies/payments/confirm/ HTTP/1.1" 200 23
+INFO 2026-07-20 03:21:38 basehttp 26176 18448 "GET /movies/payments/checkout/fc4d2e83-8ab0-4bf0-a026-eb1218a70d0c/ HTTP/1.1" 200 13860
+INFO 2026-07-20 03:21:44 basehttp 26176 18448 "GET /movies/ HTTP/1.1" 200 150926
+INFO 2026-07-20 03:21:44 basehttp 26176 18448 "GET /media/movies/Pushpa.jpg HTTP/1.1" 200 13692
+INFO 2026-07-20 03:21:44 basehttp 26176 15988 "GET /media/movies/Fight_Club.jpg HTTP/1.1" 304 0
+INFO 2026-07-20 03:21:44 basehttp 26176 27164 "GET /media/movies/OIP%20(2).webp HTTP/1.1" 200 6884
+INFO 2026-07-20 03:21:44 basehttp 26176 7588 "GET /media/movies/Blade_Runner_2049.jpg HTTP/1.1" 200 40701
+INFO 2026-07-20 03:21:44 basehttp 26176 23200 "GET /media/movies/The_Social_Network.jpg HTTP/1.1" 200 19435
+INFO 2026-07-20 03:21:44 basehttp 26176 7588 "GET /media/movies/Beauty_and_the_Beast.jpg HTTP/1.1" 200 12278
+INFO 2026-07-20 03:21:44 basehttp 26176 23120 "GET /media/movies/At_Worlds_End.jpg HTTP/1.1" 200 20060
+INFO 2026-07-20 03:21:44 basehttp 26176 15988 "GET /media/movies/Drishyam.jpg HTTP/1.1" 200 32926
+INFO 2026-07-20 03:21:44 basehttp 26176 27164 "GET /media/movies/Mission%20Impossible%20%20Fallout.jpg HTTP/1.1" 200 44927
+INFO 2026-07-20 03:21:44 basehttp 26176 7588 "GET /media/movies/125814168-movie-poster-image.jpg HTTP/1.1" 200 183447
+INFO 2026-07-20 03:21:44 basehttp 26176 18448 "GET /media/movies/Gravity.jpg HTTP/1.1" 200 16742
+INFO 2026-07-20 03:21:44 basehttp 26176 23120 "GET /media/movies/Don%202.jpg HTTP/1.1" 200 32382
+INFO 2026-07-20 03:21:45 basehttp 26176 23200 "GET /media/movies/Vikram.jpg HTTP/1.1" 200 48235
+INFO 2026-07-20 03:21:45 basehttp 26176 15988 "GET /media/movies/Titanic.jpg HTTP/1.1" 200 47751
+INFO 2026-07-20 03:21:45 basehttp 26176 27164 "GET /media/movies/Spider-Man.jpg HTTP/1.1" 200 32239
+INFO 2026-07-20 03:21:45 basehttp 26176 7588 "GET /media/movies/Goblet_of_Fire.jpg HTTP/1.1" 200 28039
+INFO 2026-07-20 03:21:45 basehttp 26176 23120 "GET /media/movies/Justice%20League.jpg HTTP/1.1" 200 40300
+INFO 2026-07-20 03:21:45 basehttp 26176 23200 "GET /media/movies/Don.jpg HTTP/1.1" 200 24306
+INFO 2026-07-20 03:21:45 basehttp 26176 18448 "GET /media/movies/Spider-Man%20Far%20From%20Home.jpg HTTP/1.1" 200 45566
+INFO 2026-07-20 03:21:45 basehttp 26176 15988 "GET /media/movies/Deathly_Hallows_Part_1.jpg HTTP/1.1" 200 39310
+INFO 2026-07-20 03:21:45 basehttp 26176 27164 "GET /media/movies/9745951-hd-hollywood-movie-poster-wallpaper.jpg HTTP/1.1" 200 231324
+INFO 2026-07-20 03:21:45 basehttp 26176 7588 "GET /media/movies/Iron%20Man%203.jpg HTTP/1.1" 200 50832
+INFO 2026-07-20 03:21:45 basehttp 26176 23120 "GET /media/movies/Inside_Out.jpg HTTP/1.1" 200 34742
+INFO 2026-07-20 03:21:45 basehttp 26176 23200 "GET /media/movies/Sultan.jpg HTTP/1.1" 200 25839
+INFO 2026-07-20 03:21:45 basehttp 26176 15988 "GET /media/movies/On_Stranger_Tides.jpg HTTP/1.1" 200 49428
+INFO 2026-07-20 03:21:45 basehttp 26176 18448 "GET /media/movies/The_Dark_Knight.jpg HTTP/1.1" 304 0
+INFO 2026-07-20 03:21:45 basehttp 26176 27164 "GET /media/movies/Black%20Panther.jpg HTTP/1.1" 200 63487
+INFO 2026-07-20 03:21:45 basehttp 26176 7588 "GET /media/movies/OIP.webp HTTP/1.1" 200 22374
+INFO 2026-07-20 03:21:45 basehttp 26176 23120 "GET /media/movies/Aquaman.jpg HTTP/1.1" 200 52532
+INFO 2026-07-20 03:21:45 basehttp 26176 27164 "GET /media/movies/Nope.jpg HTTP/1.1" 200 26196
+INFO 2026-07-20 03:21:45 basehttp 26176 18448 "GET /media/movies/War.jpg HTTP/1.1" 200 25680
+INFO 2026-07-20 03:21:45 basehttp 26176 7588 "GET /media/movies/125814183-evolution-of-indian-film-poster-art.png HTTP/1.1" 200 489392
+INFO 2026-07-20 03:21:45 basehttp 26176 27164 "GET /media/movies/Salaar.jpg HTTP/1.1" 200 31359
+INFO 2026-07-20 03:21:45 basehttp 26176 23120 "GET /media/movies/Uri%20The%20Surgical%20Strike.jpg HTTP/1.1" 200 20891
+INFO 2026-07-20 03:21:45 basehttp 26176 7588 "GET /media/movies/Alien.jpg HTTP/1.1" 200 20563
+INFO 2026-07-20 03:21:45 basehttp 26176 18448 "GET /media/movies/Cars.jpg HTTP/1.1" 200 35615
+INFO 2026-07-20 03:21:45 basehttp 26176 23200 "GET /media/movies/Avengers.jpg HTTP/1.1" 200 56495
+INFO 2026-07-20 03:21:45 basehttp 26176 23120 "GET /media/movies/125814207-beast-emma-watson-film-poster-iphone-8.jpg HTTP/1.1" 200 166323
+INFO 2026-07-20 03:21:45 basehttp 26176 7588 "GET /media/movies/Interstellar.jpg HTTP/1.1" 200 61135
+INFO 2026-07-20 03:21:45 basehttp 26176 18448 "GET /media/movies/The_Hobbit.jpg HTTP/1.1" 200 48029
+INFO 2026-07-20 03:21:45 basehttp 26176 27164 "GET /media/movies/sonic1usartgregwray.jpg HTTP/1.1" 200 2053246
+INFO 2026-07-20 03:21:45 basehttp 26176 23200 "GET /media/movies/Dune.jpg HTTP/1.1" 200 34075
+INFO 2026-07-20 03:21:45 basehttp 26176 23120 "GET /media/movies/Pulp%20Fiction.jpg HTTP/1.1" 200 58164
+INFO 2026-07-20 03:21:45 basehttp 26176 15988 "GET /media/movies/pexels-davidgomes-2752777.jpg HTTP/1.1" 200 3491493
+INFO 2026-07-20 03:21:45 basehttp 26176 7588 "GET /media/movies/Dunki.jpg HTTP/1.1" 200 34587
+INFO 2026-07-20 03:21:45 basehttp 26176 18448 "GET /media/movies/Chennai%20Express.jpg HTTP/1.1" 200 32638
+INFO 2026-07-20 03:21:45 basehttp 26176 27164 "GET /media/movies/The%20Matrix%20Revolutions.jpg HTTP/1.1" 200 28265
+INFO 2026-07-20 03:21:45 basehttp 26176 23120 "GET /media/movies/Shutter_Island.jpg HTTP/1.1" 200 39876
+INFO 2026-07-20 03:21:45 basehttp 26176 23200 "GET /media/movies/The_Lion_King.jpg HTTP/1.1" 200 23148
+INFO 2026-07-20 03:21:45 basehttp 26176 15988 "GET /media/movies/Frozen.jpg HTTP/1.1" 200 41440
+INFO 2026-07-20 03:21:45 basehttp 26176 7588 "GET /media/movies/56524693-art-film-poster-parasite-wallpaper.jpg HTTP/1.1" 200 108025
+INFO 2026-07-20 03:21:45 basehttp 26176 27164 "GET /media/movies/Memento.jpg HTTP/1.1" 200 33238
+INFO 2026-07-20 03:21:45 basehttp 26176 18448 "GET /media/movies/The_Green_Mile.jpg HTTP/1.1" 200 24599
+INFO 2026-07-20 03:21:45 basehttp 26176 15988 "GET /media/movies/Fantastic_Beasts.jpg HTTP/1.1" 200 27944
+INFO 2026-07-20 03:21:45 basehttp 26176 23120 "GET /media/movies/125814135-madmax-furyroad-film-poster-art.jpg HTTP/1.1" 200 586208
+INFO 2026-07-20 03:21:45 basehttp 26176 7588 "GET /media/movies/Edge_of_Tomorrow.jpg HTTP/1.1" 200 47101
+INFO 2026-07-20 03:21:45 basehttp 26176 27164 "GET /media/movies/Avatar.jpg HTTP/1.1" 200 26439
+INFO 2026-07-20 03:21:45 basehttp 26176 23200 "GET /media/movies/125814210-manjummel-boys-covers.jpg HTTP/1.1" 200 360081
+INFO 2026-07-20 03:21:45 basehttp 26176 18448 "GET /media/movies/Captain_America.jpg HTTP/1.1" 200 22813
+INFO 2026-07-20 03:21:46 basehttp 26176 18448 "GET /profile/ HTTP/1.1" 200 19732
+INFO 2026-07-20 03:21:53 basehttp 26176 18448 "GET /admin/movies/theater/ HTTP/1.1" 200 41379
+INFO 2026-07-20 03:21:53 basehttp 26176 18448 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 03:21:55 basehttp 26176 18448 "GET /admin/movies/booking/ HTTP/1.1" 200 12148
+INFO 2026-07-20 03:21:56 basehttp 26176 18448 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 03:22:11 basehttp 26176 18448 "POST /admin/movies/booking/ HTTP/1.1" 200 7701
+INFO 2026-07-20 03:22:14 basehttp 26176 18448 "POST /admin/movies/booking/ HTTP/1.1" 302 0
+INFO 2026-07-20 03:22:14 basehttp 26176 18448 "GET /admin/movies/booking/ HTTP/1.1" 200 7500
+INFO 2026-07-20 03:22:14 basehttp 26176 18448 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 03:22:32 basehttp 26176 26756 "GET / HTTP/1.1" 200 40860
+INFO 2026-07-20 03:22:33 basehttp 26176 26756 "GET /media/movies/Parasite.jpg HTTP/1.1" 200 36857
+INFO 2026-07-20 03:22:33 basehttp 26176 19732 "GET /media/movies/The%20Shawshank%20Redemption.jpg HTTP/1.1" 200 45916
+INFO 2026-07-20 03:22:33 basehttp 26176 19732 "GET /media/movies/Coco.jpg HTTP/1.1" 200 71998
+INFO 2026-07-20 03:22:33 basehttp 26176 19732 "GET /media/movies/Dilwale.jpg HTTP/1.1" 200 43124
+INFO 2026-07-20 03:22:33 basehttp 26176 23420 "GET /media/movies/125814139-suicide-squad-film-poster-art.jpg HTTP/1.1" 200 882341
+INFO 2026-07-20 03:22:33 basehttp 26176 19732 "GET /media/movies/Bajrangi%20Bhaijaan.jpg HTTP/1.1" 200 43292
+INFO 2026-07-20 03:22:33 basehttp 26176 23420 "GET /media/movies/Doctor%20Strange.jpg HTTP/1.1" 200 62832
+INFO 2026-07-20 03:22:33 basehttp 26176 19732 "GET /media/movies/Thor.jpg HTTP/1.1" 200 34090
+INFO 2026-07-20 03:22:33 basehttp 26176 19732 "GET /media/movies/Up.jpg HTTP/1.1" 200 22182
+INFO 2026-07-20 03:22:33 basehttp 26176 23420 "GET /media/movies/Black_Adam.jpg HTTP/1.1" 200 50771
+INFO 2026-07-20 03:22:34 basehttp 26176 23420 "GET /login/ HTTP/1.1" 200 14857
+INFO 2026-07-20 03:22:45 basehttp 26176 23420 "POST /login/ HTTP/1.1" 302 0
+INFO 2026-07-20 03:22:45 basehttp 26176 23420 "GET / HTTP/1.1" 200 41266
+INFO 2026-07-20 03:22:48 basehttp 26176 23420 "GET /profile/ HTTP/1.1" 200 16541
+INFO 2026-07-20 03:22:51 basehttp 26176 23420 "GET / HTTP/1.1" 200 41266
+INFO 2026-07-20 03:22:52 basehttp 26176 23420 "GET /movies/897/theaters HTTP/1.1" 200 16417
+INFO 2026-07-20 03:22:54 basehttp 26176 23420 "GET /movies/theater/1020/seats/book/ HTTP/1.1" 200 41590
+INFO 2026-07-20 03:22:58 basehttp 26176 23420 "POST /movies/theater/1020/seats/book/ HTTP/1.1" 302 0
+INFO 2026-07-20 03:22:59 basehttp 26176 23420 "GET /movies/payments/checkout/2d993b62-1455-459d-aed0-579982426e0a/ HTTP/1.1" 200 14761
+INFO 2026-07-20 03:23:30 views 26176 23420 Payment confirmed
+INFO 2026-07-20 03:23:30 basehttp 26176 23420 "POST /movies/payments/confirm/ HTTP/1.1" 200 23
+INFO 2026-07-20 03:23:31 basehttp 26176 23420 "GET /movies/payments/checkout/2d993b62-1455-459d-aed0-579982426e0a/ HTTP/1.1" 200 13641
+INFO 2026-07-20 03:23:46 basehttp 26176 18448 "GET /admin/movies/emailtask/ HTTP/1.1" 200 24321
+INFO 2026-07-20 03:23:46 basehttp 26176 18448 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 03:24:04 basehttp 26176 18448 "POST /admin/movies/emailtask/ HTTP/1.1" 302 0
+INFO 2026-07-20 03:24:04 basehttp 26176 18448 "GET /admin/movies/emailtask/ HTTP/1.1" 200 19711
+INFO 2026-07-20 03:24:04 basehttp 26176 18448 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 03:24:28 basehttp 26176 18448 "POST /admin/movies/emailtask/ HTTP/1.1" 302 0
+INFO 2026-07-20 03:24:29 basehttp 26176 18448 "GET /admin/movies/emailtask/ HTTP/1.1" 200 12304
+INFO 2026-07-20 03:24:29 basehttp 26176 18448 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 03:25:04 basehttp 26176 23420 "GET / HTTP/1.1" 200 41266
+INFO 2026-07-20 03:25:06 basehttp 26176 23420 "GET /movies/976/theaters HTTP/1.1" 200 16419
+INFO 2026-07-20 03:25:07 basehttp 26176 23420 "GET /movies/theater/1139/seats/book/ HTTP/1.1" 200 41592
+INFO 2026-07-20 03:25:10 basehttp 26176 23420 "POST /movies/theater/1139/seats/book/ HTTP/1.1" 302 0
+INFO 2026-07-20 03:25:11 basehttp 26176 23420 "GET /movies/payments/checkout/9530bafa-d876-4aa4-914d-f93024b8d39f/ HTTP/1.1" 200 14137
+INFO 2026-07-20 03:25:35 views 26176 23420 Payment confirmed
+INFO 2026-07-20 03:25:35 basehttp 26176 23420 "POST /movies/payments/confirm/ HTTP/1.1" 200 23
+INFO 2026-07-20 03:25:35 basehttp 26176 23420 "GET /movies/payments/checkout/9530bafa-d876-4aa4-914d-f93024b8d39f/ HTTP/1.1" 200 13017
+INFO 2026-07-20 03:25:41 basehttp 26176 18448 "GET /admin/movies/emailtask/ HTTP/1.1" 200 12854
+INFO 2026-07-20 03:25:41 basehttp 26176 18448 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 03:34:22 basehttp 26176 22380 "GET /admin/movies/emailtask/ HTTP/1.1" 200 12850
+INFO 2026-07-20 03:34:22 basehttp 26176 22380 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 03:39:44 basehttp 26176 16956 "GET / HTTP/1.1" 200 41266
+INFO 2026-07-20 03:39:45 basehttp 26176 16956 "GET /movies/968/theaters HTTP/1.1" 200 16429
+INFO 2026-07-20 03:40:38 views 21668 22728 Payment confirmed
+INFO 2026-07-20 03:41:03 basehttp 26176 16956 "GET / HTTP/1.1" 200 41390
+INFO 2026-07-20 03:41:03 basehttp 26176 16956 "GET /media/movies/Skyfall.jpg HTTP/1.1" 200 19509
+INFO 2026-07-20 03:41:03 basehttp 26176 19024 "GET /media/movies/OIP%20(1).webp HTTP/1.1" 200 31582
+INFO 2026-07-20 03:41:03 basehttp 26176 21576 "GET /media/movies/Saving_Private_Ryan.jpg HTTP/1.1" 200 28112
+INFO 2026-07-20 03:41:03 basehttp 26176 2936 "GET /media/movies/Captain%20Marvel.jpg HTTP/1.1" 200 48495
+INFO 2026-07-20 03:41:03 basehttp 26176 12952 "GET /media/movies/Inception.jpg HTTP/1.1" 200 44728
+INFO 2026-07-20 03:41:03 basehttp 26176 14996 "GET /media/movies/56524693-art-film-poster-parasite-wallpaper.jpg HTTP/1.1" 200 108025
+INFO 2026-07-20 03:41:03 basehttp 26176 2936 "GET /media/movies/Brave.jpg HTTP/1.1" 200 24238
+INFO 2026-07-20 03:41:03 basehttp 26176 12952 "GET /media/movies/Drishyam%202.jpg HTTP/1.1" 200 25411
+INFO 2026-07-20 03:41:03 basehttp 26176 21576 "GET /media/movies/Soul.jpg HTTP/1.1" 200 27565
+INFO 2026-07-20 03:41:03 basehttp 26176 14996 "GET /media/movies/125814193-goodfellas-movie-poster-wallpaper.jpg HTTP/1.1" 200 250655
+INFO 2026-07-20 03:41:09 basehttp 26176 14996 "GET /movies/1002/theaters HTTP/1.1" 200 16758
+INFO 2026-07-20 03:41:16 basehttp 26176 14996 "GET /movies/998/theaters HTTP/1.1" 200 15784
+INFO 2026-07-20 03:41:26 basehttp 26176 14996 "GET /movies/995/theaters HTTP/1.1" 200 15803
+INFO 2026-07-20 03:43:34 basehttp 26176 14996 "GET /movies/995/theaters HTTP/1.1" 200 15803
+INFO 2026-07-20 03:43:37 basehttp 26176 14996 "GET / HTTP/1.1" 200 41079
+INFO 2026-07-20 03:43:37 basehttp 26176 21576 "GET /media/movies/Bhool%20Bhulaiyaa%202.jpg HTTP/1.1" 200 33943
+INFO 2026-07-20 03:43:37 basehttp 26176 14996 "GET /media/movies/Fight_Club.jpg HTTP/1.1" 200 38374
+INFO 2026-07-20 03:43:37 basehttp 26176 12952 "GET /media/movies/Don%202.jpg HTTP/1.1" 200 32382
+INFO 2026-07-20 03:43:37 basehttp 26176 12952 "GET /media/movies/Jawan.jpg HTTP/1.1" 200 25680
+INFO 2026-07-20 03:43:37 basehttp 26176 14996 "GET /media/movies/Oldboy.jpg HTTP/1.1" 200 33585
+INFO 2026-07-20 03:43:37 basehttp 26176 21576 "GET /media/movies/Shazam.jpg HTTP/1.1" 200 30909
+INFO 2026-07-20 03:43:39 basehttp 26176 21576 "GET / HTTP/1.1" 200 41079
+INFO 2026-07-20 03:43:40 basehttp 26176 21576 "GET /movies/1090/theaters HTTP/1.1" 200 16798
+INFO 2026-07-20 03:43:45 basehttp 26176 21576 "GET /movies/996/theaters HTTP/1.1" 200 15788
+INFO 2026-07-20 03:43:48 basehttp 26176 21576 "GET /movies/998/theaters HTTP/1.1" 200 15784
+WARNING 2026-07-20 03:43:51 log 26176 21576 Not Found: /favicon.ico
+WARNING 2026-07-20 03:43:51 basehttp 26176 21576 "GET /favicon.ico HTTP/1.1" 404 4291
+INFO 2026-07-20 03:46:09 views 5764 24812 Payment confirmed
+INFO 2026-07-20 03:46:52 views 25160 23812 Payment confirmed
+INFO 2026-07-20 03:50:22 basehttp 26176 16316 "GET / HTTP/1.1" 200 41564
+INFO 2026-07-20 03:50:22 basehttp 26176 16316 "GET /media/movies/John%20Wick%20Chapter%203%20%20Parabellum.jpg HTTP/1.1" 200 27436
+INFO 2026-07-20 03:50:22 basehttp 26176 12620 "GET /media/movies/Casino_Royale.jpg HTTP/1.1" 200 25727
+INFO 2026-07-20 03:50:22 basehttp 26176 16448 "GET /media/movies/The_Wolf_of_Wall_Street.jpg HTTP/1.1" 200 46503
+INFO 2026-07-20 03:50:22 basehttp 26176 26424 "GET /media/movies/Black_Panther.jpg HTTP/1.1" 200 63487
+INFO 2026-07-20 03:50:22 basehttp 26176 24536 "GET /media/movies/The_Lord_of_the_Rings_The_Fellowship_of_the_Ring.jpg HTTP/1.1" 200 58527
+INFO 2026-07-20 03:50:22 basehttp 26176 20992 "GET /media/movies/125814168-movie-poster-image.jpg HTTP/1.1" 200 183447
+INFO 2026-07-20 03:50:22 basehttp 26176 26424 "GET /media/movies/Cars.jpg HTTP/1.1" 200 35615
+INFO 2026-07-20 03:50:22 basehttp 26176 20992 "GET /media/movies/Iron%20Man%202.jpg HTTP/1.1" 200 41366
+INFO 2026-07-20 03:50:22 basehttp 26176 16448 "GET /media/movies/The_Pianist.jpg HTTP/1.1" 200 22018
+INFO 2026-07-20 03:50:24 basehttp 26176 16448 "GET /movies/1180/theaters HTTP/1.1" 200 15445
+INFO 2026-07-20 03:50:26 basehttp 26176 16448 "GET /movies/1159/theaters HTTP/1.1" 200 16840
+INFO 2026-07-20 03:50:30 basehttp 26176 16448 "GET /movies/1114/theaters HTTP/1.1" 200 15451
+INFO 2026-07-20 03:50:33 basehttp 26176 16448 "GET /movies/1131/theaters HTTP/1.1" 200 15840
+INFO 2026-07-20 03:50:36 basehttp 26176 16448 "GET /movies/1203/theaters HTTP/1.1" 200 15521
+INFO 2026-07-20 03:50:41 basehttp 26176 16448 "GET /movies/1205/theaters HTTP/1.1" 200 15786
+INFO 2026-07-20 03:50:46 basehttp 26176 16448 "GET /movies HTTP/1.1" 301 0
+INFO 2026-07-20 03:50:46 basehttp 26176 16448 "GET /movies/ HTTP/1.1" 200 149605
+INFO 2026-07-20 03:50:47 basehttp 26176 16448 "GET /media/movies/Chennai%20Express.jpg HTTP/1.1" 200 32638
+INFO 2026-07-20 03:50:47 basehttp 26176 26424 "GET /media/movies/Turning_Red.jpg HTTP/1.1" 200 34279
+INFO 2026-07-20 03:50:47 basehttp 26176 12620 "GET /media/movies/Dune.jpg HTTP/1.1" 200 34075
+INFO 2026-07-20 03:50:47 basehttp 26176 16448 "GET /media/movies/Hi%20Nanna.jpg HTTP/1.1" 200 24232
+INFO 2026-07-20 03:50:47 basehttp 26176 20992 "GET /media/movies/Gully%20Boy.jpg HTTP/1.1" 200 28829
+INFO 2026-07-20 03:50:47 basehttp 26176 24536 "GET /media/movies/Joker.jpg HTTP/1.1" 200 43722
+INFO 2026-07-20 03:50:47 basehttp 26176 16316 "GET /media/movies/Prisoner_of_Azkaban.jpg HTTP/1.1" 200 30996
+INFO 2026-07-20 03:50:47 basehttp 26176 26424 "GET /media/movies/Deathly_Hallows_Part_2.jpg HTTP/1.1" 200 37113
+INFO 2026-07-20 03:50:47 basehttp 26176 16448 "GET /media/movies/IMG_5878-scaled.jpeg HTTP/1.1" 200 822112
+INFO 2026-07-20 03:50:47 basehttp 26176 12620 "GET /media/movies/The_Return_of_the_King.jpg HTTP/1.1" 200 43024
+INFO 2026-07-20 03:50:47 basehttp 26176 26424 "GET /media/movies/How_to_Train_Your_Dragon.jpg HTTP/1.1" 200 28683
+INFO 2026-07-20 03:50:47 basehttp 26176 20992 "GET /media/movies/Pathaan.jpg HTTP/1.1" 200 177476
+INFO 2026-07-20 03:50:47 basehttp 26176 24536 "GET /media/movies/Tenet.jpg HTTP/1.1" 200 47203
+INFO 2026-07-20 03:50:47 basehttp 26176 16448 "GET /media/movies/La_La_Land.jpg HTTP/1.1" 200 25936
+INFO 2026-07-20 03:50:47 basehttp 26176 26424 "GET /media/movies/Cast_Away.jpg HTTP/1.1" 200 29803
+INFO 2026-07-20 03:50:47 basehttp 26176 12620 "GET /media/movies/The_Lion_King.jpg HTTP/1.1" 200 23148
+INFO 2026-07-20 03:50:47 basehttp 26176 16316 "GET /media/movies/The_Imitation_Game.jpg HTTP/1.1" 200 27116
+INFO 2026-07-20 03:50:47 basehttp 26176 20992 "GET /media/movies/Jailer.jpg HTTP/1.1" 200 18483
+INFO 2026-07-20 03:50:47 basehttp 26176 16448 "GET /media/movies/f5VK0h2bprRhR6iRrixcuEfRxSUF4l14F66vQYrsJGmKZ5nTA1.jpg HTTP/1.1" 200 27304
+INFO 2026-07-20 03:50:47 basehttp 26176 26424 "GET /media/movies/Beast.jpg HTTP/1.1" 200 22171
+INFO 2026-07-20 03:50:47 basehttp 26176 24536 "GET /media/movies/At_Worlds_End.jpg HTTP/1.1" 200 20060
+INFO 2026-07-20 03:50:47 basehttp 26176 12620 "GET /media/movies/On_Stranger_Tides.jpg HTTP/1.1" 200 49428
+INFO 2026-07-20 03:50:47 basehttp 26176 16448 "GET /media/movies/1077148.jpg HTTP/1.1" 200 249332
+INFO 2026-07-20 03:50:47 basehttp 26176 26424 "GET /media/movies/Top%20Gun%20Maverick.jpg HTTP/1.1" 200 31792
+INFO 2026-07-20 03:50:47 basehttp 26176 16316 "GET /media/movies/Raees.jpg HTTP/1.1" 200 30842
+INFO 2026-07-20 03:50:47 basehttp 26176 12620 "GET /media/movies/The_Revenant.jpg HTTP/1.1" 200 36737
+INFO 2026-07-20 03:50:47 basehttp 26176 16448 "GET /media/movies/Moana.jpg HTTP/1.1" 200 41365
+INFO 2026-07-20 03:50:47 basehttp 26176 24536 "GET /media/movies/Dunkirk.jpg HTTP/1.1" 200 20271
+INFO 2026-07-20 03:50:47 basehttp 26176 16448 "GET /media/movies/OIP%20(3).webp HTTP/1.1" 200 72598
+INFO 2026-07-20 03:50:47 basehttp 26176 12620 "GET /media/movies/Dead_Mans_Chest.jpg HTTP/1.1" 200 39491
+INFO 2026-07-20 03:50:47 basehttp 26176 26424 "GET /media/movies/125814210-manjummel-boys-covers.jpg HTTP/1.1" 200 360081
+INFO 2026-07-20 03:50:47 basehttp 26176 16316 "GET /media/movies/download.jpeg HTTP/1.1" 200 12036
+INFO 2026-07-20 03:50:47 basehttp 26176 16448 "GET /media/movies/Pushpa.jpg HTTP/1.1" 200 13692
+INFO 2026-07-20 03:50:47 basehttp 26176 24536 "GET /media/movies/Kalki%202898%20AD.jpg HTTP/1.1" 200 34076
+INFO 2026-07-20 03:50:47 basehttp 26176 20992 "GET /media/movies/125814183-evolution-of-indian-film-poster-art.png HTTP/1.1" 200 489392
+INFO 2026-07-20 03:50:47 basehttp 26176 26424 "GET /media/movies/3%20Idiots.jpg HTTP/1.1" 200 41263
+INFO 2026-07-20 03:50:47 basehttp 26176 12620 "GET /media/movies/Fallout.jpg HTTP/1.1" 200 44765
+INFO 2026-07-20 03:50:47 basehttp 26176 16316 "GET /media/movies/Leo.jpg HTTP/1.1" 200 46801
+INFO 2026-07-20 03:50:47 basehttp 26176 24536 "GET /media/movies/Nope.jpg HTTP/1.1" 200 26196
+INFO 2026-07-20 03:50:47 basehttp 26176 26424 "GET /media/movies/Rockstar.jpg HTTP/1.1" 200 28846
+INFO 2026-07-20 03:50:47 basehttp 26176 20992 "GET /media/movies/Gravity.jpg HTTP/1.1" 200 16742
+INFO 2026-07-20 03:50:47 basehttp 26176 12620 "GET /media/movies/Spider-Man%20Far%20From%20Home.jpg HTTP/1.1" 200 45566
+INFO 2026-07-20 03:50:47 basehttp 26176 16448 "GET /media/movies/125814207-beast-emma-watson-film-poster-iphone-8.jpg HTTP/1.1" 200 166323
+INFO 2026-07-20 03:50:47 basehttp 26176 26424 "GET /media/movies/Bhool%20Bhulaiyaa.jpg HTTP/1.1" 200 41330
+INFO 2026-07-20 03:50:47 basehttp 26176 20992 "GET /media/movies/1917.jpg HTTP/1.1" 200 17515
+INFO 2026-07-20 03:50:47 basehttp 26176 16316 "GET /media/movies/Iron_Man.jpg HTTP/1.1" 200 30727
+INFO 2026-07-20 03:50:47 basehttp 26176 16448 "GET /media/movies/feUv2SYumXlT8E2RhzlYbZxfEGLG5AVrCPxP1gmAaCusxyPnA1.jpg HTTP/1.1" 200 42378
+INFO 2026-07-20 03:50:47 basehttp 26176 26424 "GET /media/movies/The_Matrix.jpg HTTP/1.1" 200 52153
+INFO 2026-07-20 03:50:47 basehttp 26176 20992 "GET /media/movies/The%20Dark%20Knight.jpg HTTP/1.1" 200 40337
+INFO 2026-07-20 03:50:47 basehttp 26176 12620 "GET /media/movies/125814135-madmax-furyroad-film-poster-art.jpg HTTP/1.1" 200 586208
+INFO 2026-07-20 03:50:48 basehttp 26176 24536 "GET /media/movies/1077155.jpg HTTP/1.1" 200 1407168
+INFO 2026-07-20 03:52:52 basehttp 26176 24536 "GET /movies/1161/theaters HTTP/1.1" 200 15453
+INFO 2026-07-20 03:52:58 basehttp 26176 24536 "GET /movies/1200/theaters HTTP/1.1" 200 16433
+INFO 2026-07-20 03:53:02 basehttp 26176 24536 "GET /movies/1216/theaters HTTP/1.1" 200 15785
+INFO 2026-07-20 03:53:05 basehttp 26176 24536 "GET /movies/1216/theaters HTTP/1.1" 200 15785
+INFO 2026-07-20 03:53:13 basehttp 26176 24536 "GET /movies/1208/theaters HTTP/1.1" 200 15817
+WARNING 2026-07-20 03:53:18 log 26176 24536 Not Found: /favicon.ico
+WARNING 2026-07-20 03:53:18 basehttp 26176 24536 "GET /favicon.ico HTTP/1.1" 404 4291
+INFO 2026-07-20 03:53:19 autoreload 26176 16056 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-20 03:53:21 autoreload 13820 20140 Watching for file changes with StatReloader
+INFO 2026-07-20 03:53:57 views 10724 22832 Payment confirmed
+INFO 2026-07-20 03:54:21 basehttp 13820 23224 "GET / HTTP/1.1" 200 34677
+INFO 2026-07-20 03:56:15 basehttp 13820 23224 "GET /movies/1234/theaters HTTP/1.1" 200 16411
+INFO 2026-07-20 03:56:19 basehttp 13820 23224 "GET / HTTP/1.1" 200 41680
+INFO 2026-07-20 03:56:19 basehttp 13820 23544 "GET /media/movies/The_Dark_Knight.jpg HTTP/1.1" 200 40337
+INFO 2026-07-20 03:56:19 basehttp 13820 23224 "GET /media/movies/OIP%20(2).webp HTTP/1.1" 200 6884
+INFO 2026-07-20 03:56:19 basehttp 13820 24560 "GET /media/movies/PK.jpg HTTP/1.1" 200 36437
+INFO 2026-07-20 03:56:23 basehttp 13820 24560 "GET / HTTP/1.1" 200 41680
+INFO 2026-07-20 03:56:26 basehttp 13820 24560 "GET /movies/1307/theaters HTTP/1.1" 200 16415
+INFO 2026-07-20 03:56:28 basehttp 13820 24560 "GET /movies/1241/theaters HTTP/1.1" 200 16417
+INFO 2026-07-20 03:56:31 basehttp 13820 24560 "GET /movies/1254/theaters HTTP/1.1" 200 16393
+INFO 2026-07-20 03:56:36 basehttp 13820 24560 "GET /movies/ HTTP/1.1" 200 149669
+INFO 2026-07-20 03:56:36 basehttp 13820 23224 "GET /media/movies/Top_Gun_Maverick.jpg HTTP/1.1" 200 31792
+INFO 2026-07-20 03:56:36 basehttp 13820 2164 "GET /media/movies/Chhichhore.jpg HTTP/1.1" 200 38921
+INFO 2026-07-20 03:56:36 basehttp 13820 24560 "GET /media/movies/Frozen.jpg HTTP/1.1" 200 41440
+INFO 2026-07-20 03:56:36 basehttp 13820 17764 "GET /media/movies/Spider-Man%20Homecoming.jpg HTTP/1.1" 200 49554
+INFO 2026-07-20 03:56:36 basehttp 13820 23544 "GET /media/movies/Aliens.jpg HTTP/1.1" 200 41653
+INFO 2026-07-20 03:56:36 basehttp 13820 2764 "GET /media/movies/Shrek.jpg HTTP/1.1" 200 33823
+INFO 2026-07-20 03:56:36 basehttp 13820 24560 "GET /media/movies/Goblet_of_Fire.jpg HTTP/1.1" 200 28039
+INFO 2026-07-20 03:56:36 basehttp 13820 17764 "GET /media/movies/Mission%20Impossible%20%20Fallout.jpg HTTP/1.1" 200 44927
+INFO 2026-07-20 03:56:36 basehttp 13820 23224 "GET /media/movies/Big_Hero_6.jpg HTTP/1.1" 200 12170
+INFO 2026-07-20 03:56:36 basehttp 13820 2164 "GET /media/movies/9745951-hd-hollywood-movie-poster-wallpaper.jpg HTTP/1.1" 200 231324
+INFO 2026-07-20 03:56:36 basehttp 13820 23544 "GET /media/movies/Avatar%20The%20Way%20of%20Water.jpg HTTP/1.1" 200 28494
+INFO 2026-07-20 03:56:36 basehttp 13820 17764 "GET /media/movies/Toy_Story.jpg HTTP/1.1" 200 38682
+INFO 2026-07-20 03:56:36 basehttp 13820 24560 "GET /media/movies/Aquaman.jpg HTTP/1.1" 200 52532
+INFO 2026-07-20 03:56:36 basehttp 13820 2764 "GET /media/movies/Heat.jpg HTTP/1.1" 200 40532
+INFO 2026-07-20 03:56:36 basehttp 13820 23544 "GET /media/movies/Oppenheimer.jpg HTTP/1.1" 200 51757
+INFO 2026-07-20 03:56:36 basehttp 13820 17764 "GET /media/movies/Avengers%20Endgame.jpg HTTP/1.1" 200 63332
+INFO 2026-07-20 03:56:36 basehttp 13820 23224 "GET /media/movies/635217f73e372771013edb4c-the-avengers-poster-marvel-movie-canvas1.jpg HTTP/1.1" 200 308649
+INFO 2026-07-20 03:56:41 basehttp 13820 23224 "GET /movies/1299/theaters HTTP/1.1" 200 16423
+INFO 2026-07-20 03:58:43 basehttp 13820 23224 "GET /movies/1345/theaters HTTP/1.1" 200 15435
+INFO 2026-07-20 03:59:11 basehttp 13820 23224 "GET /movies/ HTTP/1.1" 200 149669
+INFO 2026-07-20 03:59:18 basehttp 13820 23224 "GET /movies/?search=venom&page=1 HTTP/1.1" 200 25601
+INFO 2026-07-20 03:59:18 basehttp 13820 23224 "GET /media/movies/106685002-art-metallic-venom-marvel-wallpaper.jpg HTTP/1.1" 200 34430
+INFO 2026-07-20 03:59:20 basehttp 13820 23224 "GET /movies/1246/theaters HTTP/1.1" 200 16834
+INFO 2026-07-20 04:02:29 basehttp 13820 23224 "GET / HTTP/1.1" 200 41680
+INFO 2026-07-20 04:04:16 basehttp 13820 23224 "GET / HTTP/1.1" 200 41680
+INFO 2026-07-20 04:04:19 basehttp 13820 23224 "GET /movies/1232/theaters HTTP/1.1" 200 16431
+INFO 2026-07-20 04:04:22 basehttp 13820 23224 "GET /movies/1238/theaters HTTP/1.1" 200 16774
+INFO 2026-07-20 04:04:25 basehttp 13820 23224 "GET /movies/1241/theaters HTTP/1.1" 200 16771
+INFO 2026-07-20 04:04:28 basehttp 13820 23224 "GET /movies/1312/theaters HTTP/1.1" 200 16820
+INFO 2026-07-20 04:04:46 basehttp 13820 23224 "GET /movies/1312/theaters HTTP/1.1" 200 16820
+INFO 2026-07-20 04:04:51 basehttp 13820 23224 "GET /movies/ HTTP/1.1" 200 149669
+INFO 2026-07-20 04:04:53 basehttp 13820 23224 "GET /movies/1296/theaters HTTP/1.1" 200 15781
+INFO 2026-07-20 04:04:57 basehttp 13820 23224 "GET /movies/1308/theaters HTTP/1.1" 200 16803
+INFO 2026-07-20 04:05:03 basehttp 13820 23224 "GET /movies/1285/theaters HTTP/1.1" 200 15836
+INFO 2026-07-20 04:05:43 basehttp 13820 23224 "GET /movies/ HTTP/1.1" 200 149669
+INFO 2026-07-20 04:05:46 basehttp 13820 23224 "GET /movies/1299/theaters HTTP/1.1" 200 16779
+INFO 2026-07-20 04:05:51 basehttp 13820 23224 "GET /movies/1325/theaters HTTP/1.1" 200 16775
+INFO 2026-07-20 04:05:56 basehttp 13820 23224 "GET /movies/1345/theaters HTTP/1.1" 200 15788
+INFO 2026-07-20 04:06:00 basehttp 13820 23224 "GET /movies/1296/theaters HTTP/1.1" 200 15781
+INFO 2026-07-20 04:06:27 basehttp 13820 23224 "GET /movies/1296/theaters HTTP/1.1" 200 15781
+INFO 2026-07-20 04:07:03 basehttp 13820 23568 "GET /admin/movies/movie/ HTTP/1.1" 200 53352
+INFO 2026-07-20 04:07:03 basehttp 13820 23568 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 04:07:14 basehttp 13820 23568 "GET /admin/movies/genre/ HTTP/1.1" 200 14364
+INFO 2026-07-20 04:07:14 basehttp 13820 23568 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 04:07:25 basehttp 13820 23568 "GET /admin/movies/movie/ HTTP/1.1" 200 53352
+INFO 2026-07-20 04:07:25 basehttp 13820 23568 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 04:07:27 basehttp 13820 23568 "GET /admin/movies/movie/1296/change/ HTTP/1.1" 200 21433
+INFO 2026-07-20 04:07:27 basehttp 13820 23568 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2026-07-20 04:07:27 basehttp 13820 16676 "GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+INFO 2026-07-20 04:07:27 basehttp 13820 26536 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+INFO 2026-07-20 04:07:27 basehttp 13820 24728 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2026-07-20 04:07:27 basehttp 13820 10504 "GET /static/admin/js/inlines.js HTTP/1.1" 200 15225
+INFO 2026-07-20 04:07:27 basehttp 13820 21284 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 04:07:27 basehttp 13820 21284 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2026-07-20 04:07:27 basehttp 13820 10504 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2026-07-20 04:07:28 basehttp 13820 10504 "GET /static/admin/img/inline-delete.svg HTTP/1.1" 200 560
+INFO 2026-07-20 04:07:28 basehttp 13820 24728 "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 304 0
+INFO 2026-07-20 04:07:28 basehttp 13820 21284 "GET /static/admin/img/selector-icons.svg HTTP/1.1" 304 0
+INFO 2026-07-20 04:07:28 basehttp 13820 10504 "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 304 0
+INFO 2026-07-20 04:09:25 basehttp 13820 10504 "POST /admin/movies/movie/1296/change/ HTTP/1.1" 302 0
+INFO 2026-07-20 04:09:25 basehttp 13820 10504 "GET /admin/movies/movie/ HTTP/1.1" 200 53553
+INFO 2026-07-20 04:09:25 basehttp 13820 10504 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 04:09:31 basehttp 13820 23224 "GET /movies/1296/theaters HTTP/1.1" 200 15781
+WARNING 2026-07-20 04:09:35 log 13820 23224 Not Found: /favicon.ico
+WARNING 2026-07-20 04:09:35 basehttp 13820 23224 "GET /favicon.ico HTTP/1.1" 404 4291
+INFO 2026-07-20 04:13:58 autoreload 13820 20140 D:\code\Intership\bookmyseat\settings.py changed, reloading.
+INFO 2026-07-20 04:14:00 autoreload 22896 22916 Watching for file changes with StatReloader
+INFO 2026-07-20 04:14:09 autoreload 22896 22916 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-20 04:14:12 autoreload 23632 21280 Watching for file changes with StatReloader
+INFO 2026-07-20 04:14:32 views 7768 26016 Payment confirmed
+INFO 2026-07-20 04:20:38 basehttp 23632 26216 "GET / HTTP/1.1" 200 47440
+INFO 2026-07-20 04:20:47 basehttp 23632 26216 "GET /movies/1269/theaters HTTP/1.1" 200 23699
+WARNING 2026-07-20 04:20:55 log 23632 26216 Not Found: /favicon.ico
+WARNING 2026-07-20 04:20:55 basehttp 23632 26216 "GET /favicon.ico HTTP/1.1" 404 4291
+INFO 2026-07-20 04:21:26 views 25160 25924 Payment confirmed
+INFO 2026-07-20 04:22:08 basehttp 23632 26216 "GET /movies/1269/theaters HTTP/1.1" 200 23699
+INFO 2026-07-20 04:22:11 basehttp 23632 26216 "GET / HTTP/1.1" 200 47440
+INFO 2026-07-20 04:22:30 basehttp 23632 26216 "GET /profile/ HTTP/1.1" 200 22583
+INFO 2026-07-20 04:22:35 basehttp 23632 26216 "GET /movies/ HTTP/1.1" 200 156923
+INFO 2026-07-20 04:22:40 basehttp 23632 26216 "GET /movies/1296/theaters HTTP/1.1" 200 22585
+INFO 2026-07-20 04:22:43 basehttp 23632 26216 "GET /movies/theater/1613/seats/book/ HTTP/1.1" 200 48147
+INFO 2026-07-20 04:22:51 basehttp 23632 26216 "POST /movies/theater/1613/seats/book/ HTTP/1.1" 302 0
+INFO 2026-07-20 04:22:52 basehttp 23632 26216 "GET /movies/payments/checkout/06c06f37-3244-4c2d-af82-06507cac4278/ HTTP/1.1" 200 22433
+INFO 2026-07-20 04:23:39 basehttp 23632 26216 "GET /movies/payments/checkout/06c06f37-3244-4c2d-af82-06507cac4278/ HTTP/1.1" 200 22433
+INFO 2026-07-20 04:23:46 basehttp 23632 26216 "GET /movies/payments/checkout/06c06f37-3244-4c2d-af82-06507cac4278/ HTTP/1.1" 200 22433
+INFO 2026-07-20 04:23:53 basehttp 23632 26216 "GET /movies/ HTTP/1.1" 200 156923
+INFO 2026-07-20 04:23:55 basehttp 23632 26216 "GET /movies/1296/theaters HTTP/1.1" 200 22585
+INFO 2026-07-20 04:23:58 basehttp 23632 26216 "GET /movies/theater/1613/seats/book/ HTTP/1.1" 200 46411
+INFO 2026-07-20 04:24:03 basehttp 23632 26216 "GET / HTTP/1.1" 200 47440
+INFO 2026-07-20 04:25:52 views 16204 5308 Payment confirmed
+INFO 2026-07-20 04:26:22 basehttp 23632 26216 "GET / HTTP/1.1" 200 52075
+INFO 2026-07-20 04:26:33 basehttp 23632 26216 "GET / HTTP/1.1" 200 52075
+INFO 2026-07-20 04:26:49 basehttp 23632 26216 "GET /movies/1333/theaters HTTP/1.1" 200 26964
+INFO 2026-07-20 04:26:57 basehttp 23632 26216 "GET /movies/1256/theaters HTTP/1.1" 200 27255
+INFO 2026-07-20 04:27:19 basehttp 23632 26216 "GET /movies/1307/theaters HTTP/1.1" 200 28209
+WARNING 2026-07-20 04:27:23 log 23632 26216 Not Found: /favicon.ico
+WARNING 2026-07-20 04:27:23 basehttp 23632 26216 "GET /favicon.ico HTTP/1.1" 404 4291
+INFO 2026-07-20 04:27:35 basehttp 23632 26216 "GET /movies/theater/1633/seats/book/ HTTP/1.1" 200 52786
+INFO 2026-07-20 04:27:44 basehttp 23632 26216 "POST /movies/theater/1633/seats/book/ HTTP/1.1" 302 0
+INFO 2026-07-20 04:27:44 basehttp 23632 26216 "GET /movies/payments/checkout/673185a9-368d-46e6-a169-eb9e2bc830b3/ HTTP/1.1" 200 26648
+INFO 2026-07-20 04:27:53 basehttp 23632 26216 "GET /movies/payments/checkout/673185a9-368d-46e6-a169-eb9e2bc830b3/ HTTP/1.1" 200 26648
+INFO 2026-07-20 04:28:08 basehttp 23632 26216 "GET /profile/ HTTP/1.1" 200 32449
+INFO 2026-07-20 04:28:14 basehttp 23632 26216 "GET /movies/ HTTP/1.1" 200 161558
+INFO 2026-07-20 04:28:22 basehttp 23632 26216 "GET /movies/1292/theaters HTTP/1.1" 200 27240
+INFO 2026-07-20 04:28:25 basehttp 23632 26216 "GET /movies/theater/1606/seats/book/ HTTP/1.1" 200 52790
+INFO 2026-07-20 04:28:38 basehttp 23632 26216 "POST /movies/theater/1606/seats/book/ HTTP/1.1" 302 0
+INFO 2026-07-20 04:28:39 basehttp 23632 26216 "GET /movies/payments/checkout/a192ccfa-2a75-4729-b5ca-2c8f450a7241/ HTTP/1.1" 200 26220
+INFO 2026-07-20 04:28:42 basehttp 23632 26216 "GET / HTTP/1.1" 200 52075
+INFO 2026-07-20 04:30:47 views 16056 25892 Payment confirmed
+INFO 2026-07-20 04:31:11 basehttp 23632 26216 "GET / HTTP/1.1" 200 53030
+INFO 2026-07-20 04:31:21 basehttp 23632 26216 "GET /movies/ HTTP/1.1" 200 162513
+INFO 2026-07-20 04:31:28 basehttp 23632 26216 "GET /movies/1299/theaters HTTP/1.1" 200 29173
+INFO 2026-07-20 04:31:42 basehttp 23632 26216 "GET /movies/theater/1618/seats/book/ HTTP/1.1" 200 53744
+INFO 2026-07-20 04:32:00 basehttp 23632 26216 "POST /movies/theater/1618/seats/book/ HTTP/1.1" 302 0
+INFO 2026-07-20 04:32:00 basehttp 23632 26216 "GET /movies/payments/checkout/00e3a869-93a5-4982-a6a8-650025d87880/ HTTP/1.1" 200 27078
+INFO 2026-07-20 04:32:32 views 23632 26216 Payment confirmed
+INFO 2026-07-20 04:32:33 basehttp 23632 26216 "POST /movies/payments/confirm/ HTTP/1.1" 200 23
+INFO 2026-07-20 04:32:33 basehttp 23632 26216 "GET /movies/payments/checkout/00e3a869-93a5-4982-a6a8-650025d87880/ HTTP/1.1" 200 25838
+INFO 2026-07-20 04:32:38 basehttp 23632 26216 "GET /profile/ HTTP/1.1" 200 37318
+INFO 2026-07-20 04:32:57 basehttp 23632 25492 "GET /admin/movies/booking/ HTTP/1.1" 200 17183
+INFO 2026-07-20 04:32:57 basehttp 23632 25492 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 04:35:13 basehttp 23632 25492 "GET /admin/movies/emailtask/ HTTP/1.1" 200 13532
+INFO 2026-07-20 04:35:13 basehttp 23632 25492 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+ERROR 2026-07-20 04:35:30 log 23632 25492 Internal Server Error: /admin/movies/emailtask/add/
+Traceback (most recent call last):
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\options.py", line 710, in get_form
+    return modelform_factory(self.model, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\forms\models.py", line 563, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\forms\models.py", line 276, in __new__
+    raise FieldError(message)
+django.core.exceptions.FieldError: Unknown field(s) (context_display, last_error_display) specified for EmailTask
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\options.py", line 1657, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\options.py", line 1574, in _changeform_view
+    ModelForm = self.get_form(
+                ^^^^^^^^^^^^^^
+  File "C:\Users\ayush\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\options.py", line 712, in get_form
+    raise FieldError(
+django.core.exceptions.FieldError: Unknown field(s) (context_display, last_error_display) specified for EmailTask. Check fields/fieldsets/exclude attributes of class EmailTaskAdmin.
+ERROR 2026-07-20 04:35:30 basehttp 23632 25492 "GET /admin/movies/emailtask/add/ HTTP/1.1" 500 140846
+INFO 2026-07-20 04:35:32 views 15924 2500 Payment confirmed
+INFO 2026-07-20 04:35:33 basehttp 23632 25492 "GET /admin/movies/emailtask/ HTTP/1.1" 200 13532
+INFO 2026-07-20 04:35:38 basehttp 23632 25492 "GET /admin/movies/ HTTP/1.1" 200 5771
+INFO 2026-07-20 04:35:41 basehttp 23632 25492 "GET /admin/movies/paymentwebhookevent/ HTTP/1.1" 200 7896
+INFO 2026-07-20 04:35:41 basehttp 23632 25492 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 04:36:02 basehttp 23632 26216 "GET /profile/ HTTP/1.1" 200 40936
+INFO 2026-07-20 04:37:26 basehttp 23632 26216 "GET /profile/ HTTP/1.1" 200 40936
+INFO 2026-07-20 04:37:40 basehttp 23632 26216 "GET /profile/ HTTP/1.1" 200 44258
+INFO 2026-07-20 04:37:47 basehttp 23632 26216 "GET /profile/ HTTP/1.1" 200 44258
+INFO 2026-07-20 04:37:56 views 3140 10552 Payment confirmed
+INFO 2026-07-20 04:38:02 basehttp 23632 26216 "GET /profile/ HTTP/1.1" 200 44258
+INFO 2026-07-20 04:38:29 basehttp 23632 26216 "GET /profile/ HTTP/1.1" 200 44258
+INFO 2026-07-20 04:40:21 basehttp 23632 26216 "GET / HTTP/1.1" 200 53030
+INFO 2026-07-20 04:40:33 basehttp 23632 25492 "GET /admin/movies/paymentwebhookevent/ HTTP/1.1" 200 7896
+INFO 2026-07-20 04:40:33 basehttp 23632 25492 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 04:40:39 autoreload 23632 21280 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-20 04:40:40 autoreload 26004 21596 Watching for file changes with StatReloader
+INFO 2026-07-20 04:40:41 basehttp 26004 22268 "GET /profile/ HTTP/1.1" 200 28453
+INFO 2026-07-20 04:40:47 autoreload 26004 21596 D:\code\Intership\movies\urls.py changed, reloading.
+INFO 2026-07-20 04:40:49 autoreload 17008 25364 Watching for file changes with StatReloader
+INFO 2026-07-20 04:41:44 autoreload 17008 25364 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-20 04:41:46 autoreload 14692 24744 Watching for file changes with StatReloader
+INFO 2026-07-20 04:41:52 autoreload 14692 24744 D:\code\Intership\bookmyseat\urls.py changed, reloading.
+INFO 2026-07-20 04:41:55 autoreload 6344 18720 Watching for file changes with StatReloader
+INFO 2026-07-20 04:42:15 basehttp 6344 23620 "GET /admin/movies/paymentwebhookevent/ HTTP/1.1" 200 7896
+INFO 2026-07-20 04:42:15 basehttp 6344 23620 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 04:42:24 views 22992 26780 Payment confirmed
+INFO 2026-07-20 04:42:46 basehttp 6344 23620 "GET /admin/movies/paymentwebhookevent/ HTTP/1.1" 200 7896
+INFO 2026-07-20 04:42:46 basehttp 6344 23620 "GET /admin/jsi18n/ HTTP/1.1" 200 3325
+INFO 2026-07-20 04:42:51 basehttp 6344 23620 "GET /admin/movies/ HTTP/1.1" 200 5771
+INFO 2026-07-20 04:42:53 basehttp 6344 23620 "GET /admin/ HTTP/1.1" 200 9689
+INFO 2026-07-20 04:43:07 basehttp 6344 23620 "GET / HTTP/1.1" 200 55701
+INFO 2026-07-20 04:43:07 basehttp 6344 14996 "GET /media/movies/The_Lord_of_the_Rings_The_Fellowship_of_the_Ring.jpg HTTP/1.1" 304 0
+INFO 2026-07-20 04:43:07 basehttp 6344 22672 "GET /media/movies/Gully%20Boy.jpg HTTP/1.1" 200 28829
+INFO 2026-07-20 04:43:07 basehttp 6344 23620 "GET /media/movies/Shazam.jpg HTTP/1.1" 200 30909
+INFO 2026-07-20 04:43:08 basehttp 6344 14676 "GET /media/movies/The_Wolf_of_Wall_Street.jpg HTTP/1.1" 200 46503
+INFO 2026-07-20 04:43:08 basehttp 6344 21948 "GET /media/movies/PK.jpg HTTP/1.1" 200 36437
+INFO 2026-07-20 04:43:11 basehttp 6344 21948 "GET /movies/admin-analytics/ HTTP/1.1" 200 34240
+INFO 2026-07-20 04:45:30 basehttp 6344 21948 "GET /admin/ HTTP/1.1" 200 9689
+INFO 2026-07-20 04:45:35 autoreload 6344 18720 D:\code\Intership\movies\views.py changed, reloading.
+INFO 2026-07-20 04:45:36 autoreload 27080 7260 Watching for file changes with StatReloader
+INFO 2026-07-20 04:45:43 autoreload 27080 7260 D:\code\Intership\movies\urls.py changed, reloading.
+INFO 2026-07-20 04:45:45 autoreload 5460 12312 Watching for file changes with StatReloader
+INFO 2026-07-20 04:45:47 basehttp 5460 21584 "GET /movies/ HTTP/1.1" 200 169240
+INFO 2026-07-20 04:45:47 basehttp 5460 21584 "GET /profile/ HTTP/1.1" 200 46778
+INFO 2026-07-20 04:45:53 basehttp 5460 21584 "GET /movies/ HTTP/1.1" 200 168464
+INFO 2026-07-20 04:46:11 basehttp 5460 21584 "GET /movies/1296/theaters HTTP/1.1" 200 30695
+INFO 2026-07-20 04:46:18 views 23448 21432 Payment confirmed
+WARNING 2026-07-20 04:46:19 log 5460 21584 Not Found: /favicon.ico
+WARNING 2026-07-20 04:46:19 basehttp 5460 21584 "GET /favicon.ico HTTP/1.1" 404 4291
+INFO 2026-07-20 04:46:31 basehttp 5460 21584 "GET / HTTP/1.1" 200 55550
+INFO 2026-07-20 04:47:25 basehttp 5460 22536 "GET /movies/admin-analytics/ HTTP/1.1" 200 37164
+INFO 2026-07-20 04:47:41 basehttp 5460 21584 "GET /profile/ HTTP/1.1" 200 48836
+INFO 2026-07-20 04:47:50 basehttp 5460 21584 "POST /movies/cancel/61/ HTTP/1.1" 302 0
+INFO 2026-07-20 04:47:50 basehttp 5460 21584 "GET /profile/ HTTP/1.1" 200 48366
+INFO 2026-07-20 04:47:56 basehttp 5460 21584 "GET / HTTP/1.1" 200 55550
+INFO 2026-07-20 04:48:02 basehttp 5460 21584 "GET /movies/ HTTP/1.1" 200 168464
+INFO 2026-07-20 04:48:06 basehttp 5460 21584 "GET /movies/1299/theaters HTTP/1.1" 200 31693
+INFO 2026-07-20 04:48:09 basehttp 5460 21584 "GET /movies/theater/1618/seats/book/ HTTP/1.1" 200 55396
+INFO 2026-07-20 04:48:18 basehttp 5460 21584 "GET /movies/ HTTP/1.1" 200 168464
+INFO 2026-07-20 04:48:37 basehttp 5460 21584 "GET / HTTP/1.1" 200 55550
+INFO 2026-07-20 23:52:15 basehttp 5460 22700 "GET / HTTP/1.1" 200 55701
+INFO 2026-07-20 23:52:15 basehttp 5460 22700 "GET /media/movies/Gravity.jpg HTTP/1.1" 304 0
+INFO 2026-07-20 23:52:15 basehttp 5460 3148 "GET /media/movies/Shazam.jpg HTTP/1.1" 304 0
+INFO 2026-07-20 23:52:15 basehttp 5460 7456 "GET /media/movies/Gully%20Boy.jpg HTTP/1.1" 304 0
+INFO 2026-07-20 23:52:15 basehttp 5460 1828 "GET /media/movies/The_Dark_Knight.jpg HTTP/1.1" 304 0
+INFO 2026-07-20 23:52:15 basehttp 5460 25504 "GET /media/movies/OIP%20(2).webp HTTP/1.1" 304 0
+INFO 2026-07-20 23:52:15 basehttp 5460 27180 "GET /media/movies/The_Wolf_of_Wall_Street.jpg HTTP/1.1" 304 0
+INFO 2026-07-20 23:52:15 basehttp 5460 27180 "GET /media/movies/PK.jpg HTTP/1.1" 304 0
+INFO 2026-07-20 23:52:15 basehttp 5460 27180 "GET /media/movies/The_Lord_of_the_Rings_The_Fellowship_of_the_Ring.jpg HTTP/1.1" 304 0
+INFO 2026-07-20 23:52:15 basehttp 5460 1828 "GET /media/movies/On_Stranger_Tides.jpg HTTP/1.1" 304 0

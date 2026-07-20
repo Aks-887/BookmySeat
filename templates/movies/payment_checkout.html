@@ -1,0 +1,103 @@
+{% extends "users/basic.html" %}
+{% block content %}
+<style>
+  .ticket-card {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--card-border) !important;
+    border-radius: 24px !important;
+    overflow: hidden;
+    position: relative;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .ticket-header {
+    background: var(--primary-gradient) !important;
+    padding: 30px !important;
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
+    text-align: center;
+  }
+  .ticket-body {
+    padding: 35px !important;
+  }
+  .ticket-card::before, .ticket-card::after {
+    content: '';
+    position: absolute;
+    top: 92px;
+    width: 20px;
+    height: 20px;
+    background: #0d0f1c; /* matches body background */
+    border-radius: 50%;
+    z-index: 10;
+  }
+  .ticket-card::before {
+    left: -10px;
+  }
+  .ticket-card::after {
+    right: -10px;
+  }
+</style>
+
+<div class="container py-5 animate-fade-in">
+  <div class="row justify-content-center">
+    <div class="col-lg-7">
+      <div class="ticket-card shadow-lg">
+        <div class="ticket-header text-white">
+          <h3 class="mb-0 font-weight-bold"><i class="fas fa-ticket-alt mr-2"></i> Complete Payment</h3>
+        </div>
+        <div class="ticket-body text-white-theme">
+          <p>Payment ID: <strong>{{ booking.payment_id }}</strong></p>
+          <p>Status: <strong class="badge badge-primary">{{ booking.payment_status }}</strong></p>
+          <p>Total Amount: <strong>${{ total_amount }}</strong></p>
+          <hr style="border-color: rgba(255,255,255,0.08);">
+          {% for booking_item in bookings %}
+            <p>Movie: <strong>{{ booking_item.movie.name }}</strong></p>
+            <p>Theater: <strong>{{ booking_item.theater.name }}</strong></p>
+            <p>Seat: <strong>{{ booking_item.seat.seat_number }}</strong></p>
+            <p>Seat Amount: <strong>${{ booking_item.amount }}</strong></p>
+            {% if not forloop.last %}<hr style="border-color: rgba(255,255,255,0.08);">{% endif %}
+          {% endfor %}
+
+          {% if gateway_error %}
+            <div class="alert alert-warning mt-4"><i class="fas fa-exclamation-circle mr-2"></i> {{ gateway_error }}</div>
+          {% elif booking.payment_status == 'completed' %}
+            <div class="alert alert-success mt-4"><i class="fas fa-check-circle mr-2"></i> Payment confirmed. Your ticket email is being sent.</div>
+          {% elif booking.gateway_order_id and razorpay_key_id %}
+            <div class="alert alert-info mt-4"><i class="fas fa-info-circle mr-2"></i> Payments are verified server-side. Do not close this page until Razorpay returns.</div>
+            <div class="text-center mt-4">
+              <button id="pay-button" type="button" class="btn btn-primary btn-lg btn-block"><i class="fas fa-credit-card mr-2"></i> Pay securely</button>
+            </div>
+          {% else %}
+            <div class="alert alert-warning mt-4"><i class="fas fa-exclamation-triangle mr-2"></i> Online payments are not configured for this environment.</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% if booking.gateway_order_id and razorpay_key_id and booking.payment_status != 'completed' %}
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  document.getElementById('pay-button').addEventListener('click', function () {
+    const options = {
+      key: '{{ razorpay_key_id|escapejs }}',
+      amount: '{{ payment_amount_subunits }}',
+      currency: '{{ payment_currency|escapejs }}',
+      name: 'BookMySeat',
+      description: 'Movie ticket booking',
+      order_id: '{{ booking.gateway_order_id|escapejs }}',
+      handler: async function (response) {
+        const result = await fetch('{% url "confirm_payment" %}', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json', 'X-CSRFToken': '{{ csrf_token }}'},
+          body: JSON.stringify({booking_reference: '{{ booking.payment_id|escapejs }}', ...response})
+        });
+        const data = await result.json();
+        window.location.reload();
+      },
+      modal: { ondismiss: function () { window.location.reload(); } }
+    };
+    new Razorpay(options).open();
+  });
+</script>
+{% endif %}
+{% endblock %}

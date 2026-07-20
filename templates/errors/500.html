@@ -1,0 +1,14 @@
+{% extends "users/basic.html" %}
+{% block content %}
+<div class="container py-5 text-center animate-fade-in" style="min-height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+  <div class="mb-4">
+    <i class="fas fa-exclamation-triangle fa-6x text-primary" style="background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 15px rgba(255,0,85,0.25));"></i>
+  </div>
+  <h1 class="display-3 font-weight-bold text-primary mb-2">500</h1>
+  <h3 class="font-weight-bold text-primary mb-3">Projector Glitch</h3>
+  <p class="text-secondary mb-5" style="max-width: 480px;">We've experienced an unexpected projector malfunction. Our projectionists are currently splicing the film back together. Please try reloading the page shortly.</p>
+  <div>
+    <a href="/" class="btn btn-primary btn-lg"><i class="fas fa-redo-alt mr-2"></i>Reload Page</a>
+  </div>
+</div>
+{% endblock %}

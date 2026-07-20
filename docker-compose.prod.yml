@@ -1,0 +1,80 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: bookmyseat
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  web:
+    build:
+      context: .
+    image: ${IMAGE_NAME:-bookmyseat_web:latest}
+    restart: always
+    env_file:
+      - deploy/process_email_queue.env
+    depends_on:
+      - db
+    command: gunicorn bookmyseat.wsgi:application --bind 0.0.0.0:8000 --workers 3
+    volumes:
+      - static-data:/app/static
+      - media-data:/app/media
+    expose:
+      - 8000
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://127.0.0.1:8000/_health/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  worker:
+    build:
+      context: .
+    image: ${IMAGE_NAME:-bookmyseat_worker:latest}
+    restart: always
+    env_file:
+      - deploy/process_email_queue.env
+    depends_on:
+      - db
+    command: /bin/sh -c "while true; do python manage.py process_email_queue --limit 200; sleep 30; done"
+    volumes:
+      - static-data:/app/static
+      - media-data:/app/media
+    healthcheck:
+      test: ["CMD-SHELL", "python manage.py process_email_queue --stats || true"]
+      interval: 5m
+      timeout: 30s
+      retries: 2
+
+  nginx:
+    image: nginx:stable-alpine
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./deploy/nginx:/etc/nginx/conf.d:ro
+      - cert-data:/etc/letsencrypt
+      - static-data:/app/static
+      - media-data:/app/media
+    depends_on:
+      - web
+
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - cert-data:/etc/letsencrypt
+      - ./deploy/nginx:/etc/nginx/conf.d:ro
+    entrypoint: ''
+    command: /bin/sh -c "trap exit TERM; while :; do sleep 6h & wait $${!}; certbot renew --quiet --deploy-hook 'nginx -s reload'; done"
+
+volumes:
+  db-data:
+  static-data:
+  media-data:
+  cert-data:

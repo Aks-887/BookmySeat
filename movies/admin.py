@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.utils.html import format_html
 from django.urls import reverse
 from django.db.models import Q
-from .models import EmailTask, Movie, Theater, Seat, Booking, MovieImage, Genre, Language
+from .models import EmailTask, Movie, Theater, Seat, Booking, MovieImage, Genre, Language, PaymentWebhookEvent
 from .email_tasks import _send_email_task
 
 
@@ -45,8 +45,16 @@ class SeatAdmin(admin.ModelAdmin):
 
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
-    list_display = ['user', 'seat', 'movie', 'theater', 'payment_id', 'booked_at']
-    search_fields = ['user__username', 'payment_id', 'movie__name', 'theater__name']
+    list_display = ['user', 'seat', 'movie', 'theater', 'payment_id', 'payment_status', 'gateway_order_id', 'booked_at']
+    search_fields = ['user__username', 'payment_id', 'gateway_order_id', 'gateway_payment_id', 'movie__name', 'theater__name']
+
+
+@admin.register(PaymentWebhookEvent)
+class PaymentWebhookEventAdmin(admin.ModelAdmin):
+    list_display = ['provider', 'event_type', 'gateway_order_id', 'status', 'received_at', 'processed_at']
+    list_filter = ['provider', 'event_type', 'status']
+    search_fields = ['event_id', 'gateway_order_id', 'gateway_payment_id']
+    readonly_fields = [field.name for field in PaymentWebhookEvent._meta.fields]
 
 
 @admin.register(EmailTask)

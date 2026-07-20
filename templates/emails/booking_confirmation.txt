@@ -13,6 +13,8 @@ BOOKING CONFIRMATION
 ================================================================================
 
 Confirmation ID: {{ payment_id }}
+Booking reference: {{ booking_reference }}
+Amount paid: {{ amount }}
 
 MOVIE DETAILS:
   Movie:       {{ movie_name }}

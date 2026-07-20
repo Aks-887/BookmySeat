@@ -20,7 +20,11 @@ class SeatReservation(models.Model):
     ]
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='seat_reservations')
-    seat = models.OneToOneField('Seat', on_delete=models.CASCADE, related_name='reservation')
+    seat = models.ForeignKey(
+    'Seat',
+    on_delete=models.CASCADE,
+    related_name='reservations'
+)
     theater = models.ForeignKey('Theater', on_delete=models.CASCADE, related_name='seat_reservations')
     movie = models.ForeignKey('Movie', on_delete=models.CASCADE, related_name='seat_reservations')
     status = models.CharField(max_length=12, choices=STATUS_CHOICES, default=STATUS_RESERVED)
@@ -46,7 +50,7 @@ class SeatReservation(models.Model):
             reservation.status = cls.STATUS_EXPIRED
             reservation.save(update_fields=['status'])
             seat = reservation.seat
-            booking = Booking.objects.filter(seat=seat, payment_status__in=['pending', 'reserved']).first()
+            booking = Booking.objects.filter(seat=seat, payment_status__in=['pending', 'processing', 'reserved']).first()
             if booking:
                 booking.payment_status = 'expired'
                 booking.save(update_fields=['payment_status'])
@@ -171,13 +175,18 @@ class Seat(models.Model):
 
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    seat = models.OneToOneField(Seat, on_delete=models.CASCADE)
+    seat = models.ForeignKey(Seat, on_delete=models.CASCADE, related_name='bookings')
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='bookings')
     theater = models.ForeignKey(Theater, on_delete=models.CASCADE, related_name='bookings')
     payment_id = models.CharField(max_length=36, db_index=True, default=uuid.uuid4, editable=False)
     booked_at = models.DateTimeField(auto_now_add=True)
     payment_status = models.CharField(max_length=20, default='completed', db_index=True)
+    amount = models.DecimalField(max_digits=8, decimal_places=2, default=0.00, help_text='Booking amount in currency units')
     idempotency_key = models.CharField(max_length=100, blank=True, default='', db_index=True)
+    payment_provider = models.CharField(max_length=32, default='razorpay')
+    gateway_order_id = models.CharField(max_length=100, blank=True, default='', db_index=True)
+    gateway_payment_id = models.CharField(max_length=100, blank=True, default='', db_index=True)
+    payment_verified_at = models.DateTimeField(null=True, blank=True)
 
     class Meta:
         indexes = [
@@ -213,6 +222,9 @@ class EmailTask(models.Model):
     max_attempts = models.PositiveSmallIntegerField(default=5)
     next_attempt_at = models.DateTimeField(default=timezone.now)
     last_error = models.TextField(blank=True, null=True)
+    # A confirmation is an at-least-once queue operation. This key makes it
+    # effectively-once for a booking even if a payment provider retries.
+    deduplication_key = models.CharField(max_length=128, null=True, blank=True, unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -225,3 +237,50 @@ class EmailTask(models.Model):
 
     def __str__(self):
         return f'EmailTask to {self.recipient} [{self.status}]'
+
+
+class EmailEvent(models.Model):
+    """Records SendGrid (or other provider) webhook events related to email tasks."""
+    email_task = models.ForeignKey(EmailTask, on_delete=models.SET_NULL, null=True, blank=True, related_name='events')
+    recipient = models.EmailField(db_index=True)
+    event_type = models.CharField(max_length=64, db_index=True)
+    timestamp = models.DateTimeField(null=True, blank=True)
+    reason = models.TextField(blank=True, default='')
+    raw = models.JSONField(default=dict, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f'{self.event_type} for {self.recipient} at {self.created_at}'
+
+
+class PaymentWebhookEvent(models.Model):
+    """Minimal, replay-safe audit record for a verified gateway webhook."""
+    STATUS_PROCESSED = 'processed'
+    STATUS_IGNORED = 'ignored'
+    STATUS_FAILED = 'failed'
+
+    provider = models.CharField(max_length=32, default='razorpay')
+    event_id = models.CharField(max_length=128)
+    event_type = models.CharField(max_length=64)
+    payload_hash = models.CharField(max_length=64)
+    gateway_order_id = models.CharField(max_length=100, blank=True, default='')
+    gateway_payment_id = models.CharField(max_length=100, blank=True, default='')
+    status = models.CharField(max_length=16, default=STATUS_PROCESSED)
+    failure_reason = models.CharField(max_length=255, blank=True, default='')
+    received_at = models.DateTimeField(auto_now_add=True)
+    processed_at = models.DateTimeField(null=True, blank=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['provider', 'event_id'], name='unique_payment_gateway_event'),
+        ]
+        indexes = [
+            models.Index(fields=['gateway_order_id', 'event_type']),
+            models.Index(fields=['gateway_payment_id']),
+        ]
+
+    def __str__(self):
+        return f'{self.provider}:{self.event_type}:{self.event_id}'

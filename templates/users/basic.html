@@ -12,61 +12,443 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <style>
+      :root {
+        --bg-dark-radial: radial-gradient(circle at 50% 50%, #151829 0%, #080911 100%);
+        --primary-gradient: linear-gradient(135deg, #ff0055 0%, #ff5e00 100%);
+        --primary-color: #ff0055;
+        --secondary-color: #ff5e00;
+        --accent-emerald: #00e676;
+        --accent-blue: #00b0ff;
+        --card-bg: rgba(255, 255, 255, 0.025);
+        --card-border: rgba(255, 255, 255, 0.05);
+        --text-primary: #ffffff;
+        --text-secondary: #94a3b8;
+      }
+      
       body {
-        font-family: Arial, sans-serif;
+        font-family: 'Outfit', sans-serif !important;
+        background: var(--bg-dark-radial) !important;
+        color: var(--text-primary) !important;
+        min-height: 100vh;
+        overflow-x: hidden;
       }
+      
+      /* Typography */
+      h1, h2, h3, h4, h5, h6 {
+        color: var(--text-primary) !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.02em;
+      }
+      
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #080911;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 0, 85, 0.25);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--primary-color);
+      }
+      
+      /* Navbar Upgrade */
       .navbar {
-        background-color: #fff;
-        padding: 10px 20px;
+        background: rgba(8, 9, 17, 0.75) !important;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--card-border);
+        padding: 15px 0 !important;
+        transition: all 0.3s ease;
       }
-      .navbar-brand img {
-        height: 40px;
+      
+      .navbar-brand {
+        font-weight: 800 !important;
+        font-size: 1.5rem !important;
+        background: var(--primary-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -0.03em;
+        display: flex;
+        align-items: center;
+        gap: 10px;
       }
+      
       .navbar-nav .nav-link {
-        color: #000;
+        color: var(--text-secondary) !important;
+        font-weight: 500;
+        padding: 8px 18px !important;
+        transition: all 0.3s ease;
+        border-radius: 8px;
       }
-      .banner {
-        background-color: #f8f9fa;
-        padding: 20px;
-        text-align: center;
+      
+      .navbar-nav .nav-link:hover {
+        color: var(--text-primary) !important;
+        background: rgba(255, 255, 255, 0.04);
+        transform: translateY(-1px);
       }
-      .banner img {
-        max-width: 100%;
-        height: auto;
+      
+      .navbar-nav .active > .nav-link {
+        color: var(--text-primary) !important;
+        background: rgba(255, 0, 85, 0.1) !important;
+        border: 1px solid rgba(255, 0, 85, 0.2);
       }
-      .section-title {
-        font-size: 24px;
-        font-weight: bold;
-        margin: 20px 0;
+      
+      /* Button Overhaul */
+      .btn {
+        border-radius: 12px !important;
+        font-weight: 600 !important;
+        padding: 10px 22px !important;
+        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
       }
-      .card img {
-        height: 200px;
-        object-fit: cover;
+      
+      .btn-primary {
+        background: var(--primary-gradient) !important;
+        border: none !important;
+        color: white !important;
+        box-shadow: 0 4px 15px rgba(255, 0, 85, 0.25) !important;
       }
+      
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(255, 0, 85, 0.45) !important;
+      }
+      
+      .btn-outline-primary {
+        border: 2px solid var(--primary-color) !important;
+        color: var(--primary-color) !important;
+        background: transparent !important;
+      }
+      
+      .btn-outline-primary:hover {
+        background: var(--primary-gradient) !important;
+        border-color: transparent !important;
+        color: white !important;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(255, 0, 85, 0.35) !important;
+      }
+
+      /* Card Upgrades */
+      .card {
+        background: var(--card-bg) !important;
+        border: 1px solid var(--card-border) !important;
+        border-radius: 20px !important;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+        overflow: hidden;
+      }
+      
+      .card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(255, 0, 85, 0.25) !important;
+        box-shadow: 0 15px 30px rgba(255, 0, 85, 0.15) !important;
+      }
+      
+      .card-img-top {
+        transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        border-bottom: 1px solid var(--card-border);
+      }
+      
+      .card:hover .card-img-top {
+        transform: scale(1.03);
+      }
+      
+      .card-body {
+        background: transparent !important;
+        color: var(--text-primary);
+      }
+      
+      .card-title {
+        font-weight: 700 !important;
+        font-size: 1.15rem !important;
+        margin-bottom: 10px;
+      }
+      
+      .card-text {
+        color: var(--text-secondary) !important;
+      }
+      
+      /* Badges styling */
+      .badge {
+        border-radius: 8px !important;
+        padding: 6px 12px !important;
+        font-weight: 600 !important;
+      }
+      
+      .badge-success {
+        background-color: rgba(0, 230, 118, 0.1) !important;
+        color: var(--accent-emerald) !important;
+        border: 1px solid rgba(0, 230, 118, 0.2);
+      }
+      
+      .badge-primary {
+        background: rgba(255, 0, 85, 0.15) !important;
+        color: var(--primary-color) !important;
+        border: 1px solid rgba(255, 0, 85, 0.2);
+      }
+      
+      .badge-secondary, .badge-light {
+        background: rgba(255, 255, 255, 0.05) !important;
+        color: var(--text-secondary) !important;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      
+      /* Footer */
       .footer {
-        background-color: #343a40;
-        color: #f8f9fa;
-        padding: 20px 0;
+        background: #05060b !important;
+        border-top: 1px solid var(--card-border);
+        color: var(--text-secondary) !important;
+        padding: 50px 0 30px !important;
       }
+      
+      .footer h5 {
+        color: var(--text-primary) !important;
+        margin-bottom: 20px;
+        font-weight: 700 !important;
+      }
+      
       .footer a {
-        color: #f8f9fa;
+        color: var(--text-secondary) !important;
+        transition: color 0.3s ease;
+      }
+      
+      .footer a:hover {
+        color: var(--primary-color) !important;
         text-decoration: none;
       }
-      .footer a:hover {
-        text-decoration: underline;
-      }
+      
       .footer .social-icons i {
-        font-size: 24px;
-        margin: 0 10px;
-        transition: color 0.3s;
+        font-size: 20px;
+        margin-right: 15px;
+        color: var(--text-secondary);
+        transition: all 0.3s ease;
       }
+      
       .footer .social-icons i:hover {
-        color: #28a745;
+        color: var(--primary-color) !important;
+        transform: translateY(-3px);
+      }
+      
+      /* Entrance animations */
+      .animate-fade-in {
+        animation: fadeInUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+      }
+      
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ==========================================================================
+         Theme Toggle Switch (Lamp Style)
+         ========================================================================== */
+      .lamp-toggle-container {
+        position: relative;
+        width: 32px;
+        height: 48px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 15px;
+        user-select: none;
+      }
+      
+      /* Hanging cord */
+      .lamp-rope {
+        width: 2px;
+        height: 22px;
+        background: var(--text-secondary);
+        transition: all 0.3s ease;
+      }
+      
+      /* Bulb body */
+      .lamp-bulb {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        border: 2px solid var(--text-secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-secondary);
+        font-size: 11px;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      
+      /* Click action pull effect */
+      .lamp-toggle-container:active .lamp-rope {
+        height: 26px;
+      }
+      .lamp-toggle-container:active .lamp-bulb {
+        transform: translateY(4px);
+      }
+      
+      /* Light Mode Variable Overrides */
+      body.light-mode {
+        --bg-dark-radial: radial-gradient(circle at 50% 50%, #ffffff 0%, #f1f5f9 100%);
+        --card-bg: rgba(255, 255, 255, 0.85);
+        --card-border: rgba(0, 0, 0, 0.08);
+        --text-primary: #0f172a;
+        --text-secondary: #475569;
+        --accent-blue: #0062cc; /* Higher contrast blue for light theme */
+      }
+      
+      body.light-mode .seats-grid {
+        background: rgba(0, 0, 0, 0.02) !important;
+      }
+      
+      body.light-mode .seat.sold {
+        background-color: rgba(0, 0, 0, 0.05) !important;
+        color: rgba(0, 0, 0, 0.3) !important;
+        border-color: rgba(0, 0, 0, 0.08) !important;
+      }
+      
+      body.light-mode .time-box {
+        background: rgba(0, 0, 0, 0.03) !important;
+        border-color: rgba(0, 0, 0, 0.08) !important;
+      }
+      
+      body.light-mode .badge-secondary, body.light-mode .badge-light {
+        background: rgba(0, 0, 0, 0.05) !important;
+        border-color: rgba(0, 0, 0, 0.08) !important;
+      }
+      
+      body.light-mode .ticket-card::before, body.light-mode .ticket-card::after {
+        background: #f1f5f9;
+      }
+      
+      body.light-mode hr {
+        border-color: rgba(0, 0, 0, 0.08) !important;
+      }
+      
+      body.light-mode .navbar {
+        background: rgba(255, 255, 255, 0.8) !important;
+        border-bottom: 1px solid var(--card-border);
+      }
+      
+      body.light-mode .navbar-brand {
+        background: linear-gradient(135deg, #e0004c 0%, #ff5100 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      body.light-mode .navbar-nav .nav-link {
+        color: var(--text-secondary) !important;
+      }
+      
+      body.light-mode .navbar-nav .nav-link:hover {
+        background: rgba(0, 0, 0, 0.05);
+        color: var(--text-primary) !important;
+      }
+      
+      body.light-mode .navbar-nav .active > .nav-link {
+        background: rgba(255, 0, 85, 0.08) !important;
+        color: var(--primary-color) !important;
+      }
+      
+      body.light-mode .card {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+      }
+      
+      body.light-mode .card:hover {
+        box-shadow: 0 15px 35px rgba(255, 0, 85, 0.12) !important;
+      }
+      
+      /* Light mode glowing lamp bulb */
+      body.light-mode .lamp-bulb {
+        background: #ffeb3b !important;
+        border-color: #fbc02d !important;
+        color: #0f172a !important;
+        box-shadow: 0 0 12px #ffeb3b, 0 0 25px rgba(251, 192, 45, 0.5);
+      }
+      
+      body.light-mode .lamp-rope {
+        background: #fbc02d;
+      }
+      
+      body.light-mode .footer {
+        background: #f8fafc !important;
+      }
+      
+      body.light-mode .footer h5 {
+        color: var(--text-primary) !important;
+      }
+      
+      body.light-mode .footer a, body.light-mode .footer p {
+        color: var(--text-secondary) !important;
+      }
+      
+      body.light-mode .footer .social-icons i {
+        color: var(--text-secondary);
+      }
+      
+      /* ==========================================================================
+         Toast Notification Styles
+         ========================================================================== */
+      .toast-container {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        z-index: 1060;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        pointer-events: none;
+      }
+      
+      .custom-toast {
+        min-width: 280px;
+        max-width: 380px;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        color: var(--text-primary);
+        border-radius: 16px;
+        padding: 16px 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        transform: translateY(50px);
+        opacity: 0;
+        pointer-events: auto;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      
+      .custom-toast.show {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      
+      .custom-toast.success i {
+        color: var(--accent-emerald) !important;
+      }
+      .custom-toast.info i {
+        color: var(--accent-blue) !important;
+      }
+      .custom-toast.error i {
+        color: var(--primary-color) !important;
       }
     </style>
   </head>
@@ -102,6 +484,11 @@
             <li class="nav-item">
               <a class="nav-link" href="/movies">Movies</a>
             </li>
+            {% if user.is_staff %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'admin_analytics' %}">Admin Analytics</a>
+            </li>
+            {% endif %}
             <li class="nav-item">
               <a class="nav-link" href="{% url 'profile' %}">Profile</a>
             </li>
@@ -125,6 +512,14 @@
               <a class="nav-link" href="{% url 'register' %}">Register</a>
             </li>
             {% endif %}
+            <li class="nav-item d-flex align-items-center ml-lg-2">
+              <div class="lamp-toggle-container" id="theme-lamp-toggle" title="Toggle Light/Dark Mode">
+                <div class="lamp-rope"></div>
+                <div class="lamp-bulb">
+                  <i class="fas fa-lightbulb"></i>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -168,5 +563,63 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const lampToggle = document.getElementById('theme-lamp-toggle');
+        const body = document.body;
+        
+        // Check for saved user preference in localStorage
+        const localTheme = localStorage.getItem('site-theme');
+        if (localTheme === 'light') {
+          body.classList.add('light-mode');
+        }
+        
+        // Toggle theme on pull-lamp click
+        lampToggle.addEventListener('click', function() {
+          body.classList.toggle('light-mode');
+          
+          if (body.classList.contains('light-mode')) {
+            localStorage.setItem('site-theme', 'light');
+          } else {
+            localStorage.setItem('site-theme', 'dark');
+          }
+        });
+
+        // Toast Notification System
+        const toastContainer = document.createElement('div');
+        toastContainer.id = 'toastContainer';
+        toastContainer.className = 'toast-container';
+        body.appendChild(toastContainer);
+
+        window.showToast = function(message, type = 'success') {
+          const toast = document.createElement('div');
+          toast.className = `custom-toast ${type}`;
+          
+          let icon = 'fa-check-circle';
+          if (type === 'info') icon = 'fa-info-circle';
+          if (type === 'error') icon = 'fa-exclamation-circle';
+          
+          toast.innerHTML = `
+            <i class="fas ${icon} fa-lg"></i>
+            <span style="font-weight: 600;">${message}</span>
+          `;
+          toastContainer.appendChild(toast);
+          
+          setTimeout(() => toast.classList.add('show'), 50);
+          
+          setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => toast.remove(), 400);
+          }, 3500);
+        };
+
+        // Render Django messages in Toast notification
+        {% if messages %}
+          {% for message in messages %}
+            showToast("{{ message|escapejs }}", "{% if message.tags == 'error' %}error{% elif message.tags == 'info' %}info{% else %}success{% endif %}");
+          {% endfor %}
+        {% endif %}
+      });
+    </script>
   </body>
 </html>

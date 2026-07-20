@@ -1,0 +1,17 @@
+[Unit]
+Description=BookMySeat Email Queue Worker
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/path/to/project
+ExecStart=/path/to/venv/bin/python manage.py process_email_queue --limit 200
+Restart=on-failure
+RestartSec=10
+Environment=PYTHONUNBUFFERED=1
+# Export any environment variables you need (do NOT store secrets here; use systemd environment files)
+# EnvironmentFile=/etc/bookmyseat/env
+
+[Install]
+WantedBy=multi-user.target

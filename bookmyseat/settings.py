@@ -13,20 +13,53 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
+# Load local environment variables from .env when available.
+# This is used in development and test environments so secrets can
+# be kept out of source control while still being available to Django.
+try:
+    from dotenv import load_dotenv
+except ImportError:
+    load_dotenv = None
+
 BASE_DIR = Path(__file__).resolve().parent.parent
+dotenv_path = BASE_DIR / '.env'
+if dotenv_path.exists():
+    if load_dotenv:
+        load_dotenv(dotenv_path)
+    else:
+        # Manual fallback if python-dotenv is not installed
+        try:
+            with open(dotenv_path, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if not line or line.startswith('#'):
+                        continue
+                    if '=' in line:
+                        k, v = line.split('=', 1)
+                        k = k.strip()
+                        v = v.strip()
+                        if (v.startswith('"') and v.endswith('"')) or (v.startswith("'") and v.endswith("'")):
+                            v = v[1:-1]
+                        os.environ[k] = v
+        except Exception:
+            pass
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-c8aetlj(=vp90n@#yoc^&d(_6ivp(d!bv-4-f!r$lawptjzrwu'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.vercel.app']
+# Never keep credentials in source control. Development gets an explicitly
+# unsafe fallback only; production must supply DJANGO_SECRET_KEY.
+DEBUG = os.environ.get('DJANGO_DEBUG', 'true').lower() in ('true', '1', 'yes')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+if not SECRET_KEY:
+    if not DEBUG:
+        raise RuntimeError('DJANGO_SECRET_KEY must be configured when DEBUG is false')
+    SECRET_KEY = 'unsafe-development-key-not-for-production'
+ALLOWED_HOSTS = [host.strip() for host in os.environ.get(
+    'DJANGO_ALLOWED_HOSTS', '127.0.0.1,localhost,.vercel.app,testserver'
+).split(',') if host.strip()]
 
 
 # Application definition
@@ -41,6 +74,26 @@ INSTALLED_APPS = [
     'users',
     'movies',
 ]
+
+# Add AnyMail to INSTALLED_APPS when SendGrid is enabled
+if os.environ.get('SENDGRID_API_KEY'):
+    INSTALLED_APPS.append('anymail')
+    # AnyMail / SendGrid settings
+    ANYMAIL = {
+        'SENDGRID_API_KEY': os.environ.get('SENDGRID_API_KEY'),
+    }
+
+    # Optional: set a default Reply-To header from env
+    DEFAULT_REPLY_TO = os.environ.get('DEFAULT_REPLY_TO', os.environ.get('DEFAULT_FROM_EMAIL', 'noreply@bookmyseat.local'))
+
+    # AnyMail-specific defaults: enable click/open tracking via env
+    if os.environ.get('SENDGRID_TRACKING'):
+        ANYMAIL['SENDGRID'] = {
+            'mail_settings': {
+                'click_tracking': {'enable': True},
+                'open_tracking': {'enable': True},
+            }
+        }
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -62,18 +115,42 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
 EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True').lower() in ('true', '1', 'yes')
 EMAIL_USE_SSL = os.environ.get('EMAIL_USE_SSL', 'False').lower() in ('true', '1', 'yes')
 EMAIL_TIMEOUT = int(os.environ.get('EMAIL_TIMEOUT', 10))
+EMAIL_EVENTS_WEBHOOK_SECRET = os.environ.get('EMAIL_EVENTS_WEBHOOK_SECRET', '')
 
-# Ensure SMTP backend is selected whenever credentials are present.
-# If credentials are missing (e.g., local dev), fall back to console backend.
-#
-# NOTE: This project previously relied heavily on per-shell env vars.
-# Adding this comment + explicit logic makes it easier to debug misconfiguration.
+# Ensure an email backend is selected.
+# Priority (highest -> lowest):
+# 1) Explicit `EMAIL_BACKEND` env var
+# 2) Transactional provider env vars (SendGrid / AWS SES)
+# 3) Traditional SMTP when credentials are present
+# 4) Console backend for local development
 if os.environ.get('EMAIL_BACKEND'):
     EMAIL_BACKEND = os.environ['EMAIL_BACKEND']
-elif EMAIL_HOST_USER and EMAIL_HOST_PASSWORD:
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 else:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    # SendGrid via django-anymail
+    SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
+
+    # AWS SES (django-ses)
+    AWS_SES_ACCESS_KEY_ID = os.environ.get('AWS_SES_ACCESS_KEY_ID')
+    AWS_SES_SECRET_ACCESS_KEY = os.environ.get('AWS_SES_SECRET_ACCESS_KEY')
+    AWS_SES_REGION_NAME = os.environ.get('AWS_SES_REGION_NAME')
+
+    if SENDGRID_API_KEY:
+        # Use AnyMail's SendGrid backend when API key is present
+        EMAIL_BACKEND = 'anymail.backends.sendgrid.EmailBackend'
+        # AnyMail settings (optional)
+        ANYMAIL = {
+            'SENDGRID_API_KEY': SENDGRID_API_KEY,
+        }
+    elif AWS_SES_ACCESS_KEY_ID and AWS_SES_SECRET_ACCESS_KEY:
+        # Use django-ses backend for AWS SES
+        EMAIL_BACKEND = 'django_ses.SESBackend'
+        AWS_ACCESS_KEY_ID = AWS_SES_ACCESS_KEY_ID
+        AWS_SECRET_ACCESS_KEY = AWS_SES_SECRET_ACCESS_KEY
+        AWS_REGION_NAME = AWS_SES_REGION_NAME or 'us-east-1'
+    elif EMAIL_HOST_USER and EMAIL_HOST_PASSWORD:
+        EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    else:
+        EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Debugging aid: when Django starts, you can confirm what backend it chose.
 # Check logs/ for this line.
@@ -88,6 +165,13 @@ _logger.info(
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Razorpay is invoked only from the server. The browser receives only KEY_ID.
+RAZORPAY_KEY_ID = os.environ.get('RAZORPAY_KEY_ID', '')
+RAZORPAY_KEY_SECRET = os.environ.get('RAZORPAY_KEY_SECRET', '')
+PAYMENT_CURRENCY = os.environ.get('PAYMENT_CURRENCY', 'INR')
+PAYMENT_GATEWAY_TIMEOUT = int(os.environ.get('PAYMENT_GATEWAY_TIMEOUT', '10'))
+TICKET_PRICE = os.environ.get('TICKET_PRICE', '200.00')
 
 
 ROOT_URLCONF = 'bookmyseat.urls'
@@ -239,3 +323,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'movie-booking-locmem',
+    }
+}

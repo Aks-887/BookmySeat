@@ -1,136 +1,126 @@
 {% extends "users/basic.html" %} 
 {% block content %}
 <style>
-    /* Styling */
-    body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  padding: 20px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.movie-title {
-  font-size: 28px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Theatre Info Styling */
-.theatre-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 15px;
-  flex-wrap: wrap; /* Responsive wrapping */
-}
-
-.theatre-info strong {
-  font-size: 18px;
-  flex: 1;
-}
-
-/* Info Icons Styling */
-.info-icons {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px; /* Space between icons */
-  margin-top: 10px;
-  flex: 2;
-}
-
-.info-icons i {
-  margin-right: 5px;
-  font-size: 18px;
-}
-
-.info-section {
-  flex: 1;
-  text-align: right;
-}
-
-/* Show Times Styling */
-.show-times {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  flex-wrap: wrap; /* Responsive wrapping */
-}
-
-.time-box {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px 20px;
-  text-align: center;
-  background-color: #f1f1f1;
-  margin-bottom: 10px;
-  flex: 1;
-  min-width: 100px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.time-box:hover {
-  transform: scale(1.05);
-  background-color: #28a745;
-  color: white;
-}
-
-.time-box span {
-  display: block;
-  font-size: 12px;
-  color: black;
-}
-.time-box span:hover {
-  color: white;
-}
-
-/* Non-Cancellable Styling */
-.non-cancellable {
-  color: #ffc107;
-  font-size: 12px;
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.non-cancellable i {
-  margin-right: 5px;
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-  .theatre-info {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .info-section {
-    text-align: left;
-    margin-top: 10px;
-  }
-
-  .show-times {
-    justify-content: space-between;
-  }
-
-  .time-box {
-    flex: 1 1 100%;
-    margin-bottom: 10px;
-  }
-}
+    .movie-title {
+      font-size: 32px;
+      font-weight: 800;
+      text-align: center;
+      margin: 30px 0;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.02em;
+    }
+    
+    .theatre-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px;
+      background: var(--card-bg) !important;
+      border: 1px solid var(--card-border) !important;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    
+    .theatre-info:hover {
+      border-color: rgba(255, 0, 85, 0.2) !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    
+    .theatre-info strong {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    
+    .info-icons {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+      margin-top: 12px;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+    
+    .info-icons i {
+      margin-right: 4px;
+    }
+    
+    /* Show Times Styling */
+    .show-times {
+      display: flex;
+      justify-content: flex-start;
+      gap: 15px;
+      padding: 15px 0;
+      flex-wrap: wrap;
+    }
+    
+    .time-box {
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      border-radius: 10px;
+      padding: 12px 25px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-primary) !important;
+      font-weight: 600;
+      text-decoration: none !important;
+      min-width: 120px;
+      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    
+    .time-box:hover {
+      transform: translateY(-3px) scale(1.03);
+      background: var(--primary-gradient) !important;
+      border-color: transparent !important;
+      box-shadow: 0 8px 20px rgba(255, 0, 85, 0.35);
+      color: white !important;
+    }
+    
+    .time-box span {
+      display: block;
+      font-size: 11px;
+      color: var(--text-secondary);
+      margin-top: 4px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    
+    .time-box:hover span {
+      color: rgba(255, 255, 255, 0.8) !important;
+    }
+    
+    .non-cancellable {
+      color: #ffc107;
+      font-size: 12px;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+    }
+    
+    .non-cancellable i {
+      margin-right: 6px;
+    }
+    
+    @media (max-width: 768px) {
+      .theatre-info {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .show-times {
+        width: 100%;
+      }
+      .time-box {
+        flex: 1 1 calc(50% - 10px);
+      }
+    }
   </style>
   
   <body>

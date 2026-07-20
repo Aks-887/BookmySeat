@@ -10,3 +10,91 @@ INFO 2026-07-01 18:49:42 email_tasks 13660 16280 Booking confirmation email queu
 INFO 2026-07-01 18:49:42 email_tasks 13660 8408 Booking confirmation email sent successfully (EmailTask: 6, Recipient: ayushkrsingh542005@gmail.com, Attempts: 1)
 INFO 2026-07-01 18:56:52 email_tasks 13660 5028 Booking confirmation email queued (EmailTask: 7, Recipient: ayushkrsingh542005@gmail.com)
 INFO 2026-07-01 18:56:52 email_tasks 13660 15552 Booking confirmation email sent successfully (EmailTask: 7, Recipient: ayushkrsingh542005@gmail.com, Attempts: 1)
+INFO 2026-07-12 18:44:54 email_tasks 16288 5012 Booking confirmation email queued (EmailTask: 8, Recipient: ayush406ayush@gmail.com)
+INFO 2026-07-12 18:44:54 email_tasks 16288 17380 Booking confirmation email sent successfully (EmailTask: 8, Recipient: ayush406ayush@gmail.com, Attempts: 1)
+INFO 2026-07-12 22:11:03 email_tasks 20384 19344 Booking confirmation email queued (EmailTask: 9, Recipient: ayush406ayush@gmail.com)
+INFO 2026-07-12 22:11:03 email_tasks 20384 4736 Booking confirmation email sent successfully (EmailTask: 9, Recipient: ayush406ayush@gmail.com, Attempts: 1)
+INFO 2026-07-13 09:26:37 email_tasks 20384 11968 Booking confirmation email queued (EmailTask: 10, Recipient: ayush406ayush@gmail.com)
+INFO 2026-07-13 09:26:38 email_tasks 20384 10560 Booking confirmation email sent successfully (EmailTask: 10, Recipient: ayush406ayush@gmail.com, Attempts: 1)
+INFO 2026-07-16 23:24:39 email_tasks 5188 12412 Booking confirmation email queued (EmailTask: 11, Recipient: ayush406ayush@gmail.com)
+INFO 2026-07-16 23:24:39 email_tasks 5188 8524 Booking confirmation email sent successfully (EmailTask: 11, Recipient: ayush406ayush@gmail.com, Attempts: 1)
+INFO 2026-07-16 23:37:51 email_tasks 5372 6424 Booking confirmation email queued (EmailTask: 12, Recipient: ayush.main542005@gmail.com)
+INFO 2026-07-16 23:37:51 email_tasks 5372 12960 Booking confirmation email sent successfully (EmailTask: 12, Recipient: ayush.main542005@gmail.com, Attempts: 1)
+INFO 2026-07-16 23:43:02 email_tasks 3324 1448 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-16 23:51:59 email_tasks 2708 12100 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-16 23:52:48 email_tasks 13184 10420 Booking confirmation email queued (EmailTask: 13, Recipient: ayush.main542005@gmail.com)
+INFO 2026-07-16 23:52:51 email_tasks 13184 10420 Booking confirmation email queued (EmailTask: 14, Recipient: ayush.main542005@gmail.com)
+INFO 2026-07-16 23:54:04 email_tasks 2668 3904 Starting email queue processing: 2 tasks available
+INFO 2026-07-16 23:54:04 email_tasks 2668 3904 Booking confirmation email sent successfully (EmailTask: 13, Recipient: ayush.main542005@gmail.com, Attempts: 1)
+INFO 2026-07-16 23:54:04 email_tasks 2668 3904 Booking confirmation email sent successfully (EmailTask: 14, Recipient: ayush.main542005@gmail.com, Attempts: 1)
+INFO 2026-07-16 23:54:04 email_tasks 2668 3904 Email queue processing complete: 2 sent, 0 failed
+INFO 2026-07-17 14:16:49 email_tasks 11884 6208 Booking confirmation email queued (EmailTask: 15, Recipient: ayush.main542005@gmail.com)
+INFO 2026-07-17 14:32:30 email_tasks 3716 17276 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-17 15:08:30 email_tasks 11176 12692 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-17 15:08:30 email_tasks 11176 12692 Booking confirmation already queued
+INFO 2026-07-17 15:08:33 email_tasks 11176 12692 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-17 16:33:57 email_tasks 11676 16648 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-17 16:33:57 email_tasks 11676 16648 Booking confirmation already queued
+INFO 2026-07-17 16:33:58 email_tasks 11676 16648 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-17 16:35:08 email_tasks 15928 21448 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-17 16:35:08 email_tasks 15928 21448 Booking confirmation already queued
+INFO 2026-07-17 16:35:09 email_tasks 15928 21448 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-17 16:40:44 email_tasks 10188 18856 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-17 16:40:44 email_tasks 10188 18856 Booking confirmation already queued
+INFO 2026-07-17 16:40:45 email_tasks 10188 18856 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-17 16:55:27 email_tasks 11200 14116 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-17 16:55:27 email_tasks 11200 14116 Booking confirmation already queued
+INFO 2026-07-17 16:55:28 email_tasks 11200 14116 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-17 16:59:46 email_tasks 19804 14300 Booking confirmation email queued (EmailTask: 16, Recipient: ayush.main542005@gmail.com)
+INFO 2026-07-17 17:02:44 email_tasks 4532 19068 Starting email queue processing: 2 tasks available
+INFO 2026-07-17 17:02:59 email_tasks 4532 19068 Booking confirmation email sent successfully (EmailTask: 15, Recipient: ayush.main542005@gmail.com, Attempts: 1, SentCount: 1)
+INFO 2026-07-17 17:03:17 email_tasks 4532 19068 Booking confirmation email sent successfully (EmailTask: 16, Recipient: ayush.main542005@gmail.com, Attempts: 1, SentCount: 1)
+INFO 2026-07-17 17:03:17 email_tasks 4532 19068 Email queue processing complete: 2 sent, 0 failed
+INFO 2026-07-17 18:10:25 email_tasks 18928 12908 Booking confirmation email queued (EmailTask: 17, Recipient: ayush.main542005@gmail.com)
+INFO 2026-07-20 03:14:10 email_tasks 22156 27256 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 03:14:10 email_tasks 22156 27256 Booking confirmation already queued
+INFO 2026-07-20 03:14:11 email_tasks 22156 27256 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 03:21:38 email_tasks 26176 18448 Booking confirmation email queued (EmailTask: 18, Recipient: pushpa@gmail.com)
+INFO 2026-07-20 03:23:30 email_tasks 26176 23420 Booking confirmation email queued (EmailTask: 19, Recipient: ayush.main542005@gmail.com)
+INFO 2026-07-20 03:25:35 email_tasks 26176 23420 Booking confirmation email queued (EmailTask: 20, Recipient: ayush.main542005@gmail.com)
+INFO 2026-07-20 03:32:20 email_tasks 19644 25704 Starting email queue processing: 2 tasks available
+INFO 2026-07-20 03:32:24 email_tasks 19644 25704 Booking confirmation email sent successfully (EmailTask: 19, Recipient: ayush.main542005@gmail.com, Attempts: 1, SentCount: 1)
+INFO 2026-07-20 03:32:29 email_tasks 19644 25704 Booking confirmation email sent successfully (EmailTask: 20, Recipient: ayush.main542005@gmail.com, Attempts: 1, SentCount: 1)
+INFO 2026-07-20 03:32:29 email_tasks 19644 25704 Email queue processing complete: 2 sent, 0 failed
+INFO 2026-07-20 03:40:37 email_tasks 21668 22728 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 03:40:37 email_tasks 21668 22728 Booking confirmation already queued
+INFO 2026-07-20 03:40:38 email_tasks 21668 22728 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 03:46:08 email_tasks 5764 24812 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 03:46:08 email_tasks 5764 24812 Booking confirmation already queued
+INFO 2026-07-20 03:46:09 email_tasks 5764 24812 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 03:46:51 email_tasks 25160 23812 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 03:46:51 email_tasks 25160 23812 Booking confirmation already queued
+INFO 2026-07-20 03:46:52 email_tasks 25160 23812 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 03:53:56 email_tasks 10724 22832 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 03:53:56 email_tasks 10724 22832 Booking confirmation already queued
+INFO 2026-07-20 03:53:57 email_tasks 10724 22832 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 04:14:30 email_tasks 7768 26016 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 04:14:30 email_tasks 7768 26016 Booking confirmation already queued
+INFO 2026-07-20 04:14:32 email_tasks 7768 26016 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 04:21:25 email_tasks 25160 25924 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 04:21:25 email_tasks 25160 25924 Booking confirmation already queued
+INFO 2026-07-20 04:21:26 email_tasks 25160 25924 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 04:25:51 email_tasks 16204 5308 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 04:25:51 email_tasks 16204 5308 Booking confirmation already queued
+INFO 2026-07-20 04:25:52 email_tasks 16204 5308 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 04:30:45 email_tasks 16056 25892 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 04:30:45 email_tasks 16056 25892 Booking confirmation already queued
+INFO 2026-07-20 04:30:47 email_tasks 16056 25892 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 04:32:33 email_tasks 23632 26216 Booking confirmation email queued (EmailTask: 21, Recipient: ayush.main542005@gmail.com)
+INFO 2026-07-20 04:35:30 email_tasks 15924 2500 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 04:35:30 email_tasks 15924 2500 Booking confirmation already queued
+INFO 2026-07-20 04:35:32 email_tasks 15924 2500 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 04:37:55 email_tasks 3140 10552 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 04:37:55 email_tasks 3140 10552 Booking confirmation already queued
+INFO 2026-07-20 04:37:56 email_tasks 3140 10552 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 04:42:23 email_tasks 22992 26780 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 04:42:23 email_tasks 22992 26780 Booking confirmation already queued
+INFO 2026-07-20 04:42:24 email_tasks 22992 26780 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 04:46:17 email_tasks 23448 21432 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
+INFO 2026-07-20 04:46:17 email_tasks 23448 21432 Booking confirmation already queued
+INFO 2026-07-20 04:46:18 email_tasks 23448 21432 Booking confirmation email queued (EmailTask: 1, Recipient: test@example.com)
