@@ -235,6 +235,8 @@ def queue_booking_confirmation_email(recipient_email: str, booking_context: dict
     # A separate worker (cron, supervisor, or container) should run:
     #   python manage.py process_email_queue --limit 50
 
+    import threading
+    threading.Thread(target=_dispatch_email_task_async, args=(task.id,), daemon=True).start()
     return task
 
 
