@@ -98,9 +98,14 @@ def movie_list(request):
         '-rating': '-rating',
         'name': 'name',
         '-name': '-name',
+        '?': '?',
     }
-    sort_by = valid_sorts.get(sort_by, '-release_date')
-    movies = movies.order_by(sort_by)
+    
+    # Use random sorting by default if no sort is specified
+    sort_by = request.GET.get('sort', '?')
+    sort_field = valid_sorts.get(sort_by, '?')
+    
+    movies = movies.order_by(sort_field)
     
     # Calculate dynamic filter counts (all genres/languages available after current filters)
     # Use separate queries to get counts - more efficient than GROUP BY
