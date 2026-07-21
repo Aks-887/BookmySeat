@@ -583,11 +583,11 @@ def admin_analytics(request):
         daily_revenue = Booking.objects.filter(payment_status='completed', booked_at__date=timezone.now().date()).aggregate(total=Sum('amount'))
         weekly_revenue = Booking.objects.filter(payment_status='completed', booked_at__gte=timezone.now() - timezone.timedelta(days=7)).aggregate(total=Sum('amount'))
         monthly_revenue = Booking.objects.filter(payment_status='completed', booked_at__gte=timezone.now() - timezone.timedelta(days=30)).aggregate(total=Sum('amount'))
-        popular_movies = list(Movie.objects.annotate(booking_count=Count('bookings')).order_by('-booking_count')[:5])
-        busiest_theaters = list(Theater.objects.annotate(occupancy=Count('bookings')).order_by('-occupancy')[:5])
+        popular_movies = list(Movie.objects.annotate(booking_count=Count('bookings', filter=Q(bookings__payment_status='completed'))).order_by('-booking_count')[:5])
+        busiest_theaters = list(Theater.objects.annotate(occupancy=Count('bookings', filter=Q(bookings__payment_status='completed'))).order_by('-occupancy')[:5])
         from django.db.models.functions import ExtractHour
-        peak_hours = list(Booking.objects.annotate(hour=ExtractHour('booked_at')).values('hour').annotate(count=Count('id')).order_by('-count')[:5])
-        unbooked_movies = list(Movie.objects.annotate(booking_count=Count('bookings')).filter(booking_count=0)[:10])
+        peak_hours = list(Booking.objects.filter(payment_status='completed').annotate(hour=ExtractHour('booked_at')).values('hour').annotate(count=Count('id')).order_by('-count')[:5])
+        unbooked_movies = list(Movie.objects.annotate(booking_count=Count('bookings', filter=Q(bookings__payment_status='completed'))).filter(booking_count=0)[:10])
         
         total_bookings = Booking.objects.count()
         cancelled_bookings = Booking.objects.filter(payment_status='cancelled').count()
